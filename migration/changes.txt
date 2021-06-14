@@ -1,0 +1,1176 @@
+==== ./content/python/cmislib.md
+16a17
+> 
+==== ./content/site.md
+==== ./content/internal/internal-index.md
+==== ./content/internal/opencmis-release.md
+0a1,2
+> Title: OpenCMIS Release Process
+> 
+==== ./content/java/developing/dev-tools.md
+==== ./content/java/developing/dev-repository-specific-notes.md
+1a2
+> 
+30c31
+<     :::java
+---
+> ```java
+32c33
+< 
+---
+> ```
+==== ./content/java/developing/tools/dev-tools-workbench.md
+26c26
+< <iframe width="560" height="349" src="http://www.youtube.com/embed/akvCDVh03qs?rel=0" frameborder="0" allowfullscreen></iframe>
+---
+> <iframe width="560" height="349" src="https://www.youtube.com/embed/akvCDVh03qs?rel=0" frameborder="0" allowfullscreen></iframe>
+==== ./content/java/developing/tools/index.md
+==== ./content/java/developing/tools/dev-tools-browser.md
+==== ./content/java/developing/dev-use-without-maven.md
+==== ./content/java/developing/dev-modules.md
+4a5
+> 
+==== ./content/java/developing/dev-client-cache.md
+16c16
+<     :::java
+---
+>   ```java
+20c20
+< 
+---
+>   ```
+26c26
+<     :::java
+---
+>   ```java
+28c28
+< 
+---
+>   ```
+34c34
+<     :::java
+---
+>   ```java
+39c39
+< 
+---
+>   ```
+45c45
+<     :::java
+---
+>   ```java
+47c47
+< 
+---
+>   ```
+==== ./content/java/developing/dev-url.md
+9c9
+< 	:::
+---
+> 
+==== ./content/java/developing/dev-binding-differences.md
+==== ./content/java/developing/dev-osgi.md
+2,17d1
+< Notice:    Licensed to the Apache Software Foundation (ASF) under one
+<            or more contributor license agreements.  See the NOTICE file
+<            distributed with this work for additional information
+<            regarding copyright ownership.  The ASF licenses this file
+<            to you under the Apache License, Version 2.0 (the
+<            "License"); you may not use this file except in compliance
+<            with the License.  You may obtain a copy of the License at
+<            .
+<              http://www.apache.org/licenses/LICENSE-2.0
+<            .
+<            Unless required by applicable law or agreed to in writing,
+<            software distributed under the License is distributed on an
+<            "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+<            KIND, either express or implied.  See the License for the
+<            specific language governing permissions and limitations
+<            under the License.
+==== ./content/java/developing/dev-use-with-maven.md
+14c14
+<     :::xml
+---
+> ```xml
+20c20
+< 
+---
+> ```
+26c26
+<     :::xml
+---
+> ```xml
+31a32
+> ```
+==== ./content/java/developing/repositories/dev-repositories-jcr.md
+12c12
+< at any time. See [CMIS-315][] for the latest status.
+---
+> at any time. See [CMIS-315][CMS-315] for the latest status.
+==== ./content/java/developing/repositories/dev-repositories-inmemory.md
+78c78
+<     :::properties
+---
+> ```properties
+109c109
+< 
+---
+> ```
+==== ./content/java/developing/repositories/index.md
+==== ./content/java/developing/repositories/dev-repositories-fileshare.md
+28c28
+<     :::properties
+---
+> ```properties
+50c50
+< 
+---
+> ```
+==== ./content/java/developing/dev-logging.md
+11c11
+< 	:::properties
+---
+> ```properties
+41c41
+< 
+---
+> ```
+==== ./content/java/developing/dev-server.md
+117c117
+<     :::xml
+---
+> ```xml
+122c122
+< 
+---
+> ```
+133c133
+<     :::java
+---
+> ```java
+156a157
+> ```
+==== ./content/java/developing/index.md
+==== ./content/java/developing/guide.md
+2,17d1
+< Notice:    Licensed to the Apache Software Foundation (ASF) under one
+<            or more contributor license agreements.  See the NOTICE file
+<            distributed with this work for additional information
+<            regarding copyright ownership.  The ASF licenses this file
+<            to you under the Apache License, Version 2.0 (the
+<            "License"); you may not use this file except in compliance
+<            with the License.  You may obtain a copy of the License at
+<            .
+<              http://www.apache.org/licenses/LICENSE-2.0
+<            .
+<            Unless required by applicable law or agreed to in writing,
+<            software distributed under the License is distributed on an
+<            "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+<            KIND, either express or implied.  See the License for the
+<            specific language governing permissions and limitations
+<            under the License.
+131d114
+<     :::text
+136d118
+<     :::text
+141d122
+<     :::text
+159c140
+<     :::text
+---
+>    ```
+160a142
+>    ```
+165c147
+<     :::text
+---
+>    ```
+166a149
+>    ```
+170,171c153
+<     1. click `File->Import` and choose `General->Existing projects into workspace` in the 
+<     Import wizard.
+---
+>    1. click `File->Import` and choose `General->Existing projects into workspace` in the Import wizard.
+187d168
+<     :::text
+192d172
+<     :::text
+200d179
+<     :::text
+210a190
+> 
+222c202
+<      :::java
+---
+>    ```java
+228a209
+>    ```
+235c216
+<     :::java
+---
+> ```java
+237a219
+> ```
+246c228
+<     :::java
+---
+> ```java
+250a233
+> ```
+254c237
+<     :::java
+---
+> ```:java
+260a244
+> ```
+280c264
+<     :::java
+---
+> ```java
+287a272
+> ```
+295c280
+<     :::java
+---
+> ```java
+308a294
+> ```
+319c305
+<     :::java
+---
+> ```java
+330a317
+> ```
+335c322
+<     :::java
+---
+> ```java
+342a330
+> ```
+356c344
+<     :::java
+---
+> ```java
+396a385
+> ```
+400c389
+<     :::java
+---
+> ```java
+408a398
+> ```
+425c415
+<     :::java
+---
+> ```java
+434a425
+> ```
+440c431
+<     :::java
+---
+> ```java
+465a457
+> ```
+476c468
+<     :::java
+---
+> ```java
+490a483
+> ```
+501c494
+<         :::java
+---
+> ```java
+515a509
+> ```
+530a525
+> 
+535c530
+<     :::java
+---
+> ```java
+540a536
+> ```
+545d540
+<     :::text
+554c549
+<     :::java
+---
+> ```java
+571a567
+> ```
+581d576
+<     :::text
+597c592
+<     :::java
+---
+> ```java
+614a610
+> ```
+618d613
+<     :::text
+653c648
+<         :::java
+---
+> ```java
+680a676
+> ```
+684d679
+<     :::text
+713c708
+<     :::java
+---
+> ```java
+717a713
+> ```
+721d716
+<     :::text
+752c747
+<     :::java
+---
+> ```java
+756a752
+> ```
+761c757
+<     :::java
+---
+> ```java
+765a762
+> ```
+774c771
+<     :::java
+---
+> ```java
+779a777
+> ```
+786c784
+<     :::java
+---
+> ```java
+792a791
+> ```
+806c805
+<     :::sql
+---
+> ```sql
+807a807
+> ```
+826c826
+<             :::java
+---
+> ```java
+844a845
+> ```
+861c862
+<     :::java
+---
+> ```java
+866a868
+> ```
+875c877
+<         :::java
+---
+> ```java
+893a896
+> ```
+897d899
+<     :::text
+923c925
+<     :::java
+---
+> ```java
+926a929
+> ```
+931c934
+<     :::java
+---
+> ```java
+933a937
+> ```
+941c945
+<     :::java
+---
+> ```java
+945a950
+> ```
+959c964
+<     :::java
+---
+> ```java
+967a973
+> ```
+973c979
+<         :::java
+---
+> ```java
+991a998
+> ```
+993a1001
+> 
+1003c1011
+<          :::java
+---
+> ```java
+1033a1042
+> ```
+1044c1053
+<     :::java
+---
+> ```java
+1048a1058
+> ```
+1053c1063
+<     :::java
+---
+> ```java
+1059c1069
+< 
+---
+> ```
+1071c1081
+<         :::java
+---
+> ```java
+1097a1108
+> ```
+1104c1115
+<         :::java
+---
+> ```java
+1120a1132
+> ```
+1140c1152
+<     :::java
+---
+> ```java
+1145a1158
+> ```
+1152a1166
+> ```java
+1205a1220
+> ```
+1210d1224
+<     :::text
+1250c1264
+<         :::java
+---
+> ```java
+1292a1307
+> ```
+1307c1322
+<     :::java
+---
+> ```java
+1325a1341
+> ```
+1353c1369
+<         :::java
+---
+> ```java
+1398a1415
+> ```
+1403c1420
+<         :::java
+---
+> ```java
+1416a1434
+> ```
+1444c1462
+<     :::java
+---
+> ```java
+1459a1478
+> ```
+1471c1490
+<     :::java
+---
+> ```java
+1517a1537
+> ```
+1530a1551
+> 
+1531a1553
+> 
+1532a1555
+> 
+1533a1557
+> 
+==== ./content/java/developing/dev-session-parameters.md
+==== ./content/java/developing/dev-debug.md
+63c63
+< 	:::java
+---
+> ```java
+72a73
+> ```
+==== ./content/java/developing/client/index.md
+==== ./content/java/developing/client/dev-client-bindings.md
+48c48
+<     :::java
+---
+> ```java
+58,59c58
+< 
+<     
+---
+> ```
+67c66
+<     :::java
+---
+> ```java
+85,86c84
+< 
+< 
+---
+> ```
+94c92
+<     :::java
+---
+> ```java
+104,105c102
+<     
+<     
+---
+> ```
+113c110
+<     :::java
+---
+> ```java
+122c119
+< 
+---
+> ```
+141c138
+<     :::java
+---
+> ```java
+152c149
+<     
+---
+> ```
+==== ./content/java/developing/client/dev-client-overview.md
+==== ./content/java/developing/client/dev-client-api.md
+==== ./content/java/developing/dev-eclipse.md
+48c48
+<     :::java
+---
+> ```xml
+79a80
+> ```
+==== ./content/java/developing/dev-compare-client-api-binding.md
+==== ./content/java/how-to/how-to-build.md
+==== ./content/java/how-to/how-to-add-extension.md
+10c10
+<     :::java
+---
+> ```java
+37c37
+< 
+---
+> ```
+41c41
+<     :::xml
+---
+> ```xml
+46c46
+< 
+---
+> ```
+==== ./content/java/how-to/how-to-connect.md
+20c20
+<     :::java
+---
+> ```java
+22a23
+> ```
+==== ./content/java/how-to/how-to-create-server.md
+72c72
+<     :::xml
+---
+> ```xml
+157c157
+< 
+---
+> ```
+188d187
+<     :::properties
+196c195
+<     :::java
+---
+> ```java
+204c203
+< 
+---
+> ```
+209c208
+<     :::java
+---
+> ```java
+213c212
+< 
+---
+> ```
+225c224
+<     :::java
+---
+> ```java
+277,278c276
+<     
+< 
+---
+> ```    
+418c416
+<     :::java
+---
+> ```java
+440c438
+< 
+---
+> ```
+457d454
+<     :::properties
+464c461
+<     :::java
+---
+> ```java
+472c469
+< 
+---
+> ```
+520c517
+<     :::bat
+---
+> ```bat
+531c528
+< 
+---
+> ```
+545c542
+<     :::xml
+---
+> ```xml
+584c581
+< 
+---
+> ```
+==== ./content/java/how-to/how-to-process-query.md
+103c103
+<     :::java
+---
+> ```java
+117c117
+< 
+---
+> ```
+123c123
+<     :::java
+---
+> ```java
+136c136
+< 
+---
+> ```
+150d149
+< 
+154c153
+<     :::java
+---
+> ```java
+176c175
+< 
+---
+> ```
+193c192
+<     :::java
+---
+> ```java
+196c195
+< 
+---
+> ```
+==== ./content/java/how-to/how-to-integrate-spring.md
+10c10
+<     :::java
+---
+> ```java
+47c47
+< 
+---
+> ```
+51c51
+<     :::xml
+---
+> ```xml
+58c58
+< 
+---
+> ```
+==== ./content/java/how-to/index.md
+==== ./content/java/how-to/how-to-tune-perfomance.md
+29c29
+<     :::java
+---
+>   ```java
+33c33
+< 
+---
+>   ```
+39c39
+<     :::java
+---
+>   ```java
+41c41
+< 
+---
+>   ```
+47c47
+<     :::java
+---
+>   ```java
+52c52
+< 
+---
+>   ```
+58c58
+<     :::java
+---
+>   ```java
+59a60
+>   ```
+==== ./content/java/examples/example-connect-dotnet.md
+8c8
+<     :::C#
+---
+> ```C#
+217a218
+> ```
+\ No newline at end of file
+==== ./content/java/examples/example-osgi.md
+2,17d1
+< Notice:    Licensed to the Apache Software Foundation (ASF) under one
+<            or more contributor license agreements.  See the NOTICE file
+<            distributed with this work for additional information
+<            regarding copyright ownership.  The ASF licenses this file
+<            to you under the Apache License, Version 2.0 (the
+<            "License"); you may not use this file except in compliance
+<            with the License.  You may obtain a copy of the License at
+<            .
+<              http://www.apache.org/licenses/LICENSE-2.0
+<            .
+<            Unless required by applicable law or agreed to in writing,
+<            software distributed under the License is distributed on an
+<            "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+<            KIND, either express or implied.  See the License for the
+<            specific language governing permissions and limitations
+<            under the License.
+25c9
+<     :::java
+---
+> ```java
+37a22
+> ```
+==== ./content/java/examples/example-read-meta-content.md
+9c9
+<     :::java
+---
+> ```java
+15c15
+< 
+---
+> ```
+19c19
+<     :::java
+---
+> ```java
+37c37
+< 
+---
+> ```
+41c41
+<     :::java
+---
+> ```java
+45a46
+> ```
+==== ./content/java/examples/example-read-root.md
+9c9
+<     :::java
+---
+> ```java
+17c17
+< 
+---
+> ```
+23c23
+<     :::java
+---
+> ```java
+30a31
+> ```
+==== ./content/java/examples/example-create-session.md
+11c11
+<     :::java
+---
+> ```java
+27c27
+< 
+---
+> ```
+31c31
+<     ::java
+---
+> ```java
+55c55
+< 
+---
+> ```
+59c59
+<     :::java
+---
+> ```java
+75c75
+< 
+---
+> ```
+81c81
+<     ::java
+---
+> ```java
+97c97
+< 
+---
+> ```
+104c104
+<     ::java
+---
+> ```java
+107,109c107
+< 
+< 
+< 
+---
+> ```
+==== ./content/java/examples/example-list-folder.md
+1a2
+> 
+4c5
+<     :::java
+---
+> ```java
+20a22
+> ```
+==== ./content/java/examples/index.md
+==== ./content/java/examples/example-get-extension.md
+11c11
+<     :::java
+---
+> ```java
+32a33
+> ```
+==== ./content/java/examples/example-get-id-from-path.md
+7c7
+<     :::java
+---
+> ```java
+10a11
+> ```
+==== ./content/java/examples/example-create-type.md
+2,17d1
+< Notice:    Licensed to the Apache Software Foundation (ASF) under one
+<            or more contributor license agreements.  See the NOTICE file
+<            distributed with this work for additional information
+<            regarding copyright ownership.  The ASF licenses this file
+<            to you under the Apache License, Version 2.0 (the
+<            "License"); you may not use this file except in compliance
+<            with the License.  You may obtain a copy of the License at
+<            .
+<              http://www.apache.org/licenses/LICENSE-2.0
+<            .
+<            Unless required by applicable law or agreed to in writing,
+<            software distributed under the License is distributed on an
+<            "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+<            KIND, either express or implied.  See the License for the
+<            specific language governing permissions and limitations
+<            under the License.
+23c7
+<     :::java
+---
+> ```java
+838c822
+<     
+\ No newline at end of file
+---
+> ```
+\ No newline at end of file
+==== ./content/java/examples/example-create-update.md
+10c10
+<     :::java
+---
+> ```java
+21c21
+< 
+---
+> ```
+27c27
+<     :::java
+---
+> ```java
+45c45
+< 
+---
+> ```
+51c51
+<     :::java
+---
+> ```java
+67a68
+> ```
+==== ./content/java/examples/example-process-query-results.md
+8c8
+<     :::java
+---
+> ```java
+21c21
+< 
+---
+> ```
+25c25
+<     :::java
+---
+> ```java
+41a42
+> ```
+==== ./content/java/opencmis.md
+19c19
+< ---------------- | ---- | ------------- | --------- | ---------
+---
+> -----------------|------|---------------|-----------|---------
+==== ./content/java/download.md
+15c15
+< ------- | --- | -----
+---
+> --------|-----|-----
+25c25
+< ------- | --- | ------
+---
+> --------|-----|------
+32c32
+< ------- | --- | ------
+---
+> --------|-----|------
+==== ./content/php/testsuitedescription.md
+==== ./content/php/currentprojectstatus.md
+22a23
+> 
+55a57
+> 
+67a70
+> 
+==== ./content/php/phpfunctioncoverage.md
+==== ./content/php/phpclient.md
+==== ./content/dotnet/getting-started-with-dotcmis.md
+8c8,9
+<     :::C#
+---
+> 
+> ```C#
+18c19
+< 
+---
+> ```
+22c23,24
+<     :::C#
+---
+> 
+> ```C#
+33,34c35
+< 
+< 
+---
+> ```
+41c42,43
+<     :::C#
+---
+> 
+> ```C#
+59c61
+< 
+---
+> ```
+63c65,66
+<     :::C#
+---
+> 
+> ```C#
+82c85
+< 
+---
+> ```
+86c89,90
+<     :::C#
+---
+> 
+> ```C#
+104c108
+< 
+---
+> ```
+109c113,114
+<     :::C#
+---
+> 
+> ```C#
+127c132
+< 
+---
+> ```
+131c136,137
+<     :::C#
+---
+> 
+> ```C#
+147c153
+< 
+---
+> ```
+151c157,158
+<     :::C#
+---
+> 
+> ```C#
+171c178
+< 
+---
+> ```
+175c182,183
+<     :::C#
+---
+> 
+> ```C#
+179a188
+> ```
+183c192,193
+<     :::C#
+---
+> 
+> ```C#
+190c200
+< 
+---
+> ```
+==== ./content/dotnet/dotcmis-vs-portcmis.md
+2,17d1
+< Notice:    Licensed to the Apache Software Foundation (ASF) under one
+<            or more contributor license agreements.  See the NOTICE file
+<            distributed with this work for additional information
+<            regarding copyright ownership.  The ASF licenses this file
+<            to you under the Apache License, Version 2.0 (the
+<            "License"); you may not use this file except in compliance
+<            with the License.  You may obtain a copy of the License at
+<            .
+<              http://www.apache.org/licenses/LICENSE-2.0
+<            .
+<            Unless required by applicable law or agreed to in writing,
+<            software distributed under the License is distributed on an
+<            "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+<            KIND, either express or implied.  See the License for the
+<            specific language governing permissions and limitations
+<            under the License.
+==== ./content/dotnet/powershell-example.md
+==== ./content/dotnet/portcmis.md
+2,17d1
+< Notice:    Licensed to the Apache Software Foundation (ASF) under one
+<            or more contributor license agreements.  See the NOTICE file
+<            distributed with this work for additional information
+<            regarding copyright ownership.  The ASF licenses this file
+<            to you under the Apache License, Version 2.0 (the
+<            "License"); you may not use this file except in compliance
+<            with the License.  You may obtain a copy of the License at
+<            .
+<              http://www.apache.org/licenses/LICENSE-2.0
+<            .
+<            Unless required by applicable law or agreed to in writing,
+<            software distributed under the License is distributed on an
+<            "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+<            KIND, either express or implied.  See the License for the
+<            specific language governing permissions and limitations
+<            under the License.
+==== ./content/dotnet/dotcmis.md
+==== ./content/dotnet/session-parameters.md
+2,17d1
+< Notice:    Licensed to the Apache Software Foundation (ASF) under one
+<            or more contributor license agreements.  See the NOTICE file
+<            distributed with this work for additional information
+<            regarding copyright ownership.  The ASF licenses this file
+<            to you under the Apache License, Version 2.0 (the
+<            "License"); you may not use this file except in compliance
+<            with the License.  You may obtain a copy of the License at
+<            .
+<              http://www.apache.org/licenses/LICENSE-2.0
+<            .
+<            Unless required by applicable law or agreed to in writing,
+<            software distributed under the License is distributed on an
+<            "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+<            KIND, either express or implied.  See the License for the
+<            specific language governing permissions and limitations
+<            under the License.
+==== ./content/project/community.md
+==== ./content/project/verification.md
+==== ./content/project/cmis.md
+2,17d1
+< Notice:    Licensed to the Apache Software Foundation (ASF) under one
+<            or more contributor license agreements.  See the NOTICE file
+<            distributed with this work for additional information
+<            regarding copyright ownership.  The ASF licenses this file
+<            to you under the Apache License, Version 2.0 (the
+<            "License"); you may not use this file except in compliance
+<            with the License.  You may obtain a copy of the License at
+<            .
+<              http://www.apache.org/licenses/LICENSE-2.0
+<            .
+<            Unless required by applicable law or agreed to in writing,
+<            software distributed under the License is distributed on an
+<            "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+<            KIND, either express or implied.  See the License for the
+<            specific language governing permissions and limitations
+<            under the License.
+==== ./content/index.md
+==== ./content/javascript/parts.md
+2,17d1
+< Notice:    Licensed to the Apache Software Foundation (ASF) under one
+<            or more contributor license agreements.  See the NOTICE file
+<            distributed with this work for additional information
+<            regarding copyright ownership.  The ASF licenses this file
+<            to you under the Apache License, Version 2.0 (the
+<            "License"); you may not use this file except in compliance
+<            with the License.  You may obtain a copy of the License at
+<            .
+<              http://www.apache.org/licenses/LICENSE-2.0
+<            .
+<            Unless required by applicable law or agreed to in writing,
+<            software distributed under the License is distributed on an
+<            "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+<            KIND, either express or implied.  See the License for the
+<            specific language governing permissions and limitations
+<            under the License.
+==== ./content/objective-c/objectivecmis.md
+2,17d1
+< Notice:    Licensed to the Apache Software Foundation (ASF) under one
+<            or more contributor license agreements.  See the NOTICE file
+<            distributed with this work for additional information
+<            regarding copyright ownership.  The ASF licenses this file
+<            to you under the Apache License, Version 2.0 (the
+<            "License"); you may not use this file except in compliance
+<            with the License.  You may obtain a copy of the License at
+<            .
+<              http://www.apache.org/licenses/LICENSE-2.0
+<            .
+<            Unless required by applicable law or agreed to in writing,
+<            software distributed under the License is distributed on an
+<            "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+<            KIND, either express or implied.  See the License for the
+<            specific language governing permissions and limitations
+<            under the License.
+==== ./README.md
+==== ./migration/README.md

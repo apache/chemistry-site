@@ -8,6 +8,7 @@
    - Tables must not have spaces in `|---|---|`
    - Fenced code blocks differ
    - Four spaces signal a code block adjust when it is a list
+   - Prefer https hyperlinks
 
    See [changes.txt](changes.txt)
 
@@ -29,6 +30,6 @@
    - 'headings': True     # Fix up headings w/ permalinks
    - 'headings_re': r'^h[1-4]'
    - 'permalinks': True,
-   - 'toc': False         # does not use [TOC]
+   - 'toc': True          # uses [TOC]
    - 'toc_headers': r"h[1-4]",
    - 'tables': True       # Fix up for markdown table class
