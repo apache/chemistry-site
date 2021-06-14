@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<!--
+
+    Licensed to the Apache Software Foundation (ASF) under one or more
+    contributor license agreements.  See the NOTICE file distributed with
+    this work for additional information regarding copyright ownership.
+    The ASF licenses this file to You under the Apache License, Version 2.0
+    (the "License"); you may not use this file except in compliance with
+    the License.  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="author" content="Apache Chemistry">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+
+    <title>Understanding the Operation Context - Apache Chemistry Samples</title>
+
+    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link href="../../css/cinder.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.css">
+
+
+    <link href="../../css/chemistry.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+    
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../../index.html">Apache Chemistry Samples</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../index.html">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Repository <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../create-session/index.html">Creating a Session</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../capabilities/index.html">Getting Repository Capabilities</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../types/index.html">Working with Types</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../exceptions/index.html">CMIS Exceptions</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">CRUD <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../retrieve-objects/index.html">Retrieving Objects</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../create-objects/index.html">Creating Objects</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../update-objects/index.html">Updating Objects</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../move-objects/index.html">Moving Object</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../delete-objects/index.html">Deleting Objects</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../content/index.html">Working with Content</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../versions/index.html">Working with Versions</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../properties/index.html">Working with Properties and Secondary Types</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="index.html">Understanding the Operation Context</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../lists/index.html">Working with Lists, Paging and Skipping</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../extensions/index.html">Getting Extensions</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Query <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../queries/index.html">Executing Queries</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../query-examples/index.html">Query Examples</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../changelog/index.html">Retrieving the Change Log</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Access Control <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../allowable-actions/index.html">Checking Allowable Actions</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../access-control/index.html">Managing Access Control</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../retention/index.html">Retention and Holds</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../about/index.html">About</a>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search" aria-hidden="true"></i> Search
+                    </a>
+                </li>
+                
+                    <li >
+                        <a rel="next" href="../properties/index.html">
+                            <i class="fa fa-arrow-left" aria-hidden="true"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../lists/index.html">
+                            Next <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                
+                <li>
+                    <a href="https://www.apache.org" style="padding: 2px;">
+                        <img src="../../img/feather.png">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="first-level active"><a href="#understanding-the-operation-context">Understanding the Operation Context</a></li>
+        
+            <li class="second-level"><a href="#property-filter">Property Filter</a></li>
+            
+        
+            <li class="second-level"><a href="#allowable-actions">Allowable Actions</a></li>
+            
+        
+            <li class="second-level"><a href="#acls">ACLs</a></li>
+            
+        
+            <li class="second-level"><a href="#relationships">Relationships</a></li>
+            
+        
+            <li class="second-level"><a href="#policies">Policies</a></li>
+            
+        
+            <li class="second-level"><a href="#rendition-filter">Rendition Filter</a></li>
+            
+        
+            <li class="second-level"><a href="#order-by">Order By</a></li>
+            
+        
+            <li class="second-level"><a href="#list-batch-size">List Batch Size</a></li>
+            
+        
+            <li class="second-level"><a href="#caching">Caching</a></li>
+            
+        
+            <li class="second-level"><a href="#creating-operation-context-objects">Creating Operation Context Objects</a></li>
+            
+        
+            <li class="second-level"><a href="#using-an-operation-context">Using an Operation Context</a></li>
+            
+        
+    
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="understanding-the-operation-context">Understanding the Operation Context</h1>
+<p>The amount of metadata and associated information retrieved during an OpenCMIS or PortCMIS operation could be large, so certain methods return a sensible subset of the information by default, and provide additional methods that take an OperationContext. An OperationContext allows you to tune the amount of information returned by setting property filters, rendition filters, or by setting flags to include path segments, ACLs, Allowable Actions, Policies, and Relationships. The OperationContext is also used to control paging and caching in an operation.</p>
+<h3 id="property-filter">Property Filter</h3>
+<p><span class="spec">Spec 2.2.1.2.1</span></p>
+<p>The property filter defines which properties the repository must return. Only select the properties you really need to keep the transferred data as small as possible. The repository may return more properties than specified.</p>
+<div class="admonition note">
+<p class="admonition-title">Query Names</p>
+<p>The property filter is a collection of query names, not property IDs. The query names and property IDs of all properties defined in the CMIS specifation are same and therefore interchangeable. That might not be the case for custom types. </p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Minimal Property Filter</p>
+<p>OpenCMIS and PortCMIS need at least the properties <strong>cmis:objectId</strong>, <strong>cmis:baseTypeId</strong>, and <strong>cmis:objectTypeId</strong> to create objects.
+The default operation context implementation adds these properties automatically if they are missing in the property filter.</p>
+</div>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">OperationContext oc = ...
+oc.setFilterString(&quot;cmis:objectId,cmis:name,cmis:createdBy&quot;);
+</code></pre>
+
+<p class="portcmis">PortCMIS (C#)</p>
+<pre><code class="csharp">IOperationContext oc = ...
+oc.FilterString = &quot;cmis:objectId,cmis:name,cmis:createdBy&quot;;
+</code></pre>
+
+<h3 id="allowable-actions">Allowable Actions</h3>
+<p><span class="spec">Spec 2.2.1.2.6</span></p>
+<p>Calculating the Allowable Actions of an object can be very expensive for a repository. Don&rsquo;t request them if you don&rsquo;t need them.</p>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">OperationContext oc = ...
+oc.setIncludeAllowableActions(false); // don't request Allowable Actions
+</code></pre>
+
+<p class="portcmis">PortCMIS (C#)</p>
+<pre><code class="csharp">IOperationContext oc = ...
+oc.IncludeAllowableActions = false; // don't request Allowable Actions
+</code></pre>
+
+<h3 id="acls">ACLs</h3>
+<p><span class="spec">Spec 2.2.1.2.5</span></p>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">OperationContext oc = ...
+oc.setIncludeAcls(true); // request ACLs
+</code></pre>
+
+<p class="portcmis">PortCMIS (C#)</p>
+<pre><code class="csharp">IOperationContext oc = ...
+oc.IncludeAcls = true; // request ACLs
+</code></pre>
+
+<h3 id="relationships">Relationships</h3>
+<p><span class="spec">Spec 2.2.1.2.2</span></p>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">OperationContext oc = ...
+oc.setIncludeRelationships(IncludeRelationships.BOTH); // request source and target relationships
+</code></pre>
+
+<p class="portcmis">PortCMIS (C#)</p>
+<pre><code class="csharp">IOperationContext oc = ...
+oc.IncludeRelationships = IncludeRelationships.Both; // request source and target relationships
+</code></pre>
+
+<h3 id="policies">Policies</h3>
+<p><span class="spec">Spec 2.2.1.2.3</span></p>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">OperationContext oc = ...
+oc.setIncludePolicies(true); // request policies
+</code></pre>
+
+<p class="portcmis">PortCMIS (C#)</p>
+<pre><code class="csharp">IOperationContext oc = ...
+oc.IncludePolicies = true; // request policies
+</code></pre>
+
+<h3 id="rendition-filter">Rendition Filter</h3>
+<p><span class="spec">Spec 2.2.1.2.4</span></p>
+<p>The rendition filter defines which rendition details should be returned by the repository. This filter is a comma separated list of rendition kinds (e.g. <strong>cmis:thumbnail</strong>) and MIME types. </p>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">OperationContext oc = ...
+oc.setRenditionFilterString(&quot;cmis:thumbnail,image/*&quot;);
+</code></pre>
+
+<p class="portcmis">PortCMIS (C#)</p>
+<pre><code class="csharp">IOperationContext oc = ...
+oc.RenditionFilterString = &quot;cmis:thumbnail,image/*&quot;;
+</code></pre>
+
+<p>Rendition filer examples:</p>
+<ul>
+<li><code>*</code> (include all renditions)</li>
+<li><code>cmis:thumbnail</code> (include only thumbnails)</li>
+<li><code>image/*</code> (include all image renditions)</li>
+<li><code>application/pdf,application/x-shockwave-flash</code> (include web ready renditions)</li>
+<li><code>cmis:none</code> (exclude all renditions)</li>
+</ul>
+<h3 id="order-by">Order By</h3>
+<p><span class="spec">Spec 2.2.1.2.7</span></p>
+<p>The list of objects returned by <code>getChildren</code>, <code>getCheckedOutDocs</code>, and <code>queryObjects</code> can be ordered. This is a comma separated list of query names, followed by an optional ascending modifier &ldquo;ASC&rdquo; or descending modifier &ldquo;DESC&rdquo; for each query name. If the modifier is not stated, &ldquo;ASC&rdquo; is assumed.</p>
+<div class="admonition note">
+<p class="admonition-title">Query Names</p>
+<p>Similar to the property filter this is a collection of query names, not property IDs.</p>
+</div>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">OperationContext oc = ...
+oc.setOrderBy(&quot;cmis:createdBy DESC,cmis:name ASC&quot;);
+</code></pre>
+
+<p class="portcmis">PortCMIS (C#)</p>
+<pre><code class="csharp">IOperationContext oc = ...
+oc.OrderBy(&quot;cmis:createdBy DESC,cmis:name ASC&quot;);
+</code></pre>
+
+<h3 id="list-batch-size">List Batch Size</h3>
+<p>Lists returned by, for instances, <code>getChildren</code> and <code>query</code> are requested by OpenCMIS and PortCMIS in batches. The default batch size is 100. If a folder has 1,000 children, the client will make 10 <code>getChildren</code> calls to the server while looping over the children.</p>
+<div class="admonition note">
+<p class="admonition-title">Optimal Batch Size</p>
+<p>The optimal batch size depends on the use case. For applications that are using paging, the batch size should match the page size for the best performance. For applications that are processing all list items, the batch size should be as big as possible. The batch size maximum depends on the size of the list items (all items are loaded in main memory) and the server.</p>
+</div>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">OperationContext oc = ...
+oc.setMaxItemsPerPage(10000); // 10,000 items per batch
+</code></pre>
+
+<p class="portcmis">PortCMIS (C#)</p>
+<pre><code class="csharp">IOperationContext oc = ...
+oc.MaxItemsPerPage = 10000; // 10,000 items per batch
+</code></pre>
+
+<h3 id="caching">Caching</h3>
+<p>All objects retrieved by <code>getObject</code> and <code>getObjectByPath</code> are cached by default. If caching is turned off by an Operation Context, objects are not looked up in the cache and are not put into the cache. The methods getObject and getObjectByPath make a round-trip to the repository and get up-to-date data.</p>
+<p>See also the section about the <a href="../retrieve-objects/index.html#understanding-the-object-cache">object cache</a>.</p>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">OperationContext oc = ...
+oc.setCacheEnabled(false); // no caching please
+</code></pre>
+
+<p class="portcmis">PortCMIS (C#)</p>
+<pre><code class="csharp">IOperationContext oc = ...
+oc.CacheEnabled = false; // no caching please
+</code></pre>
+
+<h2 id="creating-operation-context-objects">Creating Operation Context Objects</h2>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">// create the default operation context
+OperationContext oc1 = session.createOperationContext();
+
+// create an operation context that selects nothing except the provided properties
+OperationContext oc2 = OperationContextUtils.createMinimumOperationContext(&quot;cmis:objectId&quot;, &quot;cmis:name&quot;, &quot;cmis:createdBy&quot;);
+
+// create an operation context that selects everything
+OperationContext oc3 = OperationContextUtils.createMaximumOperationContext();
+</code></pre>
+
+<p class="portcmis">PortCMIS (C#)</p>
+<pre><code class="csharp">// create the default operation context
+IOperationContext oc1 = Session.CreateOperationContext();
+
+// create an operation context that selects nothing except the provided properties
+IOperationContext oc2 = OperationContextUtils.CreateMinimumOperationContext(&quot;cmis:objectId&quot;, &quot;cmis:name&quot;, &quot;cmis:createdBy&quot;);
+
+// create an operation context that selects everything
+IOperationContext oc3 = OperationContextUtils.CreateMaximumOperationContext();
+</code></pre>
+
+<h2 id="using-an-operation-context">Using an Operation Context</h2>
+<p>Many methods that retrieve objects or data accept an Operation Context object as an additional parameter.
+If no Operation Context object is provided, a default Operation Context object defines what should be requested.</p>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">OperationContext oc = ...
+
+CmisObject cmisObject1 = session.getObject(id, oc);
+CmisObject cmisObject2 = session.getObjectByPath(path, oc);
+ItemIterable&lt;CmisObject&gt; children = folder.getChildren(oc);
+List&lt;Document&gt; versions = doc.getAllVersions(oc);
+</code></pre>
+
+<p class="portcmis">PortCMIS (C#)</p>
+<pre><code class="csharp">IOperationContext oc = ...
+
+ICmisObject cmisObject1 = session.GetObject(id, oc);
+ICmisObject cmisObject2 = session.GetObjectByPath(path, oc);
+IItemEnumerable&lt;ICmisObject&gt; children = folder.GetChildren(oc);
+IList&lt;IDocument&gt; versions = doc.GetAllVersions(oc);
+</code></pre></div>
+        
+    </div>
+
+    <footer class="col-md-12 text-center">
+        <hr>
+        <p>
+    </footer>
+
+    <script src="../../js/jquery-1.10.2.min.js"></script>
+    <script src="../../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '../..';
+    </script>
+    <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+    <script src="../../js/base.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        From here you can search these documents. Enter your search terms below.
+                    </p>
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                        </div>
+                    </form>
+                    <div id="mkdocs-search-results"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../../js/retina.min.js"></script>
+    </body>
+
+</html>
+<!-- last update: 2017-07-31 12:45:42 -->

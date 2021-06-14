@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<!--
+
+    Licensed to the Apache Software Foundation (ASF) under one or more
+    contributor license agreements.  See the NOTICE file distributed with
+    this work for additional information regarding copyright ownership.
+    The ASF licenses this file to You under the Apache License, Version 2.0
+    (the "License"); you may not use this file except in compliance with
+    the License.  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link type="text/css" rel="stylesheet" href="/resources/site.css" />
+    <script src="/resources/space.js" type="text/javascript"></script>
+    <meta name="keywords" content="CMIS, Content Management Interoperability Service, ECM, Enterprise Content Management, OASIS, integration standards, Chemistry, OpenCMIS, cmislib, DotCMIS, PortCMIS, ObjectiveCMIS" />
+    <meta name="description" content="Apache Chemistry, CMIS Implementation" />
+    <link rel="shortcut icon" href="/favicon.ico">
+    <title>Apache Chemistry - CMIS Client Overview</title>
+    <style>
+.headerlink {
+    visibility: hidden;
+}
+dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover > .headerlink, h2:hover > .headerlink, h3:hover > .headerlink, h4:hover > .headerlink, h5:hover > .headerlink, h6:hover > .headerlink {
+    visibility: visible;
+}
+    </style>
+  </head>
+<body onload="init()">
+  <table width="100%" cellpadding="0" cellspacing="0">
+    <tr width="100%">
+      <td id="cell-0-0">&nbsp;</td>
+      <td id="cell-0-1">&nbsp;</td>
+      <td id="cell-0-2">&nbsp;</td>
+    </tr>
+    <tr width="100%">
+      <td id="cell-1-0">&nbsp;</td>
+      <td id="cell-1-1">
+        <div id="banner" style="padding: 0px;">
+          <!-- Banner -->
+          <A href="https://chemistry.apache.org/" title="Apache Chemistry">
+            <IMG src="/images/chemistry_tm_logo.png" style="float:left; border:0px;"/>
+          </A>
+          <A href="https://www.apache.org/" title="The Apache Software Foundation">
+            <IMG src="/images/asf-logo.png"  style="float:right; border:0px;"/>
+           </A>
+          <!-- Banner -->
+        </div>
+        <div id="top-menu">
+          <table border="0" cellpadding="1" cellspacing="0" width="100%">
+            <tr>
+              <td>
+                <div align="left">
+                <!-- Breadcrumbs -->
+<a href="/">Home</a>&nbsp;&raquo&nbsp;<a href="/java/">Java</a>&nbsp;&raquo&nbsp;<a href="/java/developing/">Developing</a>&nbsp;&raquo&nbsp;<a href="/java/developing/client/">Client</a>&nbsp;&raquo&nbsp;<a href="#">CMIS Client Overview</a>
+                <!-- Breadcrumbs -->
+                </div>
+              </td>
+              <td>
+                <div align="right">
+                <!-- Quicklinks -->
+<P>
+<A href="https://www.apache.org/" class="external-link" rel="nofollow">Apache</A>
+|
+<A href="https://www.apache.org/licenses/LICENSE-2.0.html" class="external-link" rel="nofollow">License</A>
+</P>
+                <!-- Quicklinks -->
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td id="cell-1-2">&nbsp;</td>
+    </tr>
+    <tr width="100%">
+      <td id="cell-2-0">&nbsp;</td>
+      <td id="cell-2-1">
+        <table>
+          <tr height="100%" valign="top">
+            <td height="100%">
+              <div id="wrapper-menu-page-right">
+                <div id="wrapper-menu-page-top">
+                  <div id="wrapper-menu-page-bottom">
+                    <div id="menu-page">
+                      <!-- NavigationBar -->
+
+<H3><A name="Navigation-Overview"></A>Overview</H3>
+
+<UL class="alternate" type="square">
+   <LI><A href="/project/cmis.html" title="What's CMIS">What is CMIS?</A></LI>
+   <LI><A href="https://www.apache.org/licenses/" class="external-link" rel="nofollow">License</A></LI>
+   <LI><A href="/project/community.html" title="Community">Community</A></LI>
+   <LI><A href="https://lists.apache.org/list.html?dev@chemistry.apache.org" class="external-link" rel="nofollow">Mailing List</A></LI>
+   <LI><A href="https://issues.apache.org/jira/browse/CMIS" class="external-link" rel="nofollow">Issue Tracking</A></LI>
+   <LI><A href="https://www.apache.org/security/" class="external-link" rel="nofollow">Security</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-Search"></A>Search</H3>
+
+<DIV style="padding: 0px 0px 0px 20px;">
+<FORM action="https://www.google.com/search" method="get" style="font-size: 10px;">
+<INPUT name="ie" type="hidden" value="UTF-8"></INPUT>
+<INPUT name="oe" type="hidden" value="UTF-8"></INPUT>
+  <INPUT maxlength="255" name="q" size="12" type="text" value=""></INPUT>
+  <INPUT name="btnG" type="submit" value="Search"></INPUT>
+  <INPUT name="domains" type="hidden" value="chemistry.apache.org"></INPUT>
+  <INPUT name="sitesearch" type="hidden" value="chemistry.apache.org"></INPUT>
+</FORM>
+</DIV>
+
+
+<H3><A name="Navigation-CMISforJava"></A>CMIS for Java</H3>
+
+<UL class="alternate" type="square">
+  <LI><A href="/java/opencmis.html" title="OpenCMIS Overview and Index">Overview</A></LI>
+  <LI><A href="/java/download.html" title="Downloads">Downloads</A></LI>
+  <LI><A href="/docs/cmis-samples/" title="Downloads">Code Samples</A></LI>
+  <LI><A href="/java/javadoc">JavaDoc</A></LI>
+  <LI><A href="https://svn.apache.org/repos/asf/chemistry/opencmis/trunk/" class="external-link" rel="nofollow">Source Code</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-CMISforPython"></A>CMIS for Python</H3>
+
+<UL class="alternate" type="square">
+  <LI><A href="/python/cmislib.html" title="cmislib">cmislib</A></LI>
+  <LI><A href="/python/docs/" rel="nofollow">cmislib Documentation</A></LI>
+  <LI><A href="https://svn.apache.org/repos/asf/chemistry/cmislib/trunk/" class="external-link" rel="nofollow">Source Code</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-CMISforPHP"></A>CMIS for PHP</H3>
+
+<UL class="alternate" type="square">
+  <LI><A href="/php/phpclient.html" title="phpclient">CMIS PHP Client</A></LI>
+  <LI><A href="https://svn.apache.org/repos/asf/chemistry/phpclient/trunk/" class="external-link" rel="nofollow">Source Code</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-CMISfor.NET"></A>CMIS for .NET</H3>
+
+<UL class="alternate" type="square">
+  <LI><A href="/dotnet/dotcmis.html" title="DotCMIS">DotCMIS</A></LI>
+  <LI><A href="https://svn.apache.org/repos/asf/chemistry/dotcmis/trunk/" class="external-link" rel="nofollow">DotCMIS Source Code</A></LI>
+  <LI><A href="/dotnet/portcmis.html" title="PortCMIS">PortCMIS</A></LI>
+  <LI><A href="https://svn.apache.org/repos/asf/chemistry/portcmis/trunk/" class="external-link" rel="nofollow">PortCMIS Source Code</A></LI>
+  <LI><A href="/docs/cmis-samples/" title="Downloads">Code Samples</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-CMISforObjective-C"></A>CMIS for Objective-C</H3>
+
+<UL class="alternate" type="square">
+  <LI><A href="/objective-c/objectivecmis.html" title="ObjectiveCMIS">ObjectiveCMIS</A></LI>
+  <LI><A href="https://svn.apache.org/repos/asf/chemistry/objectivecmis/trunk/" class="external-link" rel="nofollow">Source Code</A></LI>
+</UL>
+
+<H3><A name="Navigation-CMISforJavaScript"></A>CMIS for JavaScript</H3>
+
+<UL class="alternate" type="square">
+  <LI><A href="/javascript/parts.html" title="Chemistry Parts">Chemistry Parts</A></LI>
+  <LI><A href="https://svn.apache.org/repos/asf/chemistry/parts/trunk/" class="external-link" rel="nofollow">Source Code</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-Sponsorship"></A>Sponsorship</H3>
+
+<UL class="alternate" type="square">
+   <LI><A href="https://www.apache.org/foundation/thanks.html" class="external-link" rel="nofollow">Thanks</A></LI>
+   <LI><A href="https://www.apache.org/foundation/sponsorship.html" class="external-link" rel="nofollow">Sponsoring Apache</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-Internal"></A>Internal Docs</H3>
+
+<UL class="alternate" type="square">
+   <LI><A href="/internal/internal-index.html" rel="nofollow"> Internal Documentation</A></LI>
+</UL>
+                    <!-- NavigationBar -->
+                    </div>
+                </div>
+              </div>
+            </div>
+           </td>
+           <td height="100%">
+             <!-- Content -->
+             <div class="wiki-content">    <h1 id="opencmis-client-development">OpenCMIS Client Development<a class="headerlink" href="#opencmis-client-development" title="Permalink">&para;</a></h1>
+<p>The OpenCMIS client API provides an easy way to connect to CMIS repositories. This is a short step-by-step guide.</p>
+<h2 id="prerequisite">Prerequisite<a class="headerlink" href="#prerequisite" title="Permalink">&para;</a></h2>
+<ol>
+<li>
+<p>Read the second chapter of the <a href="http://docs.oasis-open.org/cmis/CMIS/v1.0/cmis-spec-v1.0.html">CMIS specification</a>. You can skip the other chapters but you need to understand the CMIS domain model to in order to use OpenCMIS.</p>
+</li>
+<li>
+<p>Set up your repository. Some repositories provide CMIS out-of-the-box. Other repositories require an update, a module, a service pack, or something like that.</p>
+</li>
+<li>
+<p>Select your binding. The CMIS specification defines two bindings, AtomPub and Web Services. Check which binding your repository supports. If the repository supports both, go for the AtomPub binding. In most cases it is the better choice. But don't worry; you can switch the binding at any time. The OpenCMIS API is not binding specific.</p>
+</li>
+<li>
+<p>Check which authentication method the repository provides. Refer to the authentication section for more information.</p>
+</li>
+<li>
+<p>Make sure your repository speaks HTTPS. You probably don't want to expose your password and your documents to everyone on the network.</p>
+</li>
+<li>
+<p>Download the <a href="../../download.html">OpenCMIS client library</a> and the <a href="../../download.html">CMIS Workbench</a>.</p>
+</li>
+<li>
+<p>Choose an API. OpenCMIS provides two CMIS client APIs that are called <a href="dev-client-api.html">Client API</a> and <a href="dev-client-bindings.html">Client Bindings API</a>. The Client API is a high-level, object orientated API and suitable for most use cases. It sits on top of the Client Bindings API. The Client Bindings API reflects the CMIS domain model. It allows fine-grained control, which makes the interfaces a bit clunky. This guide explains the Client API and <a href="../dev-compare-client-api-binding.html">this page</a> compares both.</p>
+</li>
+</ol>
+<h2 id="the-theory">The Theory<a class="headerlink" href="#the-theory" title="Permalink">&para;</a></h2>
+<p>CMIS is stateless. That has a few implications.
+It scales well since each call can go to a different cluster node. But it also implies that each call has to contain authentication information. It also makes the client responsible for the information it pulls from the repository. And this has a direct effect on the application performance. Keep in mind that CMIS sends and receives XML over HTTP. Avoiding such a call can save valuable time.</p>
+<p>OpenCMIS introduces a session concept on top of CMIS and provides a set of caches that help reducing the number of calls and the amount of transmitted data.</p>
+<p>The central object of the client API is the Session object. It manages the authentication, all caches and provides the entry point to all CMIS operations. A Session object is bound to a user and therefore there is a set of separate caches per user. The repository might send different data for different users, for example to obey permissions or provide localized display names and property values. Therefore it is not possible to manage a shared cache. (The Client Bindings API is more flexible in this respect but also requires more effort and care.)</p>
+<p>In order to be effective, this Session object has to be reused as much as possible! Don't throw it away. Keep it and reuse it! OpenCMIS is thread-safe. The Session object can and should be reused across thread boundaries.</p>
+<h2 id="first-steps">First Steps<a class="headerlink" href="#first-steps" title="Permalink">&para;</a></h2>
+<p>The OpenCMIS client package contains all jars you need to connect to a repository. Make sure they are all in your classpath.</p>
+<p>Before you start implementing have a look at the OpenCMIS JavaDoc. Start with the Session interface, the Document interface, and the Folder interface. Together with your CMIS domain model knowledge (you remember the second chapter of the CMIS specification) you should now have a picture of what is available.</p>
+<p>To connect to a repository you have to create a Session object. See <a href="../../examples/example-create-session.html">this page</a> for code examples. There are a few required entries in the session parameters map. OpenCMIS has to know which binding you want to use and where to find the CMIS endpoint. Most repositories also need a username and a password to identify the user. (See the authentication section for more details.)</p>
+<p>The repository id parameter tells OpenCMIS which repository at this CMIS endpoint it should talk to. How do you get this repository id is repository specific. The SessionFactory can also fetch a list of all available repositories.</p>
+<p>There are also a number of optional <a href="../dev-session-parameters.html">session parameters</a> that control the cache behavior, HTTP settings, etc. Leave them alone as long as you don't want or have to optimize your setup.</p>
+<p>The Session object gives you access to all CMIS features.  There are a few common and repeating patterns. Have a look at the <a href="../../examples/index.html">examples sections</a>.</p>
+<p>When you feel comfortable with the API, familiarize yourself with the <a href="../dev-client-cache.html">OpenCMIS caches</a> and the <a href="../dev-operation-context.html">OperationContext</a>. They can improve the performance considerably.</p>
+<h2 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permalink">&para;</a></h2>
+<p>The CMIS specification recommends HTTP basic authentication for AtomPub and WS-Security UsernameToken for Web Services. Most repositories support that. If can't find any information in the repository documentation, assume that those are enabled.</p>
+<p>OpenCMIS also supports <a href="../dev-session-parameters.html">NTLM</a> but you should avoid it if you can. It generates some side effects in the JVM and has streaming issues.</p>
+<p>If the repository need requires a different authentication mechanism, you have to implement your own <a href="dev-client-bindings.html">authentication provider</a>.</p>
+<h2 id="cmis-workbench">CMIS Workbench<a class="headerlink" href="#cmis-workbench" title="Permalink">&para;</a></h2>
+<p>The CMIS Workbench is desktop client build on top of OpenCMIS. It lets you see the repository through the eyes of CMIS and OpenCMIS. That can be handy during development.</p>
+<p>You should also play with console that is built into the CMIS Workbench. It runs code snippets and lets you experiment with the OpenCMIS client API without setting up a full-blown Java project.</p>
+
+</div>
+             <!-- Content -->
+           </td>
+          </tr>
+        </table>
+     </td>
+     <td id="cell-2-2">&nbsp;</td>
+    </tr>
+    <tr width="100%">
+      <td id="cell-3-0">&nbsp;</td>
+      <td id="cell-3-1">&nbsp;</td>
+      <td id="cell-3-2">&nbsp;</td>
+    </tr>
+    <tr width="100%">
+     <td id="cell-3-0">&nbsp;</td>
+     <td id="cell-3-1">
+       <div id="footer">
+       <!-- Footer -->
+       <div id="site-footer">
+          Apache Chemistry, Apache, the Apache feather logo, and the Apache 
+          Chemistry project logo are trademarks of The Apache Software 
+          Foundation.
+          <br>
+          Content Management Interoperability Services (CMIS) is an
+          <a href="https://www.oasis-open.org/committees/cmis/">OASIS</a>
+          specification.
+       </div>
+       <!-- Footer -->
+       </div>
+     </td>
+     <td id="cell-3-2">&nbsp;</td>
+    </tr>
+    <tr width="100%">
+      <td id="cell-4-0">&nbsp;</td>
+      <td id="cell-4-1">&nbsp;</td>
+      <td id="cell-4-2">&nbsp;</td>
+    </tr>
+  </table>
+  <script type="text/javascript" src="/resources/retina.min.js"></script>
+  <link rel="stylesheet" href="/resources/xcode.css">
+  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.1/build/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+</body>
+</html>

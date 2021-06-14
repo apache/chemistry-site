@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<!--
+
+    Licensed to the Apache Software Foundation (ASF) under one or more
+    contributor license agreements.  See the NOTICE file distributed with
+    this work for additional information regarding copyright ownership.
+    The ASF licenses this file to You under the Apache License, Version 2.0
+    (the "License"); you may not use this file except in compliance with
+    the License.  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link type="text/css" rel="stylesheet" href="/resources/site.css" />
+    <script src="/resources/space.js" type="text/javascript"></script>
+    <meta name="keywords" content="CMIS, Content Management Interoperability Service, ECM, Enterprise Content Management, OASIS, integration standards, Chemistry, OpenCMIS, cmislib, DotCMIS, PortCMIS, ObjectiveCMIS" />
+    <meta name="description" content="Apache Chemistry, CMIS Implementation" />
+    <link rel="shortcut icon" href="/favicon.ico">
+    <title>Apache Chemistry - How To Build A Server</title>
+    <style>
+.headerlink {
+    visibility: hidden;
+}
+dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover > .headerlink, h2:hover > .headerlink, h3:hover > .headerlink, h4:hover > .headerlink, h5:hover > .headerlink, h6:hover > .headerlink {
+    visibility: visible;
+}
+    </style>
+  </head>
+<body onload="init()">
+  <table width="100%" cellpadding="0" cellspacing="0">
+    <tr width="100%">
+      <td id="cell-0-0">&nbsp;</td>
+      <td id="cell-0-1">&nbsp;</td>
+      <td id="cell-0-2">&nbsp;</td>
+    </tr>
+    <tr width="100%">
+      <td id="cell-1-0">&nbsp;</td>
+      <td id="cell-1-1">
+        <div id="banner" style="padding: 0px;">
+          <!-- Banner -->
+          <A href="https://chemistry.apache.org/" title="Apache Chemistry">
+            <IMG src="/images/chemistry_tm_logo.png" style="float:left; border:0px;"/>
+          </A>
+          <A href="https://www.apache.org/" title="The Apache Software Foundation">
+            <IMG src="/images/asf-logo.png"  style="float:right; border:0px;"/>
+           </A>
+          <!-- Banner -->
+        </div>
+        <div id="top-menu">
+          <table border="0" cellpadding="1" cellspacing="0" width="100%">
+            <tr>
+              <td>
+                <div align="left">
+                <!-- Breadcrumbs -->
+<a href="/">Home</a>&nbsp;&raquo&nbsp;<a href="/java/">Java</a>&nbsp;&raquo&nbsp;<a href="/java/how-to/">How-to</a>&nbsp;&raquo&nbsp;<a href="#">How To Build A Server</a>
+                <!-- Breadcrumbs -->
+                </div>
+              </td>
+              <td>
+                <div align="right">
+                <!-- Quicklinks -->
+<P>
+<A href="https://www.apache.org/" class="external-link" rel="nofollow">Apache</A>
+|
+<A href="https://www.apache.org/licenses/LICENSE-2.0.html" class="external-link" rel="nofollow">License</A>
+</P>
+                <!-- Quicklinks -->
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td id="cell-1-2">&nbsp;</td>
+    </tr>
+    <tr width="100%">
+      <td id="cell-2-0">&nbsp;</td>
+      <td id="cell-2-1">
+        <table>
+          <tr height="100%" valign="top">
+            <td height="100%">
+              <div id="wrapper-menu-page-right">
+                <div id="wrapper-menu-page-top">
+                  <div id="wrapper-menu-page-bottom">
+                    <div id="menu-page">
+                      <!-- NavigationBar -->
+
+<H3><A name="Navigation-Overview"></A>Overview</H3>
+
+<UL class="alternate" type="square">
+   <LI><A href="/project/cmis.html" title="What's CMIS">What is CMIS?</A></LI>
+   <LI><A href="https://www.apache.org/licenses/" class="external-link" rel="nofollow">License</A></LI>
+   <LI><A href="/project/community.html" title="Community">Community</A></LI>
+   <LI><A href="https://lists.apache.org/list.html?dev@chemistry.apache.org" class="external-link" rel="nofollow">Mailing List</A></LI>
+   <LI><A href="https://issues.apache.org/jira/browse/CMIS" class="external-link" rel="nofollow">Issue Tracking</A></LI>
+   <LI><A href="https://www.apache.org/security/" class="external-link" rel="nofollow">Security</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-Search"></A>Search</H3>
+
+<DIV style="padding: 0px 0px 0px 20px;">
+<FORM action="https://www.google.com/search" method="get" style="font-size: 10px;">
+<INPUT name="ie" type="hidden" value="UTF-8"></INPUT>
+<INPUT name="oe" type="hidden" value="UTF-8"></INPUT>
+  <INPUT maxlength="255" name="q" size="12" type="text" value=""></INPUT>
+  <INPUT name="btnG" type="submit" value="Search"></INPUT>
+  <INPUT name="domains" type="hidden" value="chemistry.apache.org"></INPUT>
+  <INPUT name="sitesearch" type="hidden" value="chemistry.apache.org"></INPUT>
+</FORM>
+</DIV>
+
+
+<H3><A name="Navigation-CMISforJava"></A>CMIS for Java</H3>
+
+<UL class="alternate" type="square">
+  <LI><A href="/java/opencmis.html" title="OpenCMIS Overview and Index">Overview</A></LI>
+  <LI><A href="/java/download.html" title="Downloads">Downloads</A></LI>
+  <LI><A href="/docs/cmis-samples/" title="Downloads">Code Samples</A></LI>
+  <LI><A href="/java/javadoc">JavaDoc</A></LI>
+  <LI><A href="https://svn.apache.org/repos/asf/chemistry/opencmis/trunk/" class="external-link" rel="nofollow">Source Code</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-CMISforPython"></A>CMIS for Python</H3>
+
+<UL class="alternate" type="square">
+  <LI><A href="/python/cmislib.html" title="cmislib">cmislib</A></LI>
+  <LI><A href="/python/docs/" rel="nofollow">cmislib Documentation</A></LI>
+  <LI><A href="https://svn.apache.org/repos/asf/chemistry/cmislib/trunk/" class="external-link" rel="nofollow">Source Code</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-CMISforPHP"></A>CMIS for PHP</H3>
+
+<UL class="alternate" type="square">
+  <LI><A href="/php/phpclient.html" title="phpclient">CMIS PHP Client</A></LI>
+  <LI><A href="https://svn.apache.org/repos/asf/chemistry/phpclient/trunk/" class="external-link" rel="nofollow">Source Code</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-CMISfor.NET"></A>CMIS for .NET</H3>
+
+<UL class="alternate" type="square">
+  <LI><A href="/dotnet/dotcmis.html" title="DotCMIS">DotCMIS</A></LI>
+  <LI><A href="https://svn.apache.org/repos/asf/chemistry/dotcmis/trunk/" class="external-link" rel="nofollow">DotCMIS Source Code</A></LI>
+  <LI><A href="/dotnet/portcmis.html" title="PortCMIS">PortCMIS</A></LI>
+  <LI><A href="https://svn.apache.org/repos/asf/chemistry/portcmis/trunk/" class="external-link" rel="nofollow">PortCMIS Source Code</A></LI>
+  <LI><A href="/docs/cmis-samples/" title="Downloads">Code Samples</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-CMISforObjective-C"></A>CMIS for Objective-C</H3>
+
+<UL class="alternate" type="square">
+  <LI><A href="/objective-c/objectivecmis.html" title="ObjectiveCMIS">ObjectiveCMIS</A></LI>
+  <LI><A href="https://svn.apache.org/repos/asf/chemistry/objectivecmis/trunk/" class="external-link" rel="nofollow">Source Code</A></LI>
+</UL>
+
+<H3><A name="Navigation-CMISforJavaScript"></A>CMIS for JavaScript</H3>
+
+<UL class="alternate" type="square">
+  <LI><A href="/javascript/parts.html" title="Chemistry Parts">Chemistry Parts</A></LI>
+  <LI><A href="https://svn.apache.org/repos/asf/chemistry/parts/trunk/" class="external-link" rel="nofollow">Source Code</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-Sponsorship"></A>Sponsorship</H3>
+
+<UL class="alternate" type="square">
+   <LI><A href="https://www.apache.org/foundation/thanks.html" class="external-link" rel="nofollow">Thanks</A></LI>
+   <LI><A href="https://www.apache.org/foundation/sponsorship.html" class="external-link" rel="nofollow">Sponsoring Apache</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-Internal"></A>Internal Docs</H3>
+
+<UL class="alternate" type="square">
+   <LI><A href="/internal/internal-index.html" rel="nofollow"> Internal Documentation</A></LI>
+</UL>
+                    <!-- NavigationBar -->
+                    </div>
+                </div>
+              </div>
+            </div>
+           </td>
+           <td height="100%">
+             <!-- Content -->
+             <div class="wiki-content">    <p><strong>This guide is outdated!</strong> There is a more up-to-date
+<a href="https://github.com/cmisdocs/ServerDevelopmentGuide">OpenCMIS Server Development Guide on GitHub</a>.</p>
+<div id="toc"><ul><li><a class="toc-href" href="#how-to-create-a-cmis-server-using-opencmis" title="How to create a CMIS server using OpenCMIS">How to create a CMIS server using OpenCMIS</a><ul><li><a class="toc-href" href="#getting-started" title="Getting started:">Getting started:</a><ul><li><a class="toc-href" href="#using-maven" title="Using maven">Using maven</a></li><li><a class="toc-href" href="#without-maven" title="Without maven">Without maven</a></li></ul></li><li><a class="toc-href" href="#implementing-the-services" title="Implementing the services">Implementing the services</a><ul><li><a class="toc-href" href="#the-servicewrapper" title="The ServiceWrapper">The ServiceWrapper</a></li></ul></li><li><a class="toc-href" href="#differences-between-the-cmis-bindings" title="Differences between the CMIS bindings">Differences between the CMIS bindings</a><ul><li><a class="toc-href" href="#the-objectinfo-interface" title="The ObjectInfo interface">The ObjectInfo interface</a></li><li><a class="toc-href" href="#the-create-methods" title="The create() methods">The create() methods</a></li><li><a class="toc-href" href="#applying-acls" title="Applying ACLs">Applying ACLs</a></li></ul></li><li><a class="toc-href" href="#running-the-server" title="Running The Server">Running The Server</a></li><li><a class="toc-href" href="#handling-authentication" title="Handling Authentication">Handling Authentication</a></li><li><a class="toc-href" href="#configuring-your-server" title="Configuring your server">Configuring your server</a></li><li><a class="toc-href" href="#testing-the-server" title="Testing the server">Testing the server</a><ul><li><a class="toc-href" href="#test-using-curl" title="Test using curl">Test using curl</a></li></ul></li></ul></li></ul></div>
+<h1 id="how-to-create-a-cmis-server-using-opencmis">How to create a CMIS server using OpenCMIS<a class="headerlink" href="#how-to-create-a-cmis-server-using-opencmis" title="Permalink">&para;</a></h1>
+<p><a name="HowToBuildAServer-HowtocreateaCMISserverusingOpenCMIS"></a></p>
+<p>This document contains a step-by-step introduction how you can use opencmis
+to build an CMIS server. The document is divided into the following
+sections:</p>
+<p>Getting started. (download, setup Eclipse, etc.)</p>
+<ol>
+<li>Implementing the services</li>
+<li>The ServiceWrapper</li>
+<li>Differences between SOAP and AtomPub (ObjectHolder)</li>
+<li>Running the server</li>
+<li>Handling Authentication</li>
+<li>Testing the server</li>
+</ol>
+<p><a name="HowToBuildAServer-Gettingstarted:"></a></p>
+<h2 id="getting-started">Getting started:<a class="headerlink" href="#getting-started" title="Permalink">&para;</a></h2>
+<p>The following step-by-step guide is a sample how to create a web
+application acting as CMIS server. It will support both bindings web
+services and AtomPub.</p>
+<p>The following section describes how to initially setup a project to compile
+a CMIS server. Please note that CMIS comes with two built-in servers. The
+fileshare and the in-memory server. It is a good hint for all upcoming
+questions to look at these implementations as example code containing
+working implementations.</p>
+<p><a name="HowToBuildAServer-Usingmaven"></a></p>
+<h3 id="using-maven">Using maven<a class="headerlink" href="#using-maven" title="Permalink">&para;</a></h3>
+<p>Using maven is the easiest way to get started. OpenCMIS itself is using
+maven and you can get easily your setup and dependencies using maven. This
+requires that you have a working maven environment. In case you don't yet
+have one you can find instructions <a href="http://maven.apache.org/guides/getting-started/maven-in-five-minutes.html">here</a>.</p>
+<p>The first step is to create your initial pom.xml file to build your project
+and to setup the dependencies. The following steps require that you have
+build opencmis and installed it to your local maven repository (<code>mvn install</code>). See <a href="how-to-build.html">here</a>
+for detailed instructions how to do this.</p>
+<p>You can create your initial setup using maven itself (adjust package name,
+version number and so on according to your needs):</p>
+<pre><code>mvn archetype:generate -DgroupId=org.mycmis -DartifactId= mycmissrv \
+-DpackageName=local.mycmis -Dversion=0.1
+</code></pre>
+<p>Then select option 18 <code>maven-archetype-webapp</code> and confirm settings.</p>
+<p>You will find a project setup then consisting of a directory <code>mycmissvr</code>
+and subdirectories for source code and test code and the Java packages. We
+need to adapt the <code>.pom</code> file so that maven creates a web application file
+that can be deployed in a servlet container (like Apache Tomcat or Jetty).
+We also need to setup the dependencies to opencmis and we need to instruct
+maven generating an overlay with the existing server code in opencmis.
+Please remove therefore the entire generated <code>src/webapp</code> directory and all
+included files (<code>*.jsp</code>, <code>web.xml</code>).
+The final <code>pom.xml</code> will look like this:</p>
+<pre><code class="language-xml">    &lt;project xmlns="http://maven.apache.org/POM/4.0.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"&gt;
+      &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+      &lt;groupId&gt;org.mycmis&lt;/groupId&gt;
+      &lt;artifactId&gt;mycmissrv&lt;/artifactId&gt;
+      &lt;packaging&gt;war&lt;/packaging&gt;
+      &lt;version&gt;0.1&lt;/version&gt;
+      &lt;name&gt;mycmissrv Maven Webapp&lt;/name&gt;
+      &lt;url&gt;http://maven.apache.org&lt;/url&gt;
+    
+      &lt;properties&gt;
+        &lt;opencmisVersion&gt;0.1.0-incubating-SNAPSHOT&lt;/opencmisVersion&gt;
+        &lt;opencmisGroupId&gt;org.apache.chemistry.opencmis&lt;/opencmisGroupId&gt;
+      &lt;/properties&gt;
+    
+      &lt;build&gt;
+        &lt;finalName&gt;mycmissrv&lt;/finalName&gt;
+        &lt;plugins&gt;
+          &lt;plugin&gt;
+            &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+            &lt;artifactId&gt;maven-war-plugin&lt;/artifactId&gt;
+            &lt;configuration&gt;
+              &lt;overlays&gt;
+                &lt;overlay&gt;
+                &lt;/overlay&gt;
+                &lt;overlay&gt;
+                  &lt;groupId&gt;${opencmisGroupId}&lt;/groupId&gt;
+                  &lt;artifactId&gt;chemistry-opencmis-server-bindings&lt;/artifactId&gt;
+                &lt;/overlay&gt;
+              &lt;/overlays&gt;
+            &lt;/configuration&gt;
+          &lt;/plugin&gt;
+          &lt;plugin&gt;
+            &lt;artifactId&gt;maven-compiler-plugin&lt;/artifactId&gt;
+            &lt;configuration&gt;
+              &lt;target&gt;1.5&lt;/target&gt;
+              &lt;source&gt;1.5&lt;/source&gt;
+              &lt;encoding&gt;UTF-8&lt;/encoding&gt;
+            &lt;/configuration&gt;
+          &lt;/plugin&gt;
+        &lt;/plugins&gt;
+      &lt;/build&gt;
+  
+      &lt;dependencies&gt;
+        &lt;dependency&gt;
+          &lt;groupId&gt;junit&lt;/groupId&gt;
+          &lt;artifactId&gt;junit&lt;/artifactId&gt;
+          &lt;version&gt;3.8.1&lt;/version&gt;
+          &lt;scope&gt;test&lt;/scope&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+          &lt;groupId&gt;${opencmisGroupId}&lt;/groupId&gt;
+          &lt;artifactId&gt;chemistry-opencmis-commons-api&lt;/artifactId&gt;
+          &lt;version&gt;${opencmisVersion}&lt;/version&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+          &lt;groupId&gt;${opencmisGroupId}&lt;/groupId&gt;
+          &lt;artifactId&gt;chemistry-opencmis-commons-impl&lt;/artifactId&gt;
+          &lt;version&gt;${opencmisVersion}&lt;/version&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+          &lt;groupId&gt;${opencmisGroupId}&lt;/groupId&gt;
+          &lt;artifactId&gt;chemistry-opencmis-test-util&lt;/artifactId&gt;
+          &lt;version&gt;${opencmisVersion}&lt;/version&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+          &lt;groupId&gt;${opencmisGroupId}&lt;/groupId&gt;
+          &lt;artifactId&gt;chemistry-opencmis-server-bindings&lt;/artifactId&gt;
+          &lt;version&gt;${opencmisVersion}&lt;/version&gt;
+          &lt;type&gt;war&lt;/type&gt;
+       &lt;/dependency&gt;
+        &lt;dependency&gt;
+          &lt;groupId&gt;${opencmisGroupId}&lt;/groupId&gt;
+          &lt;artifactId&gt;chemistry-opencmis-server-support&lt;/artifactId&gt;
+          &lt;version&gt;${opencmisVersion}&lt;/version&gt;
+        &lt;/dependency&gt;
+        &lt;dependency&gt;
+          &lt;groupId&gt;org.antlr&lt;/groupId&gt;
+          &lt;artifactId&gt;antlr-runtime&lt;/artifactId&gt;
+          &lt;version&gt;3.1.3&lt;/version&gt;
+        &lt;/dependency&gt;  
+      &lt;/dependencies&gt;
+    &lt;/project&gt;
+</code></pre>
+<p>You will get your <code>web.xml</code> and other required files for your web
+application from opencmis which you may adjust according to your needs. You
+may run <code>mvn eclipse:eclipse</code> to generate the required <code>.projects</code> and
+<code>.classpath</code> files for Eclipse that you just need to import in your
+Eclipse workspace.</p>
+<h3 id="without-maven">Without maven<a class="headerlink" href="#without-maven" title="Permalink">&para;</a></h3>
+<p>If you do not want to use maven to build your project downlod from the downloads
+page the package "OpenCMIS Server Framework". Unzip the file and copy
+the contents to your project. It includes all required jars, web.xml and
+other supporting files. It follow the structure of a web application (.war).
+The web application can be deployed but does not have any functionality.</p>
+<p>Edit the file <code>repository.properties</code> as a first step (see below) and take
+care that it is in your classpath.</p>
+<p>You also have an initial <code>web.xml</code> and the required support files for the
+web services binding. Unless you have specific requirements you do not need
+to modify them.</p>
+<h2 id="implementing-the-services">Implementing the services<a class="headerlink" href="#implementing-the-services" title="Permalink">&para;</a></h2>
+<p>The first step is to tell opencmis where it can find your classes that
+implement the CMIS logic. For this purpose a file named
+repository.properties must be in the classpath. It must contain a property
+named class that refers to your service factory:</p>
+<pre><code>class=local.mycmis.ServiceFactory
+</code></pre>
+<p>The ServiceFactory class should extend the <code>AbstractServiceFactory</code> class
+from org.apache.chemistry.opencmis.commons.impl.server. You have to
+implement the interface CmisServiceFactory:</p>
+<pre><code class="language-java">    public void init(Map&lt;String, String&gt; parameters) {
+    }
+    
+    public void destroy() {
+    }
+    
+    public abstract CmisService getService(CallContext context);
+</code></pre>
+<p>The <code>init()</code> method is used to perform initialization and passes a set of
+configuration parameters from repository.properties:</p>
+<pre><code class="language-java">    @Override
+    public void init(Map&lt;String, String&gt; parameters) {
+    }
+</code></pre>
+<p>Typically you will create an instance of your service implementation.</p>
+<p>There is also wrapper classes is explained in the next section.</p>
+<p>The next step is that you need to implement the services according to the
+CMIS spec. We will do this here for one example call. The important piece
+is that your class implements <code>CmisService</code> which is central access point
+to all incoming calls. Here is an implementation of an example call
+<code>getRepositoryInfo()</code>:</p>
+<pre><code class="language-java">    public class MyCmisServiceImpl extends AbstractCmisService {
+    
+        public RepositoryInfo getRepositoryInfo(CallContext context,
+          String repositoryId, ExtensionsData extension) {
+    
+        	RepositoryInfoImpl repoInfo = new RepositoryInfoImpl();
+        	repoInfo.setRepositoryId(repositoryId);
+        	repoInfo.setRepositoryName("My CMIS Repository");
+        	repoInfo.setRepositoryDescription("Sample Repository");
+        	repoInfo.setCmisVersionSupported("1.0");
+        	repoInfo.setRepositoryCapabilities(null);
+        	repoInfo.setRootFolder("MyRootFolderId");
+        	repoInfo.setPrincipalAnonymous("anonymous");
+        	repoInfo.setPrincipalAnyone("anyone");
+        	repoInfo.setThinClientUri(null);
+        	repoInfo.setChangesIncomplete(Boolean.TRUE);
+        	repoInfo.setChangesOnType(null);
+        	repoInfo.setLatestChangeLogToken(null);
+        	repoInfo.setVendorName("ACME");
+        	repoInfo.setProductName("ACME CMIS Connector");
+        	repoInfo.setProductVersion("0.1");
+    
+        	// set capabilities
+        	RepositoryCapabilitiesImpl caps = new RepositoryCapabilitiesImpl();
+        	caps.setAllVersionsSearchable(false);
+        	caps.setCapabilityAcl(CapabilityAcl.NONE);
+        	caps.setCapabilityChanges(CapabilityChanges.PROPERTIES);
+    
+        	caps.setCapabilityContentStreamUpdates(CapabilityContentStreamUpdates.PWCONLY);
+        	caps.setCapabilityJoin(CapabilityJoin.NONE);
+        	caps.setCapabilityQuery(CapabilityQuery.METADATAONLY);
+        	caps.setCapabilityRendition(CapabilityRenditions.NONE);
+        	caps.setIsPwcSearchable(false);
+        	caps.setIsPwcUpdatable(true);
+        	caps.setSupportsGetDescendants(true);
+        	caps.setSupportsGetFolderTree(true);
+        	caps.setSupportsMultifiling(true);
+        	caps.setSupportsUnfiling(true);
+        	caps.setSupportsVersionSpecificFiling(false);
+        	repoInfo.setRepositoryCapabilities(caps);
+    
+        	AclCapabilitiesDataImpl aclCaps = new AclCapabilitiesDataImpl();
+        	aclCaps.setAclPropagation(AclPropagation.REPOSITORYDETERMINED);
+        	aclCaps.setPermissionDefinitionData(null);
+        	aclCaps.setPermissionMappingData(null);
+        	repoInfo.setAclCapabilities(aclCaps);
+    
+        	return repoInfo;
+          }
+         // ...
+    }
+</code></pre>
+<p>Now you can start implementing all the required methods with their methods.</p>
+<p><a name="HowToBuildAServer-TheServiceWrapper"></a></p>
+<h3 id="the-servicewrapper">The ServiceWrapper<a class="headerlink" href="#the-servicewrapper" title="Permalink">&para;</a></h3>
+<p>For the CmisService interface exists a corresponding abstract class. This
+can be used as a starting point for your implementation. This is optional
+but gives you the benefit of providing many common null pointer checks and
+default values for optional parameters. The abstract class also provides a
+default implementation for generating the ObjectInfo needed for the AtomPub
+binding. This wrapper can reduce the code required in your service
+implementation. You should always start using the wrapper class and
+directly implement the CmisService interface only when necessary. It is
+strongly recommended however to provide a better implementation for create
+the ObjectInfo however (see next section for details).</p>
+<p><a name="HowToBuildAServer-DifferencesbetweentheCMISbindings"></a></p>
+<h2 id="differences-between-the-cmis-bindings">Differences between the CMIS bindings<a class="headerlink" href="#differences-between-the-cmis-bindings" title="Permalink">&para;</a></h2>
+<p>OpenCMIS supports both the AtomPub and the web services binding interface.
+It hides all the details how to handle the protocol but there are some
+subtle differences that need to be reflected in the Java interfaces. This
+chapter explains where the differences are and why they are needed.</p>
+<p><a name="HowToBuildAServer-TheObjectInfointerface"></a></p>
+<h3 id="the-objectinfo-interface">The ObjectInfo interface<a class="headerlink" href="#the-objectinfo-interface" title="Permalink">&para;</a></h3>
+<p>The methods in the interfaces <code>CmisService</code> are following the data model
+in the CMIS specification. The specification defines the following
+services:</p>
+<ul>
+<li>AclService</li>
+<li>DiscoveryService</li>
+<li>ObjectService</li>
+<li>MultifFlingService</li>
+<li>NavigationService</li>
+<li>PolicyService</li>
+<li>RelationshipService</li>
+<li>RepositoryService</li>
+<li>Versioning Service</li>
+</ul>
+<p>For each of these services exists a corresponding interface in opencmis.
+CmisService is an interface that unifies all interfaces in one interface.
+The methods in this interface correspond to the methods in the
+specification. For the web service binding this is a one-to-one mapping.
+For the AtomPub binding this information is not sufficient in all cases.
+Take the creation of a document as an example. The web service returns in
+this case a single string value containing the id of the created document.
+A response in the AtomPub binding however consists of an AtomPub entry
+element which is an XML fragment (for an example look at
+<code>DocumentEntry.xml</code> in the examples directory of the CMIS specification).
+You will notice that generating this XML requires much more information
+than the create...() methods in the specification provide as return value.
+Your implementation needs to provide all the information so that opencmis
+can generate the complete response. For this purpose the <code>ObjectInfo</code> was
+introduced. <code>getObjectInfo</code> is the method of the <code>CmisService</code> interface
+that provides this information. The <code>AbstractCmisService</code> contains a
+member <code>objectInfoMap</code> that you can fill with this information. If you
+ignore this the class <code>AbstractCmisService</code> contains a default
+implementation which works but is very ineffecient. You should use this
+only as a starting point. Beware that a service can be called from multiple
+threads, so have to take care to handle threading issues properly.</p>
+<p>If the method you are implementing returns a list of objects and not only a
+single value (for example methods like <code>getChildren()</code>, <code>getDescendants()</code>
+in the navigation service) you need to provide an <code>ObjectInfo</code> for each
+element in the collection. <code>getObjectInfo</code> therefore returns a map with
+the object id for each object as key and the corresponding <code>ObjectInfo</code>
+as value. You can use the method <code>addObjectInfo</code> to add an element to the
+map.</p>
+<p><a name="HowToBuildAServer-Thecreate()methods"></a></p>
+<h3 id="the-create-methods">The create() methods<a class="headerlink" href="#the-create-methods" title="Permalink">&para;</a></h3>
+<p>The web service binding has separate calls for each object type to be
+created: policies, relationships, documents and folders:</p>
+<ul>
+<li>createDocument</li>
+<li>createFolder</li>
+<li>createRelationship</li>
+<li>createPolicy</li>
+</ul>
+<p>In the AtomPub binding there is one general <code>create()</code> method that is
+used for all object types. The CmisObjectService interface therefore
+contains 5 <code>create()</code> methods, the four specific ones are used for the
+web service bindings and the general one for the AtomPub binding.</p>
+<p><a name="HowToBuildAServer-ApplyingACLs"></a></p>
+<h3 id="applying-acls">Applying ACLs<a class="headerlink" href="#applying-acls" title="Permalink">&para;</a></h3>
+<p>The class <code>CmisAclService</code> has two methods <code>applyAcl()</code>. One uses two
+<code>AccessControlList</code>s with one <code>Acl</code> to add &nbsp;and one to remove. The other
+method contains only one <code>Acl</code> to be set on the target object. The web
+service binding uses the method with two parameters, the AtomPub binding
+uses the method with one parameter.</p>
+<p><a name="HowToBuildAServer-RunningTheServer"></a></p>
+<h2 id="running-the-server">Running The Server<a class="headerlink" href="#running-the-server" title="Permalink">&para;</a></h2>
+<p>When your services are implemented (or parts of them) you can try to run
+the server in a servlet container like Tomcat. If you have used maven to
+setup your project you can run</p>
+<pre><code>mvn package
+</code></pre>
+<p>to generate a war file that you will find in the target directory. If you
+have not used maven, create the war with the mechanisms of your build
+environment. Check the war contains a <code>web.xml</code>, the wsdl files in
+<code>WEB-INF</code> and all the required jars from opencmis and dependent libraries
+in <code>WEB-INF/lib</code>. For jetty maven contains a build-in integration that
+you may use if you like using <code>mvn jetty:run</code>. Adjust your <code>pom.xml</code> in
+this case accordingly.</p>
+<p>Deploy your application and start testing.</p>
+<p><a name="HowToBuildAServer-HandlingAuthentication"></a></p>
+<h2 id="handling-authentication">Handling Authentication<a class="headerlink" href="#handling-authentication" title="Permalink">&para;</a></h2>
+<p>Opencmis does not provide or expect any specific mechanism how
+authentication is handled. It provides some basic mechanisms hot to extract
+user name and password depending on the protocol. For AtomPub binding http
+basic authentication is supported, for web services WS-Security 1.1 for
+Username Token Profile 1.1 is supported.</p>
+<p>If you want to use servlet filters dealing with authentication, just
+add them to your <code>web.xml</code> file. You also can handle authentication inside of
+your code. In this case derive a class from <code>BasicAuthCallContextHandler</code>
+and implement method <code>getCallContextMap()</code>. There you have access to user
+name and password as provided by the user. By default opencmis does not
+enforce authentication, so initially the map will be null. If you raise a
+<code>CmisPermissionDeniedException</code> the exception is caught by the server
+implementation and a <code>401</code> http return code is sent as response to the
+browser. This usually opens a dialog for user name and password then.</p>
+<pre><code class="language-java">    public class MyContextHandler
+        extends BasicAuthCallContextHandler
+    {
+      public Map&lt;String, String&gt; getCallContextMap(HttpServletRequest request){
+
+        // call superclass to get user and password via basic authentication
+        Map&lt;String, String&gt;  ctxMap = super.getCallContextMap(request);
+
+        if (null == ctxMap)
+          // no user name, password given yet say: we need authentication:
+          throw new CmisPermissionDeniedException("Authentication required");
+    
+        // call your authentication
+
+        MyAuthentication.login(
+	        ctxMap.get(CallContext.USERNAME),
+	        ctxMap.get(CallContext.PASSWORD));
+
+        return ctxMap;
+      }
+    }
+</code></pre>
+<p>Beyond this it is up to you how to implement authentication. Creating
+tokens for example, using cookies, etc. is not covered by opencmis, but you
+can add it in your code.</p>
+<h2 id="configuring-your-server">Configuring your server<a class="headerlink" href="#configuring-your-server" title="Permalink">&para;</a></h2>
+<p>Opencmis reads a file <code>repository.properties</code> on startup. By default you only
+have to configure the class of your service factory (see above). You can
+add additional properties in this file. These configuration parameters are
+then passed to the <code>init()</code> method of your <code>ServiceFactory</code> as key
+value pairs in a hashmap.</p>
+<div class="codeHeader">repository.properties</div>
+<pre><code>class=local.mycmis.ServiceFactory
+myparam=my-configuration-value
+</code></pre>
+<div class="codeHeader">local.mycmis.ServiceFactory.java</div>
+<pre><code class="language-java">    // ...
+    @Override
+    public void init(Map&lt;String, String&gt; parameters) {
+      String myParamValue = parameters.get("myparam");
+             // use myParamValue
+    }
+    // ...
+</code></pre>
+<h2 id="testing-the-server">Testing the server<a class="headerlink" href="#testing-the-server" title="Permalink">&para;</a></h2>
+<p>There are various ways how you can test your implementation. You may add
+unit tests that directly call your service implementations as a first step.
+Opencmis also contains some basic tests that perform client-server
+communication. You can choose the protocol binding and whether read-only or
+read-write tests are performed. The amount of functionality tested depends
+on the capabilities returned in your getRepositoryInfo return value. You
+can run them using junit:</p>
+<p>Examples:</p>
+<p>Test class:</p>
+<pre><code>org.apache.chemistry.opencmis.client.bindings.atompub.SimpleReadOnlyTests
+</code></pre>
+<p>Test Parameters (passed as JVM args):</p>
+<pre><code>-Dopencmis.test=true
+-Dopencmis.test.username=myuser
+-Dopencmis.test.password=mypasswd
+-Dopencmis.test.repository=my_repository_id&amp;nbsp;
+-Dopencmis.test.atompub.url=[http://localhost:8080/opencmis/atom]
+</code></pre>
+<p>The following test classes exist:</p>
+<pre><code>org.apache.opencmis.client.bindings.atompub.SimpleReadOnlyTests
+org.apache.opencmis.client.bindings.atompub.SimpleReadWriteTests
+org.apache.opencmis.client.bindings.webservices.SimpleReadOnlyTests
+org.apache.opencmis.client.bindings.webservices.SimpleReadWriteTests
+</code></pre>
+<p>For web services you need an additional parameter for the service endpoint:</p>
+<pre><code>-Dopencmis.test.webservices.url=[http://localhost:8080/opencmis/services/]
+</code></pre>
+<h3 id="test-using-curl">Test using curl<a class="headerlink" href="#test-using-curl" title="Permalink">&para;</a></h3>
+<p>Simple tests (which might be useful at the beginning) can also be done
+using tools like curl or wget (AtomPub binding only). A simple example for
+a <code>.BAT</code> file (Windows) would look like this:</p>
+<pre><code class="language-bat">    rem set PATH=...\libcurl-7.19.7;...\OpenSSL\bin;%PATH%
+    set CURL=curl.exe
+    set VIEWER="C:\Program Files\Mozilla Firefox\firefox.exe"
+    set USER=XXX
+    set PWD=YYY
+    set URLPREFIX=[http://localhost:8080/opencmis/atom]
+    SET OUTFILE=atom.xml
+    
+    %CURL% \--user %USER%:%PWD% \--dump-header header.txt \--output %OUTFILE% %URLPREFIX%
+    IF ERRORLEVEL 0 %VIEWER% %OUTFILE%
+</code></pre>
+<p>Another example how to get a document with id MyDocument:</p>
+<pre><code>%CURL% \--user %USER%:%PWD% \--dump-header header.txt \--output %OUTFILE% %URLPREFIX%/A1/entry?id=%%2FMyDocument
+</code></pre>
+<p>You also can use this to create documents:</p>
+<pre><code>%CURL% \--user %USER%:%PWD% \--header "Content-Type: application/atom+xml;type=entry" \-d @post-item.xml \--output %OUTFILE%&amp;nbsp; \--url %URLPREFIX%/A1/children?id=/
+</code></pre>
+<p>The file <code>post-item.xml</code> must contain a valid Atom entry then:</p>
+<pre><code class="language-xml">    &lt;?xml version="1.0" encoding="utf-8"?&gt;
+    &lt;entry xmlns="http://www.w3.org/2005/Atom"
+        xmlns:cmis="http://docs.oasis-open.org/ns/cmis/core/200908/"
+        xmlns:cmisra="http://docs.oasis-open.org/ns/cmis/restatom/200908/"
+        xmlns:app="http://www.w3.org/2007/app"&gt;
+      &lt;id&gt;http://vmelcmis1:8080/cmis/atom/cd-library/main/Default-I10915&lt;/id&gt;
+      &lt;author&gt;
+        &lt;name&gt;Admin&lt;/name&gt;
+      &lt;/author&gt;
+      &lt;updated&gt;2009-03-01T00:00:00.000Z&lt;/updated&gt;
+      &lt;title type="text"&gt;Content from Curl&lt;/title&gt;
+      &lt;cmisra:object&gt;
+        &lt;cmis:properties&gt;
+          &lt;cmis:propertyId propertyDefinitionId="cmis:name"&gt;
+    	&lt;cmis:value&gt;Content from Curl&lt;/cmis:value&gt;
+          &lt;/cmis:propertyId&gt;
+          &lt;cmis:propertyId propertyDefinitionId="cmis:objectTypeId"&gt;
+    	&lt;cmis:value&gt;cmis:document&lt;/cmis:value&gt;
+          &lt;/cmis:propertyId&gt;
+        &lt;/cmis:properties&gt;
+      &lt;/cmisra:object&gt;
+    
+      &lt;cmisra:content type="text/plain"&gt;
+      &lt;cmisra:base64&gt;
+    RmF1c3Q6DQoNCk1laW4gc2No9m5lcyBGcuR1bGVpbiwgZGFyZiBpY2ggd2FnZW4sDQpNZWlu
+    ZW4gQXJtIHVuZCBHZWxlaXQgSWhyIGFuenV0cmFnZW4/DQoNCk1hcmdhcmV0ZToNCg0KQmlu
+    IHdlZGVyIEZy5HVsZWluLCB3ZWRlciBzY2j2biwNCkthbm4gdW5nZWxlaXRldCBuYWNoIEhh
+    dXNlIGdlaG4uDQoNCihTaWUgbWFjaHQgc2ljaCBsb3MgdW5kIGFiLikNCg0KRmF1c3Q6DQoN
+    CkJlaW0gSGltbWVsLCBkaWVzZXMgS2luZCBpc3Qgc2No9m4hDQpTbyBldHdhcyBoYWIgaWNo
+    IG5pZSBnZXNlaG4uDQpTaWUgaXN0IHNvIHNpdHQtIHVuZCB0dWdlbmRyZWljaCwNClVuZCBl
+    dHdhcyBzY2huaXBwaXNjaCBkb2NoIHp1Z2xlaWNoLg0KRGVyIExpcHBlIFJvdCwgZGVyIFdh
+    bmdlIExpY2h0LA0KRGllIFRhZ2UgZGVyIFdlbHQgdmVyZ2XfIGljaCdzIG5pY2h0IQ0KV2ll
+    IHNpZSBkaWUgQXVnZW4gbmllZGVyc2NobORndCwNCkhhdCB0aWVmIHNpY2ggaW4gbWVpbiBI
+    ZXJ6IGdlcHLkZ3Q7DQpXaWUgc2llIGt1cnogYW5nZWJ1bmRlbiB3YXIsDQpEYXMgaXN0IG51
+    biB6dW0gRW50evxja2VuIGdhciE=
+      &lt;/cmisra:base64&gt;
+      &lt;/cmisra:content&gt;
+    &lt;/entry&gt;
+</code></pre>
+
+</div>
+             <!-- Content -->
+           </td>
+          </tr>
+        </table>
+     </td>
+     <td id="cell-2-2">&nbsp;</td>
+    </tr>
+    <tr width="100%">
+      <td id="cell-3-0">&nbsp;</td>
+      <td id="cell-3-1">&nbsp;</td>
+      <td id="cell-3-2">&nbsp;</td>
+    </tr>
+    <tr width="100%">
+     <td id="cell-3-0">&nbsp;</td>
+     <td id="cell-3-1">
+       <div id="footer">
+       <!-- Footer -->
+       <div id="site-footer">
+          Apache Chemistry, Apache, the Apache feather logo, and the Apache 
+          Chemistry project logo are trademarks of The Apache Software 
+          Foundation.
+          <br>
+          Content Management Interoperability Services (CMIS) is an
+          <a href="https://www.oasis-open.org/committees/cmis/">OASIS</a>
+          specification.
+       </div>
+       <!-- Footer -->
+       </div>
+     </td>
+     <td id="cell-3-2">&nbsp;</td>
+    </tr>
+    <tr width="100%">
+      <td id="cell-4-0">&nbsp;</td>
+      <td id="cell-4-1">&nbsp;</td>
+      <td id="cell-4-2">&nbsp;</td>
+    </tr>
+  </table>
+  <script type="text/javascript" src="/resources/retina.min.js"></script>
+  <link rel="stylesheet" href="/resources/xcode.css">
+  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.1/build/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+</body>
+</html>

@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<!--
+
+    Licensed to the Apache Software Foundation (ASF) under one or more
+    contributor license agreements.  See the NOTICE file distributed with
+    this work for additional information regarding copyright ownership.
+    The ASF licenses this file to You under the Apache License, Version 2.0
+    (the "License"); you may not use this file except in compliance with
+    the License.  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="author" content="Apache Chemistry">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+
+    <title>Working with Properties and Secondary Types - Apache Chemistry Samples</title>
+
+    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link href="../../css/cinder.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.css">
+
+
+    <link href="../../css/chemistry.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+    
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../../index.html">Apache Chemistry Samples</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../index.html">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Repository <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../create-session/index.html">Creating a Session</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../capabilities/index.html">Getting Repository Capabilities</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../types/index.html">Working with Types</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../exceptions/index.html">CMIS Exceptions</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">CRUD <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../retrieve-objects/index.html">Retrieving Objects</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../create-objects/index.html">Creating Objects</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../update-objects/index.html">Updating Objects</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../move-objects/index.html">Moving Object</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../delete-objects/index.html">Deleting Objects</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../content/index.html">Working with Content</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../versions/index.html">Working with Versions</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="index.html">Working with Properties and Secondary Types</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../operation-context/index.html">Understanding the Operation Context</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../lists/index.html">Working with Lists, Paging and Skipping</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../extensions/index.html">Getting Extensions</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Query <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../queries/index.html">Executing Queries</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../query-examples/index.html">Query Examples</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../changelog/index.html">Retrieving the Change Log</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Access Control <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../allowable-actions/index.html">Checking Allowable Actions</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../access-control/index.html">Managing Access Control</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../retention/index.html">Retention and Holds</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../about/index.html">About</a>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search" aria-hidden="true"></i> Search
+                    </a>
+                </li>
+                
+                    <li >
+                        <a rel="next" href="../versions/index.html">
+                            <i class="fa fa-arrow-left" aria-hidden="true"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../operation-context/index.html">
+                            Next <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                
+                <li>
+                    <a href="https://www.apache.org" style="padding: 2px;">
+                        <img src="../../img/feather.png">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="first-level active"><a href="#working-with-properties-and-secondary-types">Working with Properties and Secondary Types</a></li>
+        
+            <li class="second-level"><a href="#data-types">Data Types</a></li>
+            
+        
+            <li class="second-level"><a href="#properties">Properties</a></li>
+            
+                <li class="third-level"><a href="#retrieving-properties">Retrieving Properties</a></li>
+            
+                <li class="third-level"><a href="#setting-properties">Setting Properties</a></li>
+            
+        
+            <li class="second-level"><a href="#secondary-types">Secondary Types</a></li>
+            
+                <li class="third-level"><a href="#setting-secondary-types">Setting Secondary Types</a></li>
+            
+                <li class="third-level"><a href="#adding-secondary-types">Adding Secondary Types</a></li>
+            
+                <li class="third-level"><a href="#removing-secondary-types">Removing Secondary Types</a></li>
+            
+        
+    
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="working-with-properties-and-secondary-types">Working with Properties and Secondary Types</h1>
+<h2 id="data-types">Data Types</h2>
+<p><span class="cmis">CMIS 1.0</span>
+<span class="cmis">CMIS 1.1</span></p>
+<p>The table below shows how the CMIS data types are mapped to Java and C# data types.
+Multi-value property values are set and returned as lists of these data types.</p>
+<table>
+<thead>
+<tr>
+<th>CMIS Data Type</th>
+<th>OpenCMIS (Java)</th>
+<th>PortCMIS (C#)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>string</strong></td>
+<td><strong>String</strong></td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td><strong>boolean</strong></td>
+<td><strong>Boolean</strong></td>
+<td><strong>bool</strong></td>
+</tr>
+<tr>
+<td><strong>decimal</strong></td>
+<td><strong>BigDecimal</strong>, float, double, byte, short, int, long</td>
+<td><strong>decimal</strong>, float, double</td>
+</tr>
+<tr>
+<td><strong>integer</strong></td>
+<td><strong>BigInteger</strong>, byte, short, int, long</td>
+<td><strong>BigInteger</strong>, sbyte, byte, short, ushort, int, uint, long</td>
+</tr>
+<tr>
+<td><strong>datetime</strong></td>
+<td><strong>GregorianCalendar</strong>, Date</td>
+<td><strong>DateTime</strong></td>
+</tr>
+<tr>
+<td><strong>uri</strong></td>
+<td><strong>String</strong></td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td><strong>id</strong></td>
+<td><strong>String</strong></td>
+<td><strong>string</strong></td>
+</tr>
+<tr>
+<td><strong>html</strong></td>
+<td><strong>String</strong></td>
+<td><strong>string</strong></td>
+</tr>
+</tbody>
+</table>
+<h2 id="properties">Properties</h2>
+<h3 id="retrieving-properties">Retrieving Properties</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Only the properties that have been requested are available. Use an <a href="../operation-context/index.html#property-filter">Operation Context</a> to define, which properties should be provided by the repository.</p>
+</div>
+<p>The value of a property that is not set, has not been provided by the repository, or of a property that does not exits is <code>null</code>.</p>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">Document doc = ...
+
+// properties defined in the CMIS specification have getters (here are just a few examples)
+String id = doc.getId();
+String name = doc.getName();
+String creator = doc.getCreatedBy();
+GregorianCalendar lastModification = doc.getLastModificationDate();
+
+
+// all property values can be accessed by their property ID
+String name2 = doc.getPropertyValue(&quot;cmis:name&quot;);
+BigInteger projectNumber = doc.getPropertyValue(&quot;project:number&quot;);
+
+// multi value property values are always returned as lists
+List&lt;String&gt; colors = doc.getPropertyValue(&quot;project:colors&quot;);
+
+// there is detailed information about a property available for generic clients
+Property&lt;String&gt; nameProp = doc.getProperty(&quot;cmis:name&quot;);
+PropertyType namePropType = nameProp.getType();
+boolean nameMultiValued = nameProp.isMultiValued();
+String name3 = nameProp.getValue();
+
+Property&lt;Boolean&gt; lightsProp = doc.getProperty(&quot;lights:on&quot;);
+PropertyType lightsPropType = lightsProp.getType();
+boolean lightsMultiValued = lightsProp.isMultiValued();
+Boolean lightsValue = lightsProp.getValue();
+</code></pre>
+
+<p class="portcmis">PortCMIS (C#)</p>
+<pre><code class="csharp">IDocument doc = ...
+
+// properties defined in the CMIS specification have getters (here are just a few examples)
+string id = doc.Id;
+string name = doc.Name;
+string creator = doc.CreatedBy;
+DateTime? lastModification = doc.LastModificationDate;
+
+// all property values can be accessed by their property ID
+string name2 = doc.GetPropertyAsStringValue(&quot;cmis:name&quot;);
+BigInteger projectNumber = (BigInteger)doc.GetPropertyValue(&quot;project:number&quot;);
+
+// multi value property values are always returned as lists
+IList&lt;string&gt; colors = (IList&lt;string&gt;)doc.GetPropertyValue(&quot;project:colors&quot;);
+
+// there is detailed information about a property available for generic clients
+IProperty nameProp = doc[&quot;cmis:name&quot;];
+PropertyType? namePropType = nameProp.PropertyType;
+bool nameMultiValued = nameProp.IsMultiValued;
+string name3 = (string)nameProp.Value;
+
+IProperty lightsProp = doc[&quot;lights:on&quot;];
+PropertyType? lightsPropType = lightsProp.PropertyType;
+bool lightsMultiValued = lightsProp.IsMultiValued;
+bool? lightsValue = (bool?)lightsProp.Value;
+
+</code></pre>
+
+<h3 id="setting-properties">Setting Properties</h3>
+<p>Before OpenCMIS or PortCMIS sends properties to a repository, it checks the type definition whether the properties exist or not, if the data types match, and if multi-value properties contain <code>null</code> values. If it detects a problem, it throws an exception before it sends anything to the repository.</p>
+<p>If a property cannot be set, for example because it is a read-only property, OpenCMIS or PortCMIS silently filters out the property. The value is not sent to the repository.</p>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">Map&lt;String, Object&gt; properties = new HashMap&lt;String, Object&gt;();
+
+// adding single value properties
+properties.put(PropertyIds.NAME, &quot;the-tower&quot;);
+properties.put(&quot;project:number&quot;, 1234);
+properties.put(&quot;project:now&quot;, new GregorianCalendar());
+properties.put(&quot;project:onTime&quot;, true);
+properties.put(&quot;project:budget&quot;, new BigDecimal(&quot;654321.98&quot;));
+
+// adding a multi value property
+List&lt;String&gt; colors = new ArrayList&lt;String&gt;();
+colors.add(&quot;red&quot;);
+colors.add(&quot;green&quot;);
+colors.add(&quot;blue&quot;);
+
+properties.put(&quot;project:colors&quot;, colors); 
+
+// unsetting a property
+properties.put(&quot;project:something&quot;, null);
+
+// call create... or update...
+</code></pre>
+
+<p class="portcmis">PortCMIS (C#)</p>
+<pre><code class="csharp">IDictionary&lt;string, object&gt; properties = new Dictionary&lt;string, object&gt;();
+
+// adding single value properties
+properties[PropertyIds.Name] = &quot;the-tower&quot;;
+properties[&quot;project:number&quot;] = 1234;
+properties[&quot;project:now&quot;] = DateTime.Now;
+properties[&quot;project:onTime&quot;] = true;
+properties[&quot;project:budget&quot;] = 654321.98M;
+
+// adding a multi value property
+IList&lt;string&gt; colors = new List&lt;string&gt;();
+colors.Add(&quot;red&quot;);
+colors.Add(&quot;green&quot;);
+colors.Add(&quot;blue&quot;);
+
+properties[&quot;project:colors&quot;] = colors; 
+
+// unsetting a property
+properties[&quot;project:something&quot;] = null;
+
+// call Create... or Update...
+</code></pre>
+
+<h2 id="secondary-types">Secondary Types</h2>
+<p><span class="cmis">CMIS 1.1</span>
+<span class="spec">Spec 2.1.19</span></p>
+<p>Secondary types can be added during creation of an object and later added and removed by updating its properties.</p>
+<p>In general, secondary types can be added and removed at any time.
+But a repository may have rules and constraints that prevents a client from making those changes.</p>
+<h3 id="setting-secondary-types">Setting Secondary Types</h3>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">Folder parent = ...
+
+Map&lt;String, Object&gt; properties = new HashMap&lt;String, Object&gt;();
+
+// set standard CMIS properties
+properties.put(PropertyIds.NAME, &quot;MyNewDocument&quot;);
+properties.put(PropertyIds.OBJECT_TYPE_ID, &quot;cmis:document&quot;);
+
+// add two secondary types
+List&lt;String&gt; secondaryTypes = new ArrayList&lt;String&gt;();
+secondaryTypes.add(&quot;custom:classifictaion&quot;);
+secondaryTypes.add(&quot;custom:draft&quot;);
+
+properties.put(PropertyIds.SECONDARY_OBJECT_TYPE_IDS, secondaryTypes);
+
+// set secondary type properties
+properties.put(&quot;classifictaion&quot;, &quot;confidential&quot;);
+properties.put(&quot;draftState&quot;, &quot;early&quot;);
+
+ContentStream contentStream = ...
+
+// create the document
+Document newDoc = parent.createDocument(properties, contentStream, VersioningState.NONE);
+</code></pre>
+
+<p class="portcmis">PortCMIS (C#)</p>
+<pre><code class="csharp">IFolder parent = ...
+
+IDictionary&lt;string, object&gt; properties = new Dictionary&lt;string, object&gt;();
+
+// set standard CMIS properties
+properties[PropertyIds.Name] = &quot;MyNewDocument&quot;;
+properties[PropertyIds.ObjectTypeId] = &quot;cmis:document&quot;;
+
+// add two secondary types
+IList&lt;string&gt; secondaryTypes = new List&lt;string&gt;();
+secondaryTypes.Add(&quot;custom:classifictaion&quot;);
+secondaryTypes.Add(&quot;custom:draft&quot;);
+
+properties[PropertyIds.SecondaryObjectTypeIds] = secondaryTypes;
+
+// set secondary type properties
+properties[&quot;classifictaion&quot;] = &quot;confidential&quot;;
+properties[&quot;draftState&quot;] = &quot;early&quot;;
+
+ContentStream contentStream = ...
+
+// create the document
+IDocument newDoc = parent.CreateDocument(properties, contentStream, VersioningState.None);
+</code></pre>
+
+<h3 id="adding-secondary-types">Adding Secondary Types</h3>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">CmisObject cmisObject = ...
+
+// get current list of secondary types
+List&lt;String&gt; secondaryTypes = doc.getPropertyValue(PropertyIds.SECONDARY_OBJECT_TYPE_IDS);
+if (secondaryTypes == null) {
+    secondaryTypes = new ArrayList&lt;String&gt;();
+}
+
+Map&lt;String, Object&gt; properties = new HashMap&lt;String, Object&gt;();
+
+// add the new secondary type
+secondaryTypes.add(&quot;custom:classifictaion&quot;);
+properties.put(PropertyIds.SECONDARY_OBJECT_TYPE_IDS, secondaryTypes);
+
+// set secondary type property
+properties.put(&quot;classifictaion&quot;, &quot;public&quot;);
+
+// update
+cmisObject.updateProperties(properties);
+</code></pre>
+
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">// the convenient way...
+
+CmisObject cmisObject = ...
+
+// set secondary type property
+Map&lt;String, Object&gt; properties = new HashMap&lt;String, Object&gt;();
+properties.put(&quot;classifictaion&quot;, &quot;public&quot;);
+
+// update with secondary type
+cmisObject.updateProperties(properties, Collections.singletonList(&quot;custom:classifictaion&quot;), null);
+
+</code></pre>
+
+<p class="portcmis">PortCMIS (C#)</p>
+<pre><code class="csharp">ICmisObject cmisObject = ...
+
+// get current list of secondary types
+IList&lt;string&gt; secondaryTypes = (IList&lt;string&gt;)doc.GetPropertyValue(PropertyIds.SecondaryObjectTypeIds);
+if (secondaryTypes == null) {
+    secondaryTypes = new List&lt;string&gt;();
+}
+
+IDictonary&lt;string, object&gt; properties = new Dictonary&lt;string, object&gt;();
+
+// add the new secondary type
+secondaryTypes.Add(&quot;custom:classifictaion&quot;);
+properties[PropertyIds.SecondaryObjectTypeIds] = secondaryTypes;
+
+// set secondary type property
+properties[&quot;classifictaion&quot;] = &quot;public&quot;;
+
+// update
+cmisObject.UpdateProperties(properties);
+</code></pre>
+
+<h3 id="removing-secondary-types">Removing Secondary Types</h3>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">CmisObject cmisObject = ...
+
+// get the current list of secondary types
+List&lt;String&gt; secondaryTypes = doc.getPropertyValue(PropertyIds.SECONDARY_OBJECT_TYPE_IDS);
+if (secondaryTypes == null || !secondaryTypes.contains(&quot;custom:classifictaion&quot;)) {
+    // there is nothing to remove
+    return;
+}
+
+Map&lt;String, Object&gt; properties = new HashMap&lt;String, Object&gt;();
+
+// remove the new secondary type
+secondaryTypes.remove(&quot;custom:classifictaion&quot;);
+properties.put(PropertyIds.SECONDARY_OBJECT_TYPE_IDS, secondaryTypes);
+
+// update
+cmisObject.updateProperties(properties);
+</code></pre>
+
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">// the convenient way...
+
+CmisObject cmisObject = ...
+
+// remove secondary type
+cmisObject.updateProperties(null, null, Collections.singletonList(&quot;custom:classifictaion&quot;));
+
+</code></pre>
+
+<p class="portcmis">PortCMIS (C#)</p>
+<pre><code class="csharp">ICmisObject cmisObject = ...
+
+// get current list of secondary types
+IList&lt;string&gt; secondaryTypes = (IList&lt;string&gt;)doc.GetPropertyValue(PropertyIds.SecondaryObjectTypeIds);
+if (secondaryTypes == null || !secondaryTypes.Contains(&quot;custom:classifictaion&quot;)) {
+    // there is nothing to remove
+    return;
+}
+
+IDictionary&lt;string, object&gt; properties = new Dictionary&lt;string, object&gt;();
+
+// remove the secondary type
+secondaryTypes.Remove(&quot;custom:classifictaion&quot;);
+properties[PropertyIds.SecondaryObjectTypeIds] = secondaryTypes;
+
+// update
+cmisObject.UpdateProperties(properties);
+</code></pre></div>
+        
+    </div>
+
+    <footer class="col-md-12 text-center">
+        <hr>
+        <p>
+    </footer>
+
+    <script src="../../js/jquery-1.10.2.min.js"></script>
+    <script src="../../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '../..';
+    </script>
+    <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+    <script src="../../js/base.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        From here you can search these documents. Enter your search terms below.
+                    </p>
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                        </div>
+                    </form>
+                    <div id="mkdocs-search-results"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../../js/retina.min.js"></script>
+    </body>
+
+</html>
+<!-- last update: 2017-07-31 12:45:42 -->

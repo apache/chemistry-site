@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<!--
+
+    Licensed to the Apache Software Foundation (ASF) under one or more
+    contributor license agreements.  See the NOTICE file distributed with
+    this work for additional information regarding copyright ownership.
+    The ASF licenses this file to You under the Apache License, Version 2.0
+    (the "License"); you may not use this file except in compliance with
+    the License.  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="author" content="Apache Chemistry">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+
+    <title>Creating Objects - Apache Chemistry Samples</title>
+
+    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link href="../../css/cinder.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.css">
+
+
+    <link href="../../css/chemistry.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+    
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../../index.html">Apache Chemistry Samples</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../index.html">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Repository <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../create-session/index.html">Creating a Session</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../capabilities/index.html">Getting Repository Capabilities</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../types/index.html">Working with Types</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../exceptions/index.html">CMIS Exceptions</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">CRUD <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../retrieve-objects/index.html">Retrieving Objects</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="index.html">Creating Objects</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../update-objects/index.html">Updating Objects</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../move-objects/index.html">Moving Object</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../delete-objects/index.html">Deleting Objects</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../content/index.html">Working with Content</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../versions/index.html">Working with Versions</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../properties/index.html">Working with Properties and Secondary Types</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../operation-context/index.html">Understanding the Operation Context</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../lists/index.html">Working with Lists, Paging and Skipping</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../extensions/index.html">Getting Extensions</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Query <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../queries/index.html">Executing Queries</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../query-examples/index.html">Query Examples</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../changelog/index.html">Retrieving the Change Log</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Access Control <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../allowable-actions/index.html">Checking Allowable Actions</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../access-control/index.html">Managing Access Control</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../retention/index.html">Retention and Holds</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../about/index.html">About</a>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search" aria-hidden="true"></i> Search
+                    </a>
+                </li>
+                
+                    <li >
+                        <a rel="next" href="../retrieve-objects/index.html">
+                            <i class="fa fa-arrow-left" aria-hidden="true"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../update-objects/index.html">
+                            Next <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                
+                <li>
+                    <a href="https://www.apache.org" style="padding: 2px;">
+                        <img src="../../img/feather.png">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="first-level active"><a href="#creating-objects">Creating Objects</a></li>
+        
+            <li class="second-level"><a href="#creating-a-folder">Creating a Folder</a></li>
+            
+        
+            <li class="second-level"><a href="#creating-a-document">Creating a Document</a></li>
+            
+                <li class="third-level"><a href="#creating-a-documet-from-source-copy-content">Creating a Documet from Source (Copy Content)</a></li>
+            
+        
+            <li class="second-level"><a href="#creating-a-relationship">Creating a Relationship</a></li>
+            
+        
+            <li class="second-level"><a href="#creating-a-policy">Creating a Policy</a></li>
+            
+        
+            <li class="second-level"><a href="#creating-an-item">Creating an Item</a></li>
+            
+        
+            <li class="second-level"><a href="#creating-object-with-a-folder-object-vs-creating-object-with-the-session-object">Creating object with a Folder Object vs Creating object with the Session Object</a></li>
+            
+        
+    
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="creating-objects">Creating Objects</h1>
+<p>To create an object a client has to provide a least the two properties <strong>cmis:name</strong> and <strong>cmis:objectTypeId</strong>.<br />
+<strong>cmis:name</strong> sets the name of the object and <strong>cmis:objectTypeId</strong> sets its object type.<br />
+Depending on the object type, more properties can be set or must be set. See also the page about <a href="../properties/index.html">properties</a>.</p>
+<h2 id="creating-a-folder">Creating a Folder</h2>
+<p><span class="cmis">CMIS 1.0</span>
+<span class="cmis">CMIS 1.1</span>
+<span class="spec">Spec 2.1.5</span></p>
+<p>A folder is always a <abbr title="An object is called &quot;filed&quot; if it resides in one or more folders.">filed</abbr> object. That is, you always need a parent folder.</p>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">Folder parent = ....
+
+// prepare properties
+Map&lt;String, Object&gt; properties = new HashMap&lt;String, Object&gt;();
+properties.put(PropertyIds.NAME, &quot;a new folder&quot;);
+properties.put(PropertyIds.OBJECT_TYPE_ID, &quot;cmis:folder&quot;);
+
+// create the folder
+Folder newFolder = parent.createFolder(properties);
+</code></pre>
+
+<p class="portcmis">PortCMIS (C#)</p>
+<pre><code class="csharp">IFolder parent = ....
+
+// prepare properties
+IDictionary&lt;string, object&gt; properties = new Dictionary&lt;string, object&gt;();
+properties[PropertyIds.Name] = &quot;a new folder&quot;;
+properties[PropertyIds.ObjectTypeId] = &quot;cmis:folder&quot;;
+
+// create the folder
+IFolder newFolder = parent.CreateFolder(properties);
+</code></pre>
+
+<h2 id="creating-a-document">Creating a Document</h2>
+<p><span class="cmis">CMIS 1.0</span>
+<span class="cmis">CMIS 1.1</span>
+<span class="spec">Spec 2.1.4</span></p>
+<p>Documents can be <abbr title="An object is called &quot;filed&quot; if it resides in one or more folders.">filed</abbr> and <abbr title="An object is called &quot;unfiled&quot; if it doesn't reside in a folder. Folders cannot be unfiled.">unfiled</abbr>. The following samples show how to create a <abbr title="An object is called &quot;filed&quot; if it resides in one or more folders.">filed</abbr> document. Use the session object to create an <abbr title="An object is called &quot;unfiled&quot; if it doesn't reside in a folder. Folders cannot be unfiled.">unfiled</abbr> document.</p>
+<p>See also the <a href="../content/index.html">page about content</a> how to work with content streams.</p>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="Java">Folder parent = ....
+
+String textFileName = &quot;test.txt&quot;;
+
+// prepare content - a simple text file
+String content = &quot;Hello World!&quot;;
+
+String filename = textFileName;
+String mimetype = &quot;text/plain; charset=UTF-8&quot;;
+
+byte[] contentBytes = content.getBytes(&quot;UTF-8&quot;);
+ByteArrayInputStream stream = new ByteArrayInputStream(contentBytes);
+
+ContentStream contentStream = session.getObjectFactory().createContentStream(filename, contentBytes.length, mimetype, stream);
+
+// prepare properties
+Map&lt;String, Object&gt; properties = new HashMap&lt;String, Object&gt;();
+properties.put(PropertyIds.NAME, textFileName);
+properties.put(PropertyIds.OBJECT_TYPE_ID, &quot;cmis:document&quot;);
+
+// create the document
+Document newDoc = parent.createDocument(properties, contentStream, VersioningState.NONE);
+</code></pre>
+
+<p class="portcmis">PortCMIS (C#)</p>
+<pre><code class="csharp">IFolder parent = ....
+
+string textFileName = &quot;test.txt&quot;;
+
+// prepare content - a simple text file
+string content = &quot;Hello World!&quot;;
+
+string filename = textFileName;
+string mimetype = &quot;text/plain; charset=UTF-8&quot;;
+
+byte[] contentBytes = Encoding.UTF8.GetBytes(content);
+Stream stream = new MemoryStream(contentBytes);
+
+IContentStream contentStream = session.ObjectFactory.CreateContentStream(filename, contentBytes.length, mimetype, stream);
+
+// prepare properties
+IDictionary&lt;string, object&gt; properties = new Dictionary&lt;string, object&gt;();
+properties[PropertyIds.Name] = textFileName;
+properties[PropertyIds.ObjectTypeId] = &quot;cmis:document&quot;;
+
+// create the document
+IDocument newDoc = parent.CreateDocument(properties, contentStream, VersioningState.None);
+</code></pre>
+
+<h3 id="creating-a-documet-from-source-copy-content">Creating a Documet from Source (Copy Content)</h3>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="Java">Folder folder = ...
+Document doc = ...
+
+doc.copy(folder); // create a copy of the document in this folder
+</code></pre>
+
+<p class="portcmis">PortCMIS (C#)</p>
+<pre><code class="csharp">IFolder folder = ...
+IDocument doc = ...
+
+doc.Copy(folder); // create a copy of the document in this folder
+</code></pre>
+
+<h2 id="creating-a-relationship">Creating a Relationship</h2>
+<p><span class="cmis">CMIS 1.0</span>
+<span class="cmis">CMIS 1.1</span>
+<span class="spec">Spec 2.1.6</span></p>
+<p>Relationships are always <abbr title="An object is called &quot;unfiled&quot; if it doesn't reside in a folder. Folders cannot be unfiled.">unfiled</abbr> objects. The ID of the source object and the ID of the target object must be provided.
+See the <a href="../types/index.html">page about types</a> how to discover relationship types and their properties.</p>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">String sourceId = ...
+String targetId = ...
+
+Map&lt;String, Object&gt; properties = new HashMap&lt;String, Object&gt;();
+properties.put(PropertyIds.NAME, &quot;a new relationship&quot;);
+properties.put(PropertyIds.OBJECT_TYPE_ID, &quot;my:relationsip&quot;);
+properties.put(PropertyIds.SOURCE_ID, sourceId);
+properties.put(PropertyIds.TARGET_ID, targetId);
+
+ObjectId newRelId = session.createRelationship(properties);
+</code></pre>
+
+<p class="portcmis">PortCMIS (C#)</p>
+<pre><code class="csharp">string sourceId = ...
+string targetId = ...
+
+IDictionary&lt;string, object&gt; properties = new Dictionary&lt;string, object&gt;();
+properties[PropertyIds.Name] = &quot;a new relationship&quot;;
+properties[PropertyIds.ObjectTypeId] = &quot;my:relationsip&quot;;
+properties[PropertyIds.SourceId] = sourceId;
+properties[PropertyIds.TargetId] = targetId;
+
+IObjectId newRelId = session.CreateRelationship(properties);
+</code></pre>
+
+<h2 id="creating-a-policy">Creating a Policy</h2>
+<p><span class="cmis">CMIS 1.0</span>
+<span class="cmis">CMIS 1.1</span>
+<span class="spec">Spec 2.1.7</span></p>
+<p>Policies can be <abbr title="An object is called &quot;filed&quot; if it resides in one or more folders.">filed</abbr> and <abbr title="An object is called &quot;unfiled&quot; if it doesn't reside in a folder. Folders cannot be unfiled.">unfiled</abbr>. The following samples show how to create a <abbr title="An object is called &quot;filed&quot; if it resides in one or more folders.">filed</abbr> policy. Use the session object to create an <abbr title="An object is called &quot;unfiled&quot; if it doesn't reside in a folder. Folders cannot be unfiled.">unfiled</abbr> policy.</p>
+<p>In most cases it doesn&rsquo;t make sense to create an policies of the type <code>cmis:policy</code> because it has no semantics. Usually, the repository provides specific policy types with or without additional properties. See the <a href="../types/index.html">page about types</a> how to discover policy types and their properties.</p>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">Folder parent = ....
+
+// prepare properties
+Map&lt;String, Object&gt; properties = new HashMap&lt;String, Object&gt;();
+properties.put(PropertyIds.NAME, &quot;a new policy&quot;);
+properties.put(PropertyIds.OBJECT_TYPE_ID, &quot;my:policy&quot;);
+properties.put(PropertyIds.POLICY_TEXT, &quot;my policy description&quot;);
+
+// create the policy
+Policy newPolicy = parent.createPolicy(properties);
+</code></pre>
+
+<p class="portcmis">PortCMIS (C#)</p>
+<pre><code class="csharp">IFolder parent = ....
+
+// prepare properties
+IDictionary&lt;string, object&gt; properties = new Dictionary&lt;string, object&gt;();
+properties[PropertyIds.Name] = &quot;a new policy&quot;;
+properties[PropertyIds.ObjectTypeId] = &quot;my:policy&quot;;
+properties[PropertyIds.PolicyText] = &quot;my policy description&quot;;
+
+// create the policy
+IPolicy newPolicy = parent.CreatePolicy(properties);
+</code></pre>
+
+<h2 id="creating-an-item">Creating an Item</h2>
+<p><span class="cmis">CMIS 1.1</span>
+<span class="spec">Spec 2.1.8</span></p>
+<p>Items can be <abbr title="An object is called &quot;filed&quot; if it resides in one or more folders.">filed</abbr> and <abbr title="An object is called &quot;unfiled&quot; if it doesn't reside in a folder. Folders cannot be unfiled.">unfiled</abbr>. The following samples show how to create a <abbr title="An object is called &quot;filed&quot; if it resides in one or more folders.">filed</abbr> item. Use the session object to create an <abbr title="An object is called &quot;unfiled&quot; if it doesn't reside in a folder. Folders cannot be unfiled.">unfiled</abbr> item.</p>
+<p>In most cases it doesn&rsquo;t make sense to create an item of the type <code>cmis:item</code>. Usually, the repository provides specific item types with or without additional properties. See the <a href="../types/index.html">page about types</a> how to discover item types and their properties.</p>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">Folder parent = ....
+
+// prepare properties
+Map&lt;String, Object&gt; properties = new HashMap&lt;String, Object&gt;();
+properties.put(PropertyIds.NAME, &quot;a new item&quot;);
+properties.put(PropertyIds.OBJECT_TYPE_ID, &quot;my:item&quot;);
+
+// create the item
+Item newItem = parent.createItem(properties);
+</code></pre>
+
+<p class="portcmis">PortCMIS (C#)</p>
+<pre><code class="csharp">IFolder parent = ....
+
+// prepare properties
+IDictionary&lt;string, object&gt; properties = new Dictionary&lt;string, object&gt;();
+properties[PropertyIds.Name] = &quot;a new item&quot;;
+properties[PropertyIds.ObjectTypeId] = &quot;cmis:item&quot;;
+
+// create the item
+IItem newItem = parent.CreateItem(properties);
+</code></pre>
+
+<h2 id="creating-object-with-a-folder-object-vs-creating-object-with-the-session-object">Creating object with a Folder Object vs Creating object with the Session Object</h2>
+<p>OpenCMIS and PortCMIS provide two ways to create objects.
+The code samples above create objects in a folder. It is also possible to create an object with the session object
+and without getting the parent folder first.</p>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">Map&lt;String, Object&gt; properties = new HashMap&lt;String, Object&gt;();
+properties.put(PropertyIds.OBJECT_TYPE_ID, &quot;cmis:folder&quot;);
+properties.put(PropertyIds.NAME, &quot;a new folder&quot;);
+
+ObjectId newFolderId = session.createFolder(properties, parentId);
+</code></pre>
+
+<p>Both approaches have advantages and disadvantages.</p>
+<p>Creating an object with a folder object is more convenient. The create methods return the newly created object.</p>
+<p>Creating an object with the session object is faster because it only needs one round-trip to the server. But it only returns the ID of the newly created object.</p>
+<p>Unfiled objects can only be created with the session object.</p></div>
+        
+    </div>
+
+    <footer class="col-md-12 text-center">
+        <hr>
+        <p>
+    </footer>
+
+    <script src="../../js/jquery-1.10.2.min.js"></script>
+    <script src="../../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '../..';
+    </script>
+    <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+    <script src="../../js/base.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        From here you can search these documents. Enter your search terms below.
+                    </p>
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                        </div>
+                    </form>
+                    <div id="mkdocs-search-results"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../../js/retina.min.js"></script>
+    </body>
+
+</html>
+<!-- last update: 2017-07-31 12:45:42 -->

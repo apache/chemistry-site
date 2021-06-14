@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<!--
+
+    Licensed to the Apache Software Foundation (ASF) under one or more
+    contributor license agreements.  See the NOTICE file distributed with
+    this work for additional information regarding copyright ownership.
+    The ASF licenses this file to You under the Apache License, Version 2.0
+    (the "License"); you may not use this file except in compliance with
+    the License.  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link type="text/css" rel="stylesheet" href="/resources/site.css" />
+    <script src="/resources/space.js" type="text/javascript"></script>
+    <meta name="keywords" content="CMIS, Content Management Interoperability Service, ECM, Enterprise Content Management, OASIS, integration standards, Chemistry, OpenCMIS, cmislib, DotCMIS, PortCMIS, ObjectiveCMIS" />
+    <meta name="description" content="Apache Chemistry, CMIS Implementation" />
+    <link rel="shortcut icon" href="/favicon.ico">
+    <title>Apache Chemistry - OpenCMIS Overview</title>
+    <style>
+.headerlink {
+    visibility: hidden;
+}
+dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover > .headerlink, h2:hover > .headerlink, h3:hover > .headerlink, h4:hover > .headerlink, h5:hover > .headerlink, h6:hover > .headerlink {
+    visibility: visible;
+}
+    </style>
+  </head>
+<body onload="init()">
+  <table width="100%" cellpadding="0" cellspacing="0">
+    <tr width="100%">
+      <td id="cell-0-0">&nbsp;</td>
+      <td id="cell-0-1">&nbsp;</td>
+      <td id="cell-0-2">&nbsp;</td>
+    </tr>
+    <tr width="100%">
+      <td id="cell-1-0">&nbsp;</td>
+      <td id="cell-1-1">
+        <div id="banner" style="padding: 0px;">
+          <!-- Banner -->
+          <A href="https://chemistry.apache.org/" title="Apache Chemistry">
+            <IMG src="/images/chemistry_tm_logo.png" style="float:left; border:0px;"/>
+          </A>
+          <A href="https://www.apache.org/" title="The Apache Software Foundation">
+            <IMG src="/images/asf-logo.png"  style="float:right; border:0px;"/>
+           </A>
+          <!-- Banner -->
+        </div>
+        <div id="top-menu">
+          <table border="0" cellpadding="1" cellspacing="0" width="100%">
+            <tr>
+              <td>
+                <div align="left">
+                <!-- Breadcrumbs -->
+<a href="/">Home</a>&nbsp;&raquo&nbsp;<a href="/java/">Java</a>&nbsp;&raquo&nbsp;<a href="#">OpenCMIS Overview</a>
+                <!-- Breadcrumbs -->
+                </div>
+              </td>
+              <td>
+                <div align="right">
+                <!-- Quicklinks -->
+<P>
+<A href="https://www.apache.org/" class="external-link" rel="nofollow">Apache</A>
+|
+<A href="https://www.apache.org/licenses/LICENSE-2.0.html" class="external-link" rel="nofollow">License</A>
+</P>
+                <!-- Quicklinks -->
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td id="cell-1-2">&nbsp;</td>
+    </tr>
+    <tr width="100%">
+      <td id="cell-2-0">&nbsp;</td>
+      <td id="cell-2-1">
+        <table>
+          <tr height="100%" valign="top">
+            <td height="100%">
+              <div id="wrapper-menu-page-right">
+                <div id="wrapper-menu-page-top">
+                  <div id="wrapper-menu-page-bottom">
+                    <div id="menu-page">
+                      <!-- NavigationBar -->
+
+<H3><A name="Navigation-Overview"></A>Overview</H3>
+
+<UL class="alternate" type="square">
+   <LI><A href="/project/cmis.html" title="What's CMIS">What is CMIS?</A></LI>
+   <LI><A href="https://www.apache.org/licenses/" class="external-link" rel="nofollow">License</A></LI>
+   <LI><A href="/project/community.html" title="Community">Community</A></LI>
+   <LI><A href="https://lists.apache.org/list.html?dev@chemistry.apache.org" class="external-link" rel="nofollow">Mailing List</A></LI>
+   <LI><A href="https://issues.apache.org/jira/browse/CMIS" class="external-link" rel="nofollow">Issue Tracking</A></LI>
+   <LI><A href="https://www.apache.org/security/" class="external-link" rel="nofollow">Security</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-Search"></A>Search</H3>
+
+<DIV style="padding: 0px 0px 0px 20px;">
+<FORM action="https://www.google.com/search" method="get" style="font-size: 10px;">
+<INPUT name="ie" type="hidden" value="UTF-8"></INPUT>
+<INPUT name="oe" type="hidden" value="UTF-8"></INPUT>
+  <INPUT maxlength="255" name="q" size="12" type="text" value=""></INPUT>
+  <INPUT name="btnG" type="submit" value="Search"></INPUT>
+  <INPUT name="domains" type="hidden" value="chemistry.apache.org"></INPUT>
+  <INPUT name="sitesearch" type="hidden" value="chemistry.apache.org"></INPUT>
+</FORM>
+</DIV>
+
+
+<H3><A name="Navigation-CMISforJava"></A>CMIS for Java</H3>
+
+<UL class="alternate" type="square">
+  <LI><A href="/java/opencmis.html" title="OpenCMIS Overview and Index">Overview</A></LI>
+  <LI><A href="/java/download.html" title="Downloads">Downloads</A></LI>
+  <LI><A href="/docs/cmis-samples/" title="Downloads">Code Samples</A></LI>
+  <LI><A href="/java/javadoc">JavaDoc</A></LI>
+  <LI><A href="https://svn.apache.org/repos/asf/chemistry/opencmis/trunk/" class="external-link" rel="nofollow">Source Code</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-CMISforPython"></A>CMIS for Python</H3>
+
+<UL class="alternate" type="square">
+  <LI><A href="/python/cmislib.html" title="cmislib">cmislib</A></LI>
+  <LI><A href="/python/docs/" rel="nofollow">cmislib Documentation</A></LI>
+  <LI><A href="https://svn.apache.org/repos/asf/chemistry/cmislib/trunk/" class="external-link" rel="nofollow">Source Code</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-CMISforPHP"></A>CMIS for PHP</H3>
+
+<UL class="alternate" type="square">
+  <LI><A href="/php/phpclient.html" title="phpclient">CMIS PHP Client</A></LI>
+  <LI><A href="https://svn.apache.org/repos/asf/chemistry/phpclient/trunk/" class="external-link" rel="nofollow">Source Code</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-CMISfor.NET"></A>CMIS for .NET</H3>
+
+<UL class="alternate" type="square">
+  <LI><A href="/dotnet/dotcmis.html" title="DotCMIS">DotCMIS</A></LI>
+  <LI><A href="https://svn.apache.org/repos/asf/chemistry/dotcmis/trunk/" class="external-link" rel="nofollow">DotCMIS Source Code</A></LI>
+  <LI><A href="/dotnet/portcmis.html" title="PortCMIS">PortCMIS</A></LI>
+  <LI><A href="https://svn.apache.org/repos/asf/chemistry/portcmis/trunk/" class="external-link" rel="nofollow">PortCMIS Source Code</A></LI>
+  <LI><A href="/docs/cmis-samples/" title="Downloads">Code Samples</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-CMISforObjective-C"></A>CMIS for Objective-C</H3>
+
+<UL class="alternate" type="square">
+  <LI><A href="/objective-c/objectivecmis.html" title="ObjectiveCMIS">ObjectiveCMIS</A></LI>
+  <LI><A href="https://svn.apache.org/repos/asf/chemistry/objectivecmis/trunk/" class="external-link" rel="nofollow">Source Code</A></LI>
+</UL>
+
+<H3><A name="Navigation-CMISforJavaScript"></A>CMIS for JavaScript</H3>
+
+<UL class="alternate" type="square">
+  <LI><A href="/javascript/parts.html" title="Chemistry Parts">Chemistry Parts</A></LI>
+  <LI><A href="https://svn.apache.org/repos/asf/chemistry/parts/trunk/" class="external-link" rel="nofollow">Source Code</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-Sponsorship"></A>Sponsorship</H3>
+
+<UL class="alternate" type="square">
+   <LI><A href="https://www.apache.org/foundation/thanks.html" class="external-link" rel="nofollow">Thanks</A></LI>
+   <LI><A href="https://www.apache.org/foundation/sponsorship.html" class="external-link" rel="nofollow">Sponsoring Apache</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-Internal"></A>Internal Docs</H3>
+
+<UL class="alternate" type="square">
+   <LI><A href="/internal/internal-index.html" rel="nofollow"> Internal Documentation</A></LI>
+</UL>
+                    <!-- NavigationBar -->
+                    </div>
+                </div>
+              </div>
+            </div>
+           </td>
+           <td height="100%">
+             <!-- Content -->
+             <div class="wiki-content">    <h1 id="welcome-to-opencmis">Welcome to OpenCMIS<a class="headerlink" href="#welcome-to-opencmis" title="Permalink">&para;</a></h1>
+<p>Apache Chemistry OpenCMIS is a collection of Java libraries, frameworks and tools around the <a href="https://docs.oasis-open.org/cmis/CMIS/v1.0/cmis-spec-v1.0.html">CMIS 1.0</a> and <a href="https://docs.oasis-open.org/cmis/CMIS/v1.1/CMIS-v1.1.html">CMIS 1.1</a> specifications.</p>
+<p>The goal of OpenCMIS is to make CMIS simple for Java client and server
+developers. It hides the binding details and provides APIs and SPIs on
+different abstraction levels. It also includes test tools for content
+repository developers and client application developers.</p>
+<h1 id="getting-opencmis">Getting OpenCMIS<a class="headerlink" href="#getting-opencmis" title="Permalink">&para;</a></h1>
+<p>You can get OpenCMIS from the <a href="download.html">download page</a> or retrieve them from the Central repository if you are <a href="developing/dev-use-with-maven.html">using Maven</a>.</p>
+<h2 id="opencmis-releases">OpenCMIS releases<a class="headerlink" href="#opencmis-releases" title="Permalink">&para;</a></h2>
+<table class="table">
+<thead>
+<tr>
+<th>Release Version</th>
+<th>Date</th>
+<th>Release Notes</th>
+<th>Changelog</th>
+<th>Reports</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Release 1.1.0</td>
+<td>2017-04-05</td>
+<td><a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310936&amp;version=12338209">1.1.0</a></td>
+<td><a href="https://issues.apache.org/jira/secure/IssueNavigator.jspa?reset=true&amp;jqlQuery=project+%3D+CMIS+AND+fixVersion+%3D+12338209">1.1.0</a></td>
+<td>&nbsp;<a href="1.1.0/maven/">1.1.0</a></td>
+</tr>
+<tr>
+<td>Release 1.0.0</td>
+<td>2016-09-08</td>
+<td><a href="https://issues.apache.org/jira/secure/ReleaseNote.jspa?projectId=12310936&amp;version=12315135">1.0.0</a></td>
+<td><a href="https://issues.apache.org/jira/secure/IssueNavigator.jspa?reset=true&amp;jqlQuery=project+%3D+CMIS+AND+fixVersion+%3D+12315135">1.0.0</a></td>
+<td>&nbsp;<a href="1.0.0/maven/">1.0.0</a></td>
+</tr></tbody></table>
+<p>For older releases please browse the <a href="https://archive.apache.org/dist/chemistry/opencmis">Archives</a>.</p>
+<h1 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permalink">&para;</a></h1>
+<p>The OpenCMIS documentation is divided into the following sections:</p>
+<ul>
+<li><a href="/docs/cmis-samples">Apache Chemistry Code Samples page</a></li>
+<li><a href="https://github.com/cmisdocs/ServerDevelopmentGuideV2/blob/master/docs/OpenCMIS%20Server%20Development%20Guide%20-%202nd%20Edition.pdf?raw=true">OpenCMIS Server Development Guide</a></li>
+</ul>
+<h1 id="projects-using-opencmis">Projects using OpenCMIS<a class="headerlink" href="#projects-using-opencmis" title="Permalink">&para;</a></h1>
+<p>If your project or product makes use of OpenCMIS, please <a href="http://mail-archives.apache.org/mod_mbox/chemistry-dev/">let us know</a>.</p>
+<h2 id="client-api">Client API<a class="headerlink" href="#client-api" title="Permalink">&para;</a></h2>
+<ul>
+<li><strong>Alfresco 4.x CMIS Web Scripts</strong> - <a href="http://cmis.alfresco.com/">Project Site</a></li>
+<li><strong>Alfresco Web Quick Start</strong> - <a href="http://wiki.alfresco.com/wiki/Web_Quick_Start_Developer_Guide">Developer Guide</a></li>
+<li><strong>Alfresco / Jive integration</strong> - <a href="http://www.alfresco.com/products/integrations/jive/">Info Page</a></li>
+<li><strong>Apache ManifoldCF</strong> - <a href="https://manifoldcf.apache.org/">Project Site</a></li>
+<li><strong>CMIS connectivity for SAP Applications</strong></li>
+<li><strong>CMIS Explorer w/Adobe AIR</strong> - <a href="http://code.google.com/p/cmis-explorer/">Project Site</a></li>
+<li><strong>CMIS Workbench</strong> - <a href="developing/tools/dev-tools-workbench.html">Project Site</a></li>
+<li><strong>Confluence CMIS Plugin</strong> - <a href="http://code.google.com/p/confluence-cmis-plugin/">Project Site</a></li>
+<li><strong>IBM Content Navigator</strong> - <a href="http://www-03.ibm.com/software/products/en/content-navigator">Product Site</a></li>
+<li><strong>Liferay 6.1</strong> - <a href="http://www.liferay.com/">Company Site</a></li>
+<li><strong>SAP Mobile Documents</strong> / <strong>SAP Document Center</strong> - <a href="http://scn.sap.com/community/mobile-documents">Product Site</a> - <a href="http://scn.sap.com/docs/DOC-58559">Custom Java Client Development Guide</a></li>
+<li><strong>Spring Surf CMIS Application Browser</strong> - <a href="http://blogs.alfresco.com/wp/cmis/2010/06/14/spring-surf-and-opencmis-integration-part-2/">Howto</a> - <a href="https://anonsvn.springframework.org/svn/se-surf/branches/DEV_CMIS_2/">Source Code</a></li>
+<li><strong>Struts2CmisExplorer</strong> - <a href="http://code.google.com/p/struts2cmisexplorer/">Project Site</a></li>
+</ul>
+<h2 id="server-framework">Server Framework<a class="headerlink" href="#server-framework" title="Permalink">&para;</a></h2>
+<ul>
+<li><strong>Alfresco 4.x &amp; 5.x</strong> - <a href="http://cmis.alfresco.com/">Project Site</a></li>
+<li><strong>LogicalDOC</strong> - <a href="http://www.logicaldoc.com">Company Site</a> - <a href="http://wiki.logicaldoc.com/wiki/CMIS">CMIS connector</a> - <a href="http://sourceforge.net/projects/logicaldoc/">Source Code</a></li>
+<li><strong>Lutece</strong> - <a href="http://www.lutece.paris.fr">Project Site</a> - <a href="http://dev.lutece.paris.fr/plugins/module-document-cmis/">CMIS Module</a></li>
+<li><strong>Nuxeo</strong> - <a href="http://community.nuxeo.com/">Project Site</a> - <a href="http://doc.nuxeo.com/x/JIAO">CMIS Connector</a></li>
+<li><strong>O3Spaces Workplace 4.2</strong> - <a href="http://www.o3spaces.com/">Company Site</a></li>
+<li><strong>Open Text Enterprise Library CMIS Connector</strong> (AtomPub binding)</li>
+<li><strong>OpenWGA CMIS Connectivity Plugin</strong> - <a href="http://www.openwga.com/blog/openwga/archives/2010-10/cmis_the_new_content_interoperability_kid_on_the_block.int.html">About</a></li>
+<li><strong>SAP Cloud Platform Document Service</strong> - <a href="https://cloudplatform.sap.com/capabilities/product-info.SAP-Cloud-Platform-Document-Service.5a039b46-8bdd-469e-9613-1d09d8c5cebe.html">Service Site</a></li>
+<li><strong>SAP Document Center</strong> - <a href="https://cloudplatform.sap.com/capabilities/product-info.SAP-Document-Center-Cloud-Edition.0818df07-c214-4571-b167-765eb53b8249.html">Service Site</a></li>
+</ul>
+
+</div>
+             <!-- Content -->
+           </td>
+          </tr>
+        </table>
+     </td>
+     <td id="cell-2-2">&nbsp;</td>
+    </tr>
+    <tr width="100%">
+      <td id="cell-3-0">&nbsp;</td>
+      <td id="cell-3-1">&nbsp;</td>
+      <td id="cell-3-2">&nbsp;</td>
+    </tr>
+    <tr width="100%">
+     <td id="cell-3-0">&nbsp;</td>
+     <td id="cell-3-1">
+       <div id="footer">
+       <!-- Footer -->
+       <div id="site-footer">
+          Apache Chemistry, Apache, the Apache feather logo, and the Apache 
+          Chemistry project logo are trademarks of The Apache Software 
+          Foundation.
+          <br>
+          Content Management Interoperability Services (CMIS) is an
+          <a href="https://www.oasis-open.org/committees/cmis/">OASIS</a>
+          specification.
+       </div>
+       <!-- Footer -->
+       </div>
+     </td>
+     <td id="cell-3-2">&nbsp;</td>
+    </tr>
+    <tr width="100%">
+      <td id="cell-4-0">&nbsp;</td>
+      <td id="cell-4-1">&nbsp;</td>
+      <td id="cell-4-2">&nbsp;</td>
+    </tr>
+  </table>
+  <script type="text/javascript" src="/resources/retina.min.js"></script>
+  <link rel="stylesheet" href="/resources/xcode.css">
+  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.1/build/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+</body>
+</html>

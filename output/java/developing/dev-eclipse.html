@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<!--
+
+    Licensed to the Apache Software Foundation (ASF) under one or more
+    contributor license agreements.  See the NOTICE file distributed with
+    this work for additional information regarding copyright ownership.
+    The ASF licenses this file to You under the Apache License, Version 2.0
+    (the "License"); you may not use this file except in compliance with
+    the License.  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link type="text/css" rel="stylesheet" href="/resources/site.css" />
+    <script src="/resources/space.js" type="text/javascript"></script>
+    <meta name="keywords" content="CMIS, Content Management Interoperability Service, ECM, Enterprise Content Management, OASIS, integration standards, Chemistry, OpenCMIS, cmislib, DotCMIS, PortCMIS, ObjectiveCMIS" />
+    <meta name="description" content="Apache Chemistry, CMIS Implementation" />
+    <link rel="shortcut icon" href="/favicon.ico">
+    <title>Apache Chemistry - Using Eclipse as Development Environment</title>
+    <style>
+.headerlink {
+    visibility: hidden;
+}
+dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover > .headerlink, h2:hover > .headerlink, h3:hover > .headerlink, h4:hover > .headerlink, h5:hover > .headerlink, h6:hover > .headerlink {
+    visibility: visible;
+}
+    </style>
+  </head>
+<body onload="init()">
+  <table width="100%" cellpadding="0" cellspacing="0">
+    <tr width="100%">
+      <td id="cell-0-0">&nbsp;</td>
+      <td id="cell-0-1">&nbsp;</td>
+      <td id="cell-0-2">&nbsp;</td>
+    </tr>
+    <tr width="100%">
+      <td id="cell-1-0">&nbsp;</td>
+      <td id="cell-1-1">
+        <div id="banner" style="padding: 0px;">
+          <!-- Banner -->
+          <A href="https://chemistry.apache.org/" title="Apache Chemistry">
+            <IMG src="/images/chemistry_tm_logo.png" style="float:left; border:0px;"/>
+          </A>
+          <A href="https://www.apache.org/" title="The Apache Software Foundation">
+            <IMG src="/images/asf-logo.png"  style="float:right; border:0px;"/>
+           </A>
+          <!-- Banner -->
+        </div>
+        <div id="top-menu">
+          <table border="0" cellpadding="1" cellspacing="0" width="100%">
+            <tr>
+              <td>
+                <div align="left">
+                <!-- Breadcrumbs -->
+<a href="/">Home</a>&nbsp;&raquo&nbsp;<a href="/java/">Java</a>&nbsp;&raquo&nbsp;<a href="/java/developing/">Developing</a>&nbsp;&raquo&nbsp;<a href="#">Using Eclipse as Development Environment</a>
+                <!-- Breadcrumbs -->
+                </div>
+              </td>
+              <td>
+                <div align="right">
+                <!-- Quicklinks -->
+<P>
+<A href="https://www.apache.org/" class="external-link" rel="nofollow">Apache</A>
+|
+<A href="https://www.apache.org/licenses/LICENSE-2.0.html" class="external-link" rel="nofollow">License</A>
+</P>
+                <!-- Quicklinks -->
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td id="cell-1-2">&nbsp;</td>
+    </tr>
+    <tr width="100%">
+      <td id="cell-2-0">&nbsp;</td>
+      <td id="cell-2-1">
+        <table>
+          <tr height="100%" valign="top">
+            <td height="100%">
+              <div id="wrapper-menu-page-right">
+                <div id="wrapper-menu-page-top">
+                  <div id="wrapper-menu-page-bottom">
+                    <div id="menu-page">
+                      <!-- NavigationBar -->
+
+<H3><A name="Navigation-Overview"></A>Overview</H3>
+
+<UL class="alternate" type="square">
+   <LI><A href="/project/cmis.html" title="What's CMIS">What is CMIS?</A></LI>
+   <LI><A href="https://www.apache.org/licenses/" class="external-link" rel="nofollow">License</A></LI>
+   <LI><A href="/project/community.html" title="Community">Community</A></LI>
+   <LI><A href="https://lists.apache.org/list.html?dev@chemistry.apache.org" class="external-link" rel="nofollow">Mailing List</A></LI>
+   <LI><A href="https://issues.apache.org/jira/browse/CMIS" class="external-link" rel="nofollow">Issue Tracking</A></LI>
+   <LI><A href="https://www.apache.org/security/" class="external-link" rel="nofollow">Security</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-Search"></A>Search</H3>
+
+<DIV style="padding: 0px 0px 0px 20px;">
+<FORM action="https://www.google.com/search" method="get" style="font-size: 10px;">
+<INPUT name="ie" type="hidden" value="UTF-8"></INPUT>
+<INPUT name="oe" type="hidden" value="UTF-8"></INPUT>
+  <INPUT maxlength="255" name="q" size="12" type="text" value=""></INPUT>
+  <INPUT name="btnG" type="submit" value="Search"></INPUT>
+  <INPUT name="domains" type="hidden" value="chemistry.apache.org"></INPUT>
+  <INPUT name="sitesearch" type="hidden" value="chemistry.apache.org"></INPUT>
+</FORM>
+</DIV>
+
+
+<H3><A name="Navigation-CMISforJava"></A>CMIS for Java</H3>
+
+<UL class="alternate" type="square">
+  <LI><A href="/java/opencmis.html" title="OpenCMIS Overview and Index">Overview</A></LI>
+  <LI><A href="/java/download.html" title="Downloads">Downloads</A></LI>
+  <LI><A href="/docs/cmis-samples/" title="Downloads">Code Samples</A></LI>
+  <LI><A href="/java/javadoc">JavaDoc</A></LI>
+  <LI><A href="https://svn.apache.org/repos/asf/chemistry/opencmis/trunk/" class="external-link" rel="nofollow">Source Code</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-CMISforPython"></A>CMIS for Python</H3>
+
+<UL class="alternate" type="square">
+  <LI><A href="/python/cmislib.html" title="cmislib">cmislib</A></LI>
+  <LI><A href="/python/docs/" rel="nofollow">cmislib Documentation</A></LI>
+  <LI><A href="https://svn.apache.org/repos/asf/chemistry/cmislib/trunk/" class="external-link" rel="nofollow">Source Code</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-CMISforPHP"></A>CMIS for PHP</H3>
+
+<UL class="alternate" type="square">
+  <LI><A href="/php/phpclient.html" title="phpclient">CMIS PHP Client</A></LI>
+  <LI><A href="https://svn.apache.org/repos/asf/chemistry/phpclient/trunk/" class="external-link" rel="nofollow">Source Code</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-CMISfor.NET"></A>CMIS for .NET</H3>
+
+<UL class="alternate" type="square">
+  <LI><A href="/dotnet/dotcmis.html" title="DotCMIS">DotCMIS</A></LI>
+  <LI><A href="https://svn.apache.org/repos/asf/chemistry/dotcmis/trunk/" class="external-link" rel="nofollow">DotCMIS Source Code</A></LI>
+  <LI><A href="/dotnet/portcmis.html" title="PortCMIS">PortCMIS</A></LI>
+  <LI><A href="https://svn.apache.org/repos/asf/chemistry/portcmis/trunk/" class="external-link" rel="nofollow">PortCMIS Source Code</A></LI>
+  <LI><A href="/docs/cmis-samples/" title="Downloads">Code Samples</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-CMISforObjective-C"></A>CMIS for Objective-C</H3>
+
+<UL class="alternate" type="square">
+  <LI><A href="/objective-c/objectivecmis.html" title="ObjectiveCMIS">ObjectiveCMIS</A></LI>
+  <LI><A href="https://svn.apache.org/repos/asf/chemistry/objectivecmis/trunk/" class="external-link" rel="nofollow">Source Code</A></LI>
+</UL>
+
+<H3><A name="Navigation-CMISforJavaScript"></A>CMIS for JavaScript</H3>
+
+<UL class="alternate" type="square">
+  <LI><A href="/javascript/parts.html" title="Chemistry Parts">Chemistry Parts</A></LI>
+  <LI><A href="https://svn.apache.org/repos/asf/chemistry/parts/trunk/" class="external-link" rel="nofollow">Source Code</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-Sponsorship"></A>Sponsorship</H3>
+
+<UL class="alternate" type="square">
+   <LI><A href="https://www.apache.org/foundation/thanks.html" class="external-link" rel="nofollow">Thanks</A></LI>
+   <LI><A href="https://www.apache.org/foundation/sponsorship.html" class="external-link" rel="nofollow">Sponsoring Apache</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-Internal"></A>Internal Docs</H3>
+
+<UL class="alternate" type="square">
+   <LI><A href="/internal/internal-index.html" rel="nofollow"> Internal Documentation</A></LI>
+</UL>
+                    <!-- NavigationBar -->
+                    </div>
+                </div>
+              </div>
+            </div>
+           </td>
+           <td height="100%">
+             <!-- Content -->
+             <div class="wiki-content">    <h1 id="using-eclipse">Using Eclipse<a class="headerlink" href="#using-eclipse" title="Permalink">&para;</a></h1>
+<p>Please note that you can use maven to generate projects for Eclipse (and other
+development tools) by using mvn <code>eclipse:eclipse</code>. For details see the maven
+documentation. This mechanism also works for other IDEs than Eclipse.</p>
+<h2 id="debugging">Debugging<a class="headerlink" href="#debugging" title="Permalink">&para;</a></h2>
+<h3 id="debugging-a-client">Debugging a client<a class="headerlink" href="#debugging-a-client" title="Permalink">&para;</a></h3>
+<p>Using the Eclipse debugger for a client application usually
+is straightforward. Just create the launch configuration
+(for example Java stand alone application) and run your
+project in the debugger.</p>
+<h3 id="debugging-a-server">Debugging a server<a class="headerlink" href="#debugging-a-server" title="Permalink">&para;</a></h3>
+<p>Using the debugger for server development requires the
+appropriate setup. This is a bit more tricky than on the
+client side. There are several ways how to do this. Choose
+whatever works best for your environment. The following
+sections use Apache Tomcat as servlet container for your
+server development project. The same mechanism works for
+other servlet containers and can easily be adapted
+(e.g. Jetty).</p>
+<h4 id="tomcat-remote-debugging">Tomcat Remote Debugging<a class="headerlink" href="#tomcat-remote-debugging" title="Permalink">&para;</a></h4>
+<p>Build your server and create a .war archive. Deploy your
+archive in Tomcat (e.g. copy it to the webapps directory of
+the Tomcat installation). Start Tomcat in debugging mode. See
+<a href="http://wiki.apache.org/tomcat/FAQ/Developing#Q1">here</a> for details. Create in Eclipse a launch configuration
+for remote debugging connecting to your Tomcat.</p>
+<p>There are other options as well. You can skip creating the
+.war file and configure Tomcat to use your build output
+directory as web application. See the Tomcat documentation
+for more details.</p>
+<h4 id="eclipse-wdt">Eclipse WDT<a class="headerlink" href="#eclipse-wdt" title="Permalink">&para;</a></h4>
+<p>If you use the Eclipse J2EE distribution or have installed
+the Web Development Tools (WDT) you can run/debug your
+server directly within your IDE. Unfortunately the
+integration with maven is not very convenient. You have
+to patch the file <code>pom.xml</code> of your server project so
+that mvn eclipse:eclipse generates a web application.</p>
+<pre><code class="language-xml">    &lt;build&gt;
+      &lt;plugins&gt;
+        . . . 
+          &lt;plugin&gt;
+            &lt;groupId&gt;org.apache.maven.plugins&lt;/groupId&gt;
+            &lt;artifactId&gt;maven-eclipse-plugin&lt;/artifactId&gt;
+			&lt;version&gt;2.8&lt;/version&gt;
+			&lt;configuration&gt;
+			   &lt;wtpversion&gt;2.0&lt;/wtpversion&gt;
+			   &lt;wtpContextName&gt;inmemory&lt;/wtpContextName&gt;
+			   &lt;linkedResources&gt;
+				 &lt;linkedResource&gt;
+				   &lt;name&gt;src/main/webapp/WEB-INF/sun-jaxws.xml&lt;/name&gt; 
+				   &lt;type&gt;1&lt;/type&gt; 
+				   &lt;location&gt;
+					 ${basedir}/chemistry-opencmis-server/chemistry-opencmis-server-bindings/src/main/webapp/WEB-INF/sun-jaxws.xml
+				   &lt;/location&gt;
+				 &lt;/linkedResource&gt;
+				 &lt;linkedResource&gt;
+				   &lt;name&gt;src/main/webapp/WEB-INF/web.xml&lt;/name&gt; 
+				   &lt;type&gt;1&lt;/type&gt; 
+				   &lt;location&gt;${basedir}/chemistry-opencmis-server/chemistry-opencmis-server-bindings/src/main/webapp/WEB-INF/web.xml&lt;/location&gt;
+				 &lt;/linkedResource&gt;
+				 &lt;linkedResource&gt;
+				   &lt;name&gt;src/main/webapp/WEB-INF/wsdl&lt;/name&gt; 
+				   &lt;type&gt;2&lt;/type&gt; 
+				   &lt;location&gt;${basedir}/chemistry-opencmis-server/chemistry-opencmis-server-bindings/src/main/webapp/WEB-INF/wsdl&lt;/location&gt;
+				 &lt;/linkedResource&gt;
+			   &lt;/linkedResources&gt;
+			&lt;/configuration&gt;            
+          &lt;/plugin&gt;
+</code></pre>
+<p>If you don't use maven you have to manually create a dynamic
+web project in Eclipse. In this case <code>inmemory</code> is the
+context root of your server. An address like
+<code>http://localhost:8080/inmemory/atom/</code> should work. What
+still needs to be done manually (even with maven) is to
+configure all the jars needed to run the server. Open the
+project properties in Eclipse and select Deployment Assembly.
+Add / Project and add the following projects:</p>
+<ul>
+<li>chemistry-opencmis-commons-api</li>
+<li>chemistry-opencmis-commons-impl</li>
+<li>chemistry-opencmis-server-bindings</li>
+<li>chemistry-opencmis-server-support</li>
+</ul>
+<p>Then Add / Java Build Path Entries and add all the jars
+listed.</p>
+<p>This setup allows you to add your server project to an existing
+Server configuration in Eclipse. (If your Server tab is
+empty you first have to create one). In the Server Tab now
+you can run or debug Tomcat with your server project as a
+deployed web application.</p>
+<h4 id="the-local-binding">The Local Binding<a class="headerlink" href="#the-local-binding" title="Permalink">&para;</a></h4>
+<p>OpenCMIS allows to bypass all AtomPub or SOAP protocols
+and directly connect from a client to server using Java
+classes within a single JVM and is called the Local
+Binding. This can be convenient is some cases and makes
+debugging very easy. See the example how to
+<a href="/java/examples/example-create-session.html">create a session</a>.</p>
+<h2 id="long-package-names">Long Package Names<a class="headerlink" href="#long-package-names" title="Permalink">&para;</a></h2>
+<p>The opencmis project uses package names that sometimes
+get inconvenient due to their length. Since Helios
+Eclipse has a nice feature to abbreviate package names.
+In Window/Preferences go to Java / Appearance and
+select Abbreviate package names. Add a rule:</p>
+<p><code>org.apache.chemistry.opencmis={cmis}</code></p>
+<p>This will display all your packages in a form like</p>
+<p><code>{cmis}.commons.api</code></p>
+
+</div>
+             <!-- Content -->
+           </td>
+          </tr>
+        </table>
+     </td>
+     <td id="cell-2-2">&nbsp;</td>
+    </tr>
+    <tr width="100%">
+      <td id="cell-3-0">&nbsp;</td>
+      <td id="cell-3-1">&nbsp;</td>
+      <td id="cell-3-2">&nbsp;</td>
+    </tr>
+    <tr width="100%">
+     <td id="cell-3-0">&nbsp;</td>
+     <td id="cell-3-1">
+       <div id="footer">
+       <!-- Footer -->
+       <div id="site-footer">
+          Apache Chemistry, Apache, the Apache feather logo, and the Apache 
+          Chemistry project logo are trademarks of The Apache Software 
+          Foundation.
+          <br>
+          Content Management Interoperability Services (CMIS) is an
+          <a href="https://www.oasis-open.org/committees/cmis/">OASIS</a>
+          specification.
+       </div>
+       <!-- Footer -->
+       </div>
+     </td>
+     <td id="cell-3-2">&nbsp;</td>
+    </tr>
+    <tr width="100%">
+      <td id="cell-4-0">&nbsp;</td>
+      <td id="cell-4-1">&nbsp;</td>
+      <td id="cell-4-2">&nbsp;</td>
+    </tr>
+  </table>
+  <script type="text/javascript" src="/resources/retina.min.js"></script>
+  <link rel="stylesheet" href="/resources/xcode.css">
+  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.1/build/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+</body>
+</html>

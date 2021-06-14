@@ -1,0 +1,307 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Miscellaneous Code &#8212; Apache Chemistry cmislib 0.6.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.6.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Developer Guide" href="devguide.html" />
+    <link rel="prev" title="Code" href="code.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="devguide.html" title="Developer Guide"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="code.html" title="Code"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Apache Chemistry cmislib 0.6.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="miscellaneous-code">
+<h1>Miscellaneous Code<a class="headerlink" href="#miscellaneous-code" title="Permalink to this headline">¶</a></h1>
+<p>This page documents modules of lesser importance.</p>
+<div class="section" id="module-cmislib.cmis_services">
+<span id="the-cmislib-cmis-services-module"></span><h2>The <a class="reference internal" href="#module-cmislib.cmis_services" title="cmislib.cmis_services"><code class="xref py py-mod docutils literal"><span class="pre">cmislib.cmis_services</span></code></a> Module<a class="headerlink" href="#module-cmislib.cmis_services" title="Permalink to this headline">¶</a></h2>
+<p>This module contains the base Binding class and other service objects.</p>
+<dl class="class">
+<dt id="cmislib.cmis_services.Binding">
+<em class="property">class </em><code class="descclassname">cmislib.cmis_services.</code><code class="descname">Binding</code><a class="headerlink" href="#cmislib.cmis_services.Binding" title="Permalink to this definition">¶</a></dt>
+<dd><p>Represents the binding used to communicate with the CMIS server.</p>
+<dl class="method">
+<dt id="cmislib.cmis_services.Binding.getRepositoryService">
+<code class="descname">getRepositoryService</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cmislib.cmis_services.Binding.getRepositoryService" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the repository service specific to this binding.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="cmislib.cmis_services.RepositoryServiceIfc">
+<em class="property">class </em><code class="descclassname">cmislib.cmis_services.</code><code class="descname">RepositoryServiceIfc</code><a class="headerlink" href="#cmislib.cmis_services.RepositoryServiceIfc" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines the interface for the repository service.</p>
+<dl class="method">
+<dt id="cmislib.cmis_services.RepositoryServiceIfc.getRepositories">
+<code class="descname">getRepositories</code><span class="sig-paren">(</span><em>client</em><span class="sig-paren">)</span><a class="headerlink" href="#cmislib.cmis_services.RepositoryServiceIfc.getRepositories" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a list of repositories for this server.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="cmislib.cmis_services.RepositoryServiceIfc.getRepositoryInfo">
+<code class="descname">getRepositoryInfo</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cmislib.cmis_services.RepositoryServiceIfc.getRepositoryInfo" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the repository information for this server.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-cmislib.exceptions">
+<span id="the-cmislib-exceptions-module"></span><h2>The <a class="reference internal" href="#module-cmislib.exceptions" title="cmislib.exceptions"><code class="xref py py-mod docutils literal"><span class="pre">cmislib.exceptions</span></code></a> Module<a class="headerlink" href="#module-cmislib.exceptions" title="Permalink to this headline">¶</a></h2>
+<p>This module contains exceptions used throughout the API.</p>
+<dl class="exception">
+<dt id="cmislib.exceptions.CmisException">
+<em class="property">exception </em><code class="descclassname">cmislib.exceptions.</code><code class="descname">CmisException</code><span class="sig-paren">(</span><em>status=None</em>, <em>url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cmislib.exceptions.CmisException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Common base class for all exceptions.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="cmislib.exceptions.ConstraintException">
+<em class="property">exception </em><code class="descclassname">cmislib.exceptions.</code><code class="descname">ConstraintException</code><span class="sig-paren">(</span><em>status=None</em>, <em>url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cmislib.exceptions.ConstraintException" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="exception">
+<dt id="cmislib.exceptions.ContentAlreadyExistsException">
+<em class="property">exception </em><code class="descclassname">cmislib.exceptions.</code><code class="descname">ContentAlreadyExistsException</code><span class="sig-paren">(</span><em>status=None</em>, <em>url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cmislib.exceptions.ContentAlreadyExistsException" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="exception">
+<dt id="cmislib.exceptions.FilterNotValidException">
+<em class="property">exception </em><code class="descclassname">cmislib.exceptions.</code><code class="descname">FilterNotValidException</code><span class="sig-paren">(</span><em>status=None</em>, <em>url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cmislib.exceptions.FilterNotValidException" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="exception">
+<dt id="cmislib.exceptions.InvalidArgumentException">
+<em class="property">exception </em><code class="descclassname">cmislib.exceptions.</code><code class="descname">InvalidArgumentException</code><span class="sig-paren">(</span><em>status=None</em>, <em>url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cmislib.exceptions.InvalidArgumentException" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="exception">
+<dt id="cmislib.exceptions.NameConstraintViolationException">
+<em class="property">exception </em><code class="descclassname">cmislib.exceptions.</code><code class="descname">NameConstraintViolationException</code><span class="sig-paren">(</span><em>status=None</em>, <em>url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cmislib.exceptions.NameConstraintViolationException" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="exception">
+<dt id="cmislib.exceptions.NotSupportedException">
+<em class="property">exception </em><code class="descclassname">cmislib.exceptions.</code><code class="descname">NotSupportedException</code><span class="sig-paren">(</span><em>status=None</em>, <em>url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cmislib.exceptions.NotSupportedException" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="exception">
+<dt id="cmislib.exceptions.ObjectNotFoundException">
+<em class="property">exception </em><code class="descclassname">cmislib.exceptions.</code><code class="descname">ObjectNotFoundException</code><span class="sig-paren">(</span><em>status=None</em>, <em>url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cmislib.exceptions.ObjectNotFoundException" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="exception">
+<dt id="cmislib.exceptions.PermissionDeniedException">
+<em class="property">exception </em><code class="descclassname">cmislib.exceptions.</code><code class="descname">PermissionDeniedException</code><span class="sig-paren">(</span><em>status=None</em>, <em>url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cmislib.exceptions.PermissionDeniedException" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="exception">
+<dt id="cmislib.exceptions.RuntimeException">
+<em class="property">exception </em><code class="descclassname">cmislib.exceptions.</code><code class="descname">RuntimeException</code><span class="sig-paren">(</span><em>status=None</em>, <em>url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cmislib.exceptions.RuntimeException" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="exception">
+<dt id="cmislib.exceptions.StorageException">
+<em class="property">exception </em><code class="descclassname">cmislib.exceptions.</code><code class="descname">StorageException</code><span class="sig-paren">(</span><em>status=None</em>, <em>url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cmislib.exceptions.StorageException" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="exception">
+<dt id="cmislib.exceptions.StreamNotSupportedException">
+<em class="property">exception </em><code class="descclassname">cmislib.exceptions.</code><code class="descname">StreamNotSupportedException</code><span class="sig-paren">(</span><em>status=None</em>, <em>url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cmislib.exceptions.StreamNotSupportedException" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="exception">
+<dt id="cmislib.exceptions.UpdateConflictException">
+<em class="property">exception </em><code class="descclassname">cmislib.exceptions.</code><code class="descname">UpdateConflictException</code><span class="sig-paren">(</span><em>status=None</em>, <em>url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cmislib.exceptions.UpdateConflictException" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="exception">
+<dt id="cmislib.exceptions.VersioningException">
+<em class="property">exception </em><code class="descclassname">cmislib.exceptions.</code><code class="descname">VersioningException</code><span class="sig-paren">(</span><em>status=None</em>, <em>url=None</em><span class="sig-paren">)</span><a class="headerlink" href="#cmislib.exceptions.VersioningException" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-cmislib.messages">
+<span id="the-cmislib-messages-module"></span><h2>The <a class="reference internal" href="#module-cmislib.messages" title="cmislib.messages"><code class="xref py py-mod docutils literal"><span class="pre">cmislib.messages</span></code></a> Module<a class="headerlink" href="#module-cmislib.messages" title="Permalink to this headline">¶</a></h2>
+<p>This module contains common strings.</p>
+</div>
+<div class="section" id="module-cmislib.util">
+<span id="the-cmislib-util-module"></span><h2>The <a class="reference internal" href="#module-cmislib.util" title="cmislib.util"><code class="xref py py-mod docutils literal"><span class="pre">cmislib.util</span></code></a> Module<a class="headerlink" href="#module-cmislib.util" title="Permalink to this headline">¶</a></h2>
+<p>This module contains handy utility functions.</p>
+<dl class="function">
+<dt id="cmislib.util.multiple_replace">
+<code class="descclassname">cmislib.util.</code><code class="descname">multiple_replace</code><span class="sig-paren">(</span><em>aDict</em>, <em>text</em><span class="sig-paren">)</span><a class="headerlink" href="#cmislib.util.multiple_replace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Replace in &#8216;text&#8217; all occurences of any key in the given
+dictionary by its corresponding value.  Returns the new string.</p>
+<p>See <a class="reference external" href="http://code.activestate.com/recipes/81330/">http://code.activestate.com/recipes/81330/</a></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cmislib.util.parseBoolValue">
+<code class="descclassname">cmislib.util.</code><code class="descname">parseBoolValue</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#cmislib.util.parseBoolValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Utility function to parse booleans and none from strings</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cmislib.util.parseDateTimeValue">
+<code class="descclassname">cmislib.util.</code><code class="descname">parseDateTimeValue</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#cmislib.util.parseDateTimeValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Utility function to return a datetime from a string.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cmislib.util.parsePropValue">
+<code class="descclassname">cmislib.util.</code><code class="descname">parsePropValue</code><span class="sig-paren">(</span><em>value</em>, <em>nodeName</em><span class="sig-paren">)</span><a class="headerlink" href="#cmislib.util.parsePropValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a properly-typed object based on the type as specified in the
+node&#8217;s element name.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cmislib.util.parsePropValueByType">
+<code class="descclassname">cmislib.util.</code><code class="descname">parsePropValueByType</code><span class="sig-paren">(</span><em>value</em>, <em>typeName</em><span class="sig-paren">)</span><a class="headerlink" href="#cmislib.util.parsePropValueByType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a properly-typed object based on the type as specified in the
+node&#8217;s property definition.</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cmislib.util.safe_quote">
+<code class="descclassname">cmislib.util.</code><code class="descname">safe_quote</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#cmislib.util.safe_quote" title="Permalink to this definition">¶</a></dt>
+<dd><p>Safe encoding of value taking care of unicode value
+urllib.quote doesn&#8217;t like unicode values</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cmislib.util.safe_urlencode">
+<code class="descclassname">cmislib.util.</code><code class="descname">safe_urlencode</code><span class="sig-paren">(</span><em>in_dict</em><span class="sig-paren">)</span><a class="headerlink" href="#cmislib.util.safe_urlencode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Safe encoding of values taking care of unicode values
+urllib.urlencode doesn&#8217;t like unicode values</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cmislib.util.toCMISValue">
+<code class="descclassname">cmislib.util.</code><code class="descname">toCMISValue</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#cmislib.util.toCMISValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Utility function to convert Python values to CMIS string values</p>
+</dd></dl>
+
+<dl class="function">
+<dt id="cmislib.util.to_utf8">
+<code class="descclassname">cmislib.util.</code><code class="descname">to_utf8</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="headerlink" href="#cmislib.util.to_utf8" title="Permalink to this definition">¶</a></dt>
+<dd><p>Safe encodng of value to utf-8 taking care of unicode values</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Miscellaneous Code</a><ul>
+<li><a class="reference internal" href="#module-cmislib.cmis_services">The <code class="docutils literal"><span class="pre">cmislib.cmis_services</span></code> Module</a></li>
+<li><a class="reference internal" href="#module-cmislib.exceptions">The <code class="docutils literal"><span class="pre">cmislib.exceptions</span></code> Module</a></li>
+<li><a class="reference internal" href="#module-cmislib.messages">The <code class="docutils literal"><span class="pre">cmislib.messages</span></code> Module</a></li>
+<li><a class="reference internal" href="#module-cmislib.util">The <code class="docutils literal"><span class="pre">cmislib.util</span></code> Module</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="code.html"
+                        title="previous chapter">Code</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="devguide.html"
+                        title="next chapter">Developer Guide</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/codemisc.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="devguide.html" title="Developer Guide"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="code.html" title="Code"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Apache Chemistry cmislib 0.6.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Apache Software Foundation.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1.
+    </div>
+  </body>
+</html>

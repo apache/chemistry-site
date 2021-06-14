@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+    
+    <url>
+     <loc>/index.html</loc>
+     <lastmod>2017-07-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+    
+        
+    <url>
+     <loc>/samples/create-session/index.html</loc>
+     <lastmod>2017-07-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/samples/capabilities/index.html</loc>
+     <lastmod>2017-07-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/samples/types/index.html</loc>
+     <lastmod>2017-07-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/samples/exceptions/index.html</loc>
+     <lastmod>2017-07-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/samples/retrieve-objects/index.html</loc>
+     <lastmod>2017-07-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/samples/create-objects/index.html</loc>
+     <lastmod>2017-07-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/samples/update-objects/index.html</loc>
+     <lastmod>2017-07-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/samples/move-objects/index.html</loc>
+     <lastmod>2017-07-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/samples/delete-objects/index.html</loc>
+     <lastmod>2017-07-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/samples/content/index.html</loc>
+     <lastmod>2017-07-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/samples/versions/index.html</loc>
+     <lastmod>2017-07-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/samples/properties/index.html</loc>
+     <lastmod>2017-07-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/samples/operation-context/index.html</loc>
+     <lastmod>2017-07-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/samples/lists/index.html</loc>
+     <lastmod>2017-07-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/samples/extensions/index.html</loc>
+     <lastmod>2017-07-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/samples/queries/index.html</loc>
+     <lastmod>2017-07-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/samples/query-examples/index.html</loc>
+     <lastmod>2017-07-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/samples/changelog/index.html</loc>
+     <lastmod>2017-07-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+        
+    <url>
+     <loc>/samples/allowable-actions/index.html</loc>
+     <lastmod>2017-07-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/samples/access-control/index.html</loc>
+     <lastmod>2017-07-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>/samples/retention/index.html</loc>
+     <lastmod>2017-07-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    
+
+    
+    <url>
+     <loc>/about/index.html</loc>
+     <lastmod>2017-07-31</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    
+
+</urlset>

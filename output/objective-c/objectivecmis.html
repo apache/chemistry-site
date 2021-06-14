@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<!--
+
+    Licensed to the Apache Software Foundation (ASF) under one or more
+    contributor license agreements.  See the NOTICE file distributed with
+    this work for additional information regarding copyright ownership.
+    The ASF licenses this file to You under the Apache License, Version 2.0
+    (the "License"); you may not use this file except in compliance with
+    the License.  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link type="text/css" rel="stylesheet" href="/resources/site.css" />
+    <script src="/resources/space.js" type="text/javascript"></script>
+    <meta name="keywords" content="CMIS, Content Management Interoperability Service, ECM, Enterprise Content Management, OASIS, integration standards, Chemistry, OpenCMIS, cmislib, DotCMIS, PortCMIS, ObjectiveCMIS" />
+    <meta name="description" content="Apache Chemistry, CMIS Implementation" />
+    <link rel="shortcut icon" href="/favicon.ico">
+    <title>Apache Chemistry - ObjectiveCMIS</title>
+    <style>
+.headerlink {
+    visibility: hidden;
+}
+dt:hover > .headerlink, p:hover > .headerlink, td:hover > .headerlink, h1:hover > .headerlink, h2:hover > .headerlink, h3:hover > .headerlink, h4:hover > .headerlink, h5:hover > .headerlink, h6:hover > .headerlink {
+    visibility: visible;
+}
+    </style>
+  </head>
+<body onload="init()">
+  <table width="100%" cellpadding="0" cellspacing="0">
+    <tr width="100%">
+      <td id="cell-0-0">&nbsp;</td>
+      <td id="cell-0-1">&nbsp;</td>
+      <td id="cell-0-2">&nbsp;</td>
+    </tr>
+    <tr width="100%">
+      <td id="cell-1-0">&nbsp;</td>
+      <td id="cell-1-1">
+        <div id="banner" style="padding: 0px;">
+          <!-- Banner -->
+          <A href="https://chemistry.apache.org/" title="Apache Chemistry">
+            <IMG src="/images/chemistry_tm_logo.png" style="float:left; border:0px;"/>
+          </A>
+          <A href="https://www.apache.org/" title="The Apache Software Foundation">
+            <IMG src="/images/asf-logo.png"  style="float:right; border:0px;"/>
+           </A>
+          <!-- Banner -->
+        </div>
+        <div id="top-menu">
+          <table border="0" cellpadding="1" cellspacing="0" width="100%">
+            <tr>
+              <td>
+                <div align="left">
+                <!-- Breadcrumbs -->
+<a href="/">Home</a>&nbsp;&raquo&nbsp;<a href="/objective-c/">Objective-c</a>&nbsp;&raquo&nbsp;<a href="#">ObjectiveCMIS</a>
+                <!-- Breadcrumbs -->
+                </div>
+              </td>
+              <td>
+                <div align="right">
+                <!-- Quicklinks -->
+<P>
+<A href="https://www.apache.org/" class="external-link" rel="nofollow">Apache</A>
+|
+<A href="https://www.apache.org/licenses/LICENSE-2.0.html" class="external-link" rel="nofollow">License</A>
+</P>
+                <!-- Quicklinks -->
+                </div>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </td>
+      <td id="cell-1-2">&nbsp;</td>
+    </tr>
+    <tr width="100%">
+      <td id="cell-2-0">&nbsp;</td>
+      <td id="cell-2-1">
+        <table>
+          <tr height="100%" valign="top">
+            <td height="100%">
+              <div id="wrapper-menu-page-right">
+                <div id="wrapper-menu-page-top">
+                  <div id="wrapper-menu-page-bottom">
+                    <div id="menu-page">
+                      <!-- NavigationBar -->
+
+<H3><A name="Navigation-Overview"></A>Overview</H3>
+
+<UL class="alternate" type="square">
+   <LI><A href="/project/cmis.html" title="What's CMIS">What is CMIS?</A></LI>
+   <LI><A href="https://www.apache.org/licenses/" class="external-link" rel="nofollow">License</A></LI>
+   <LI><A href="/project/community.html" title="Community">Community</A></LI>
+   <LI><A href="https://lists.apache.org/list.html?dev@chemistry.apache.org" class="external-link" rel="nofollow">Mailing List</A></LI>
+   <LI><A href="https://issues.apache.org/jira/browse/CMIS" class="external-link" rel="nofollow">Issue Tracking</A></LI>
+   <LI><A href="https://www.apache.org/security/" class="external-link" rel="nofollow">Security</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-Search"></A>Search</H3>
+
+<DIV style="padding: 0px 0px 0px 20px;">
+<FORM action="https://www.google.com/search" method="get" style="font-size: 10px;">
+<INPUT name="ie" type="hidden" value="UTF-8"></INPUT>
+<INPUT name="oe" type="hidden" value="UTF-8"></INPUT>
+  <INPUT maxlength="255" name="q" size="12" type="text" value=""></INPUT>
+  <INPUT name="btnG" type="submit" value="Search"></INPUT>
+  <INPUT name="domains" type="hidden" value="chemistry.apache.org"></INPUT>
+  <INPUT name="sitesearch" type="hidden" value="chemistry.apache.org"></INPUT>
+</FORM>
+</DIV>
+
+
+<H3><A name="Navigation-CMISforJava"></A>CMIS for Java</H3>
+
+<UL class="alternate" type="square">
+  <LI><A href="/java/opencmis.html" title="OpenCMIS Overview and Index">Overview</A></LI>
+  <LI><A href="/java/download.html" title="Downloads">Downloads</A></LI>
+  <LI><A href="/docs/cmis-samples/" title="Downloads">Code Samples</A></LI>
+  <LI><A href="/java/javadoc">JavaDoc</A></LI>
+  <LI><A href="https://svn.apache.org/repos/asf/chemistry/opencmis/trunk/" class="external-link" rel="nofollow">Source Code</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-CMISforPython"></A>CMIS for Python</H3>
+
+<UL class="alternate" type="square">
+  <LI><A href="/python/cmislib.html" title="cmislib">cmislib</A></LI>
+  <LI><A href="/python/docs/" rel="nofollow">cmislib Documentation</A></LI>
+  <LI><A href="https://svn.apache.org/repos/asf/chemistry/cmislib/trunk/" class="external-link" rel="nofollow">Source Code</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-CMISforPHP"></A>CMIS for PHP</H3>
+
+<UL class="alternate" type="square">
+  <LI><A href="/php/phpclient.html" title="phpclient">CMIS PHP Client</A></LI>
+  <LI><A href="https://svn.apache.org/repos/asf/chemistry/phpclient/trunk/" class="external-link" rel="nofollow">Source Code</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-CMISfor.NET"></A>CMIS for .NET</H3>
+
+<UL class="alternate" type="square">
+  <LI><A href="/dotnet/dotcmis.html" title="DotCMIS">DotCMIS</A></LI>
+  <LI><A href="https://svn.apache.org/repos/asf/chemistry/dotcmis/trunk/" class="external-link" rel="nofollow">DotCMIS Source Code</A></LI>
+  <LI><A href="/dotnet/portcmis.html" title="PortCMIS">PortCMIS</A></LI>
+  <LI><A href="https://svn.apache.org/repos/asf/chemistry/portcmis/trunk/" class="external-link" rel="nofollow">PortCMIS Source Code</A></LI>
+  <LI><A href="/docs/cmis-samples/" title="Downloads">Code Samples</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-CMISforObjective-C"></A>CMIS for Objective-C</H3>
+
+<UL class="alternate" type="square">
+  <LI><A href="/objective-c/objectivecmis.html" title="ObjectiveCMIS">ObjectiveCMIS</A></LI>
+  <LI><A href="https://svn.apache.org/repos/asf/chemistry/objectivecmis/trunk/" class="external-link" rel="nofollow">Source Code</A></LI>
+</UL>
+
+<H3><A name="Navigation-CMISforJavaScript"></A>CMIS for JavaScript</H3>
+
+<UL class="alternate" type="square">
+  <LI><A href="/javascript/parts.html" title="Chemistry Parts">Chemistry Parts</A></LI>
+  <LI><A href="https://svn.apache.org/repos/asf/chemistry/parts/trunk/" class="external-link" rel="nofollow">Source Code</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-Sponsorship"></A>Sponsorship</H3>
+
+<UL class="alternate" type="square">
+   <LI><A href="https://www.apache.org/foundation/thanks.html" class="external-link" rel="nofollow">Thanks</A></LI>
+   <LI><A href="https://www.apache.org/foundation/sponsorship.html" class="external-link" rel="nofollow">Sponsoring Apache</A></LI>
+</UL>
+
+
+<H3><A name="Navigation-Internal"></A>Internal Docs</H3>
+
+<UL class="alternate" type="square">
+   <LI><A href="/internal/internal-index.html" rel="nofollow"> Internal Documentation</A></LI>
+</UL>
+                    <!-- NavigationBar -->
+                    </div>
+                </div>
+              </div>
+            </div>
+           </td>
+           <td height="100%">
+             <!-- Content -->
+             <div class="wiki-content">    <h1 id="welcome-to-apache-objectivecmis">Welcome to Apache ObjectiveCMIS<a class="headerlink" href="#welcome-to-apache-objectivecmis" title="Permalink">&para;</a></h1>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permalink">&para;</a></h2>
+<p>Apache Chemistry ObjectiveCMIS is a CMIS client library for Objective-C language.</p>
+<p>The library is primarily targeted at iOS application development and aims to provide an interoperability API to CMIS based repositories.
+However, as the base library is built on the Foundation.framework it can be used for developing Mac OSX applications as well.</p>
+<p>The library is compatible with iOS v8.0 SDK and OS X v10.9 SDK or later. If your project needs to support older SDK versions, please download version 0.5 from the <a href="https://archive.apache.org/dist/chemistry/objectivecmis">Archives</a>.</p>
+<h3 id="where-to-get-it-from">Where to get it from<a class="headerlink" href="#where-to-get-it-from" title="Permalink">&para;</a></h3>
+<h4 id="release-06-2017-07-31">Release 0.6 (2017-07-31)<a class="headerlink" href="#release-06-2017-07-31" title="Permalink">&para;</a></h4>
+<p><a href="http://www.apache.org/dyn/closer.lua/chemistry/objectivecmis/0.6">Full Download page</a></p>
+<table class="table">
+<thead>
+<tr>
+<th>Package</th>
+<th>zip</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ObjectiveCMIS client source</td>
+<td><a href="https://www.apache.org/dyn/closer.lua/chemistry/objectivecmis/0.6/chemistry-objectivecmis-0.6-src.zip">Download</a> (<a href="https://www.apache.org/dist/chemistry/objectivecmis/0.6/chemistry-objectivecmis-0.6-src.zip.md5">md5</a>, <a href="https://www.apache.org/dist/chemistry/objectivecmis/0.6/chemistry-objectivecmis-0.6-src.zip.sha">sha1</a>, <a href="https://www.apache.org/dist/chemistry/objectivecmis/0.6/chemistry-objectivecmis-0.6-src.zip.asc">pgp</a>)</td>
+</tr>
+<tr>
+<td>ObjectiveCMIS client binary</td>
+<td><a href="https://www.apache.org/dyn/closer.lua/chemistry/objectivecmis/0.6/chemistry-objectivecmis-0.6-bin.zip">Download</a> (<a href="https://www.apache.org/dist/chemistry/objectivecmis/0.6/chemistry-objectivecmis-0.6-bin.zip.md5">md5</a>, <a href="https://www.apache.org/dist/chemistry/objectivecmis/0.6/chemistry-objectivecmis-0.6-bin.zip.sha">sha1</a>, <a href="https://www.apache.org/dist/chemistry/objectivecmis/0.6/chemistry-objectivecmis-0.6-bin.zip.asc">pgp</a>)</td>
+</tr></tbody></table>
+<h4 id="older-releases">Older Releases<a class="headerlink" href="#older-releases" title="Permalink">&para;</a></h4>
+<p>For older releases please browse the <a href="https://archive.apache.org/dist/chemistry/objectivecmis">Archives</a>.</p>
+<h4 id="verify-authenticity-of-downloads-package">Verify authenticity of Downloads package<a class="headerlink" href="#verify-authenticity-of-downloads-package" title="Permalink">&para;</a></h4>
+<p>While downloading the packages, make yourself familiar on how to verify their integrity, authenticity and provenience according to the Apache Software Foundation best practices. Please make sure you check the following resources:</p>
+<ul>
+<li><a href="https://chemistry.apache.org/project/verification.html">Artifact verification</a> details</li>
+<li>Developers and release managers PGP keys are publicly available <a href="https://www.apache.org/dist/chemistry/KEYS">here</a></li>
+</ul>
+<h3 id="get-objectivecmis-code">Get ObjectiveCMIS code<a class="headerlink" href="#get-objectivecmis-code" title="Permalink">&para;</a></h3>
+<ul>
+<li>binary distribution</li>
+<li>source code distribution</li>
+</ul>
+<h3 id="what-the-library-contains">What the library contains<a class="headerlink" href="#what-the-library-contains" title="Permalink">&para;</a></h3>
+<p>The ObjectiveCMIS library is distributed as a ZIP file containing</p>
+<ul>
+<li>the library:  <em>libObjectiveCMIS.a</em></li>
+<li>public header files: contained in the <em>ObjectiveCMIS</em> folder</li>
+<li>documentation: provided as a docset (generated using appledocs).</li>
+</ul>
+<h3 id="minimum-requirements">Minimum Requirements<a class="headerlink" href="#minimum-requirements" title="Permalink">&para;</a></h3>
+<p>The library is making use of Objective-C automated reference counting (ARC). Therefore the library is compatible with iOS SDK v5.x or later.</p>
+<p>For development we recommend the latest available version of XCode and iOS/Mac OSX SDKs.</p>
+<h3 id="how-to-include-the-library-on-your-xcode-project">How to include the library on your XCode project<a class="headerlink" href="#how-to-include-the-library-on-your-xcode-project" title="Permalink">&para;</a></h3>
+<p>The easiest way to include the ObjectiveCMIS library into your project is to unzip the ObjectiveCMIS ZIP file.</p>
+<p>Then go to the 'File' menu in XCode and select the 'Add Files to&hellip;' option. Add the headers and library files contained in the ZIP distribution to your project:</p>
+<ul>
+<li>Make sure that the library is included in the list of frameworks/libraries. Select the build target and go to Build Phases. libObjectiveCMIS.a should be listed in the Link Binary with Libraries option.</li>
+<li>The CMIS headers should be included in the 'Copy Headers' section of Build Phases for your build target.</li>
+</ul>
+<h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permalink">&para;</a></h2>
+<h3 id="block-based-structure">Block based structure<a class="headerlink" href="#block-based-structure" title="Permalink">&para;</a></h3>
+<p>ObjectiveCMIS calls to CMIS repositories are asynchronous. Callback handling is facilitated utilising <em>block</em> structures available in Objective-C. Further information on the use of blocks in Objective-C can be found directly at <a href="http://developer.apple.com/library/ios/#documentation/cocoa/Conceptual/Blocks/Articles/00_Introduction.html">http://developer.apple.com/library/ios/#documentation/cocoa/Conceptual/Blocks/Articles/00_Introduction.html</a>.</p>
+<h3 id="at-the-beginning-there-is-a-cmis-session">At the Beginning - There is a CMIS Session<a class="headerlink" href="#at-the-beginning-there-is-a-cmis-session" title="Permalink">&para;</a></h3>
+<p>It all starts with establishing a session to the CMIS repository. The class to facilitate this is 'CMISSession'.</p>
+<p>The code snippet below demonstrates how to create a session with a minimum set of parameters (used for access/authentication)</p>
+<pre><code>CMISSessionParameters *params = [[CMISSessionParameters alloc] initWithBindingType:CMISBindingTypeAtomPub];
+params.atomPubUrl = [NSURL URLWithString:cmisAtomPubLocation];
+params.username  = @"&lt;yourusername&gt;";
+params.password = @"&lt;yourpassword&gt;";
+params.repositoryId = self.repositoryId;
+
+//Connect to session
+
+[CMISSession connectWithSessionParameters:params completionBlock:^(CMISSession *session, NSError *error){
+   if( nil == session )
+   {
+      // do your error handling here
+   }
+   else
+   {
+      self.session = session;
+   }
+}];
+</code></pre>
+<h4 id="how-to-get-to-the-repository-id">How to get to the repository ID<a class="headerlink" href="#how-to-get-to-the-repository-id" title="Permalink">&para;</a></h4>
+<p>In the code above you may have noticed that we used the repository ID in the session parameters. This is a required parameter to be passed into the 'connectWithSessionParameters:completionBlock:' method. CMISSession provides a convenience method to retrieve the repositories. This is demonstrated in the code snippet below.</p>
+<pre><code>__block CMISSessionParameters *params = [[CMISSessionParameters alloc] initWithBindingType:CMISBindingTypeAtomPub];
+params.atomPubUrl = [NSURL URLWithString:cmisAtomPubLocation];
+params.username  = @"&lt;yourusername&gt;";
+params.password = @"&lt;yourpassword&gt;";
+
+[CMISSession arrayOfRepositories:params completionBlock:^(NSArray *repos, NSError *error){
+   if(nil == repos)
+   {
+      // error handling
+   }
+   else
+   {
+      CMISRepositoryInfo repoInfo = [repos objectAtIndex:0];
+      params.repositoryId = repoInfo.identifier;
+      [CMISSession connectWithSessionParameters:params completionBlock:^(CMISSession *session, NSError *sessionError){
+         if(nil == session)
+         {
+             // do your error handling here
+         }
+         else
+         {
+            self.session = session;
+         }
+      }];
+   }
+}];
+</code></pre>
+
+</div>
+             <!-- Content -->
+           </td>
+          </tr>
+        </table>
+     </td>
+     <td id="cell-2-2">&nbsp;</td>
+    </tr>
+    <tr width="100%">
+      <td id="cell-3-0">&nbsp;</td>
+      <td id="cell-3-1">&nbsp;</td>
+      <td id="cell-3-2">&nbsp;</td>
+    </tr>
+    <tr width="100%">
+     <td id="cell-3-0">&nbsp;</td>
+     <td id="cell-3-1">
+       <div id="footer">
+       <!-- Footer -->
+       <div id="site-footer">
+          Apache Chemistry, Apache, the Apache feather logo, and the Apache 
+          Chemistry project logo are trademarks of The Apache Software 
+          Foundation.
+          <br>
+          Content Management Interoperability Services (CMIS) is an
+          <a href="https://www.oasis-open.org/committees/cmis/">OASIS</a>
+          specification.
+       </div>
+       <!-- Footer -->
+       </div>
+     </td>
+     <td id="cell-3-2">&nbsp;</td>
+    </tr>
+    <tr width="100%">
+      <td id="cell-4-0">&nbsp;</td>
+      <td id="cell-4-1">&nbsp;</td>
+      <td id="cell-4-2">&nbsp;</td>
+    </tr>
+  </table>
+  <script type="text/javascript" src="/resources/retina.min.js"></script>
+  <link rel="stylesheet" href="/resources/xcode.css">
+  <script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.0.1/build/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+</body>
+</html>

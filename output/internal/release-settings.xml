@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+    <servers>
+        <server>
+            <id>apache.releases.https</id>
+            <username></username>
+            <password></password>
+        </server>
+        <server>
+            <id>apache-site-staging</id>
+            <username></username>
+            <password></password>
+        </server>
+    </servers>
+
+    <profiles>
+        <profile>
+            <id>gpg-profile</id>
+            <properties>
+                <gpg.executable>gpg2</gpg.executable>
+                <gpg.useagent>true</gpg.useagent>
+            </properties>
+        </profile>
+        <profile>
+            <id>apache-release-profile</id>
+            <properties>
+                <apache.username></apache.username>
+                <apache.password></apache.password>
+            </properties>
+        </profile>
+    </profiles>
+    <activeProfiles>
+        <activeProfile>gpg-profile</activeProfile>
+        <activeProfile>apache-release-profile</activeProfile>
+    </activeProfiles>
+</settings>
