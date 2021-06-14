@@ -1,3 +1,5 @@
+Title: OpenCMIS Release Process
+
 # OpenCMIS Release Process
 
 This is a rough description of the OpenCMIS release process.  

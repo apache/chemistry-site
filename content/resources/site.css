@@ -1569,7 +1569,7 @@ div.auto_complete ul strong.highlight {
 
 /* added */
 
-.codehilite {
+code .codehilite {
    border: 1px dashed #3c78b5;
    font-size: 11px;
    font-family: Courier;
