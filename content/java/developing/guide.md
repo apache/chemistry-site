@@ -518,6 +518,7 @@ no objects are deleted. In other repositories a failed delete may have deleted s
 CMIS provides several concepts for navigating through the tree of objects in the repository. For any folder, 
 you can get its children, get its descendants, and get the folder tree. The getting started sample application sets
 up a tree in the repository that looks like this:-
+
 <img src="images/FileTree.png" />
 
 The following snippet from the getting started sample will print out the children of a folder :-
