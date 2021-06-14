@@ -214,7 +214,13 @@ ul, ol {
 }
 
 pre {
-    padding: 0px;
+    border: 1px dashed #3c78b5;
+    font-size: 11px;
+    font-family: Courier;
+    margin: 10px;
+    line-height: 13px;
+    background-color: #f0f0f0;
+    padding: 3px;
     margin-top: 5px;
     margin-left: 15px;
     margin-bottom: 5px;
@@ -1569,7 +1575,7 @@ div.auto_complete ul strong.highlight {
 
 /* added */
 
-code .codehilite {
+.codehilite {
    border: 1px dashed #3c78b5;
    font-size: 11px;
    font-family: Courier;
