@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<!--
+
+    Licensed to the Apache Software Foundation (ASF) under one or more
+    contributor license agreements.  See the NOTICE file distributed with
+    this work for additional information regarding copyright ownership.
+    The ASF licenses this file to You under the Apache License, Version 2.0
+    (the "License"); you may not use this file except in compliance with
+    the License.  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="author" content="Apache Chemistry">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+
+    <title>Getting Repository Capabilities - Apache Chemistry Samples</title>
+
+    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link href="../../css/cinder.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.css">
+
+
+    <link href="../../css/chemistry.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+    
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../../index.html">Apache Chemistry Samples</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../index.html">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Repository <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../create-session/index.html">Creating a Session</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="index.html">Getting Repository Capabilities</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../types/index.html">Working with Types</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../exceptions/index.html">CMIS Exceptions</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">CRUD <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../retrieve-objects/index.html">Retrieving Objects</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../create-objects/index.html">Creating Objects</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../update-objects/index.html">Updating Objects</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../move-objects/index.html">Moving Object</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../delete-objects/index.html">Deleting Objects</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../content/index.html">Working with Content</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../versions/index.html">Working with Versions</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../properties/index.html">Working with Properties and Secondary Types</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../operation-context/index.html">Understanding the Operation Context</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../lists/index.html">Working with Lists, Paging and Skipping</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../extensions/index.html">Getting Extensions</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Query <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../queries/index.html">Executing Queries</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../query-examples/index.html">Query Examples</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../changelog/index.html">Retrieving the Change Log</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Access Control <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../allowable-actions/index.html">Checking Allowable Actions</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../access-control/index.html">Managing Access Control</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../retention/index.html">Retention and Holds</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../about/index.html">About</a>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search" aria-hidden="true"></i> Search
+                    </a>
+                </li>
+                
+                    <li >
+                        <a rel="next" href="../create-session/index.html">
+                            <i class="fa fa-arrow-left" aria-hidden="true"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../types/index.html">
+                            Next <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                
+                <li>
+                    <a href="https://www.apache.org" style="padding: 2px;">
+                        <img src="../../img/feather.png">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="first-level active"><a href="#getting-repository-capabilities">Getting Repository Capabilities</a></li>
+        
+            <li class="second-level"><a href="#query-capability">Query Capability</a></li>
+            
+        
+            <li class="second-level"><a href="#acl-capability">ACL Capability</a></li>
+            
+        
+            <li class="second-level"><a href="#multi-filing-capability">Multi-Filing Capability</a></li>
+            
+        
+            <li class="second-level"><a href="#unfiling-capability">Unfiling Capability</a></li>
+            
+        
+    
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="getting-repository-capabilities">Getting Repository Capabilities</h1>
+<p><span class="cmis">CMIS 1.0</span>
+<span class="cmis">CMIS 1.1</span>
+<span class="spec">Spec 2.1.1.1</span></p>
+<h2 id="query-capability">Query Capability</h2>
+<p>Check whether the repository supports queries or not.</p>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">RepositoryInfo info = session.getRepositoryInfo();
+
+CapabilityQuery capabilityQuery = info.getCapabilities().getQueryCapability(); 
+boolean supportsQuery = capabilityQuery != null &amp;&amp; capabilityQuery != CapabilityQuery.NONE;
+</code></pre>
+
+<h2 id="acl-capability">ACL Capability</h2>
+<p>Check whether the repository supports ACLs or not.</p>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">RepositoryInfo info = session.getRepositoryInfo();
+
+CapabilityAcl capabilityAcl = info.getCapabilities().getAclCapability();
+boolean supportsAcls = capabilityAcl != null &amp;&amp; capabilityAcl != CapabilityAcl.NONE;
+boolean manageAcls = capabilityAcl == CapabilityAcl.MANAGE; // supports applyACL()
+</code></pre>
+
+<h2 id="multi-filing-capability">Multi-Filing Capability</h2>
+<p>Check whether the repository supports multi-filing or not.</p>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">RepositoryInfo info = session.getRepositoryInfo();
+
+boolean supportsMultiFiling = Boolean.TRUE.equals(info.getCapabilities().isMultifilingSupported());
+</code></pre>
+
+<h2 id="unfiling-capability">Unfiling Capability</h2>
+<p>Check whether the repository supports unfiling or not.</p>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">RepositoryInfo info = session.getRepositoryInfo();
+
+boolean supportsUnfiling = Boolean.TRUE.equals(info.getCapabilities().isUnfilingSupported());
+</code></pre></div>
+        
+    </div>
+
+    <footer class="col-md-12 text-center">
+        <hr>
+        <p>
+    </footer>
+
+    <script src="../../js/jquery-1.10.2.min.js"></script>
+    <script src="../../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '../..';
+    </script>
+    <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+    <script src="../../js/base.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        From here you can search these documents. Enter your search terms below.
+                    </p>
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                        </div>
+                    </form>
+                    <div id="mkdocs-search-results"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../../js/retina.min.js"></script>
+    </body>
+
+</html>
+<!-- last update: 2017-07-31 12:45:42 -->

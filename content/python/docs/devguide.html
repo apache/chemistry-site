@@ -1,0 +1,219 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Developer Guide &#8212; Apache Chemistry cmislib 0.6.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.6.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tests" href="tests.html" />
+    <link rel="prev" title="Miscellaneous Code" href="codemisc.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="tests.html" title="Tests"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="codemisc.html" title="Miscellaneous Code"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Apache Chemistry cmislib 0.6.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="developer-guide">
+<h1>Developer Guide<a class="headerlink" href="#developer-guide" title="Permalink to this headline">¶</a></h1>
+<p>This page is for people who wish to contribute code to this project.</p>
+<div class="section" id="developer-setup">
+<h2>Developer Setup<a class="headerlink" href="#developer-setup" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Check out the source from head, switch to the source code&#8217;s root directory, then run:</dt>
+<dd>python setup.py develop</dd>
+</dl>
+<p>That will set up this project&#8217;s src directory in the easy-install.pth file in site-packages.</p>
+</div>
+<div class="section" id="release-process">
+<h2>Release Process<a class="headerlink" href="#release-process" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>Checklist:</dt>
+<dd><ol class="first last arabic">
+<li><p class="first">All newly-added code has a unit test</p>
+</li>
+<li><p class="first">All tests pass cleanly (or have good reasons for not passing)</p>
+</li>
+<li><p class="first">Change setup.cfg to have the appropriate tag (&#8216;dev&#8217;, for example, or &#8216;&#8217; for a stable release)</p>
+</li>
+<li><p class="first">Change setup.py to have the appropriate version number</p>
+</li>
+<li><p class="first">Inline comments updated with changes</p>
+</li>
+<li><p class="first">Sphinx doc updated with changes</p>
+</li>
+<li><dl class="first docutils">
+<dt>Docs build cleanly</dt>
+<dd><div class="first last highlight-bash"><div class="highlight"><pre><span></span><span class="nb">cd</span> src/doc/src/
+make html
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>pep8 runs without much complaint</dt>
+<dd><div class="first last highlight-bash"><div class="highlight"><pre><span></span>pep8 --ignore<span class="o">=</span>E501,W601 --repeat model.py
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><dl class="first docutils">
+<dt>pylint runs without much complaint</dt>
+<dd><div class="first last highlight-bash"><div class="highlight"><pre><span></span>pylint --disable<span class="o">=</span>C0103,R0904,R0913,C0301,W0511 cmislibtest.py
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+<li><p class="first">All changes checked in</p>
+</li>
+<li><p class="first">Tag the release using &#8216;cmislib-[release num]-RC[x]&#8217;</p>
+</li>
+<li><dl class="first docutils">
+<dt>Use the release script to build the release artifacts</dt>
+<dd><div class="first last highlight-bash"><div class="highlight"><pre><span></span><span class="nb">cd</span> dist
+./release.sh -u jpotts@apache.org
+</pre></div>
+</div>
+</dd>
+</dl>
+<p>This will do a &#8216;setup.py bdist sdist&#8217; and will then sign all artifacts.</p>
+<p>Note that the artifacts will be named without &#8216;RC[x]&#8217;. These are the same artifacts that will be distributed if the vote passes.</p>
+</li>
+<li><p class="first">Copy files to the Apache server under ~/public_html/chemistry/cmislib/[release num]</p>
+</li>
+<li><p class="first">Start vote. Send an email to <a class="reference external" href="mailto:dev&#37;&#52;&#48;chemistry&#46;apache&#46;org">dev<span>&#64;</span>chemistry<span>&#46;</span>apache<span>&#46;</span>org</a> announcing the vote, highlighting the changes, pointing to the tagged source, and referencing the artifacts that have been copied to the Apache server.</p>
+</li>
+<li><p class="first">After 72 hours, if the vote passes, continue, otherwise address issues and start over</p>
+</li>
+<li><p class="first">Copy the files to the appropriate Apache dist directory, which is /www/www.apache.org/dist/chemistry/cmislib/[release num]</p>
+</li>
+<li><p class="first">Rename the RC tag in source code control</p>
+</li>
+<li><p class="first">Update the cmislib home page with download links to the new release</p>
+</li>
+<li><p class="first">Upload files to Pypi</p>
+</li>
+<li><dl class="first docutils">
+<dt>Check the <a class="reference external" href="http://pycheesecake.org/">cheesecake</a> score</dt>
+<dd><div class="first last highlight-bash"><div class="highlight"><pre><span></span>python cheesecake_index --name<span class="o">=</span>cmislib
+</pre></div>
+</div>
+</dd>
+</dl>
+</li>
+</ol>
+</dd>
+</dl>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Developer Guide</a><ul>
+<li><a class="reference internal" href="#developer-setup">Developer Setup</a></li>
+<li><a class="reference internal" href="#release-process">Release Process</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="codemisc.html"
+                        title="previous chapter">Miscellaneous Code</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="tests.html"
+                        title="next chapter">Tests</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/devguide.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
+          <a href="tests.html" title="Tests"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="codemisc.html" title="Miscellaneous Code"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Apache Chemistry cmislib 0.6.0 documentation</a> &#187;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2017, Apache Software Foundation.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1.
+    </div>
+  </body>
+</html>

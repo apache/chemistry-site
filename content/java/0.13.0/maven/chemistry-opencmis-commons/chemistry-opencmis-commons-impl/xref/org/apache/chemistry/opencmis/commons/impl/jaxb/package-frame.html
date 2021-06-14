@@ -1,0 +1,678 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html xml:lang="en" lang="en">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<title>OpenCMIS Commons Implementation 0.13.0 Reference Package org.apache.chemistry.opencmis.commons.impl.jaxb</title>
+		<link rel="stylesheet" type="text/css" href="../../../../../../../stylesheet.css" title="style" />
+	</head>
+	<body>
+
+		<h3>
+        	<a href="package-summary.html" target="classFrame">org.apache.chemistry.opencmis.commons.impl.jaxb</a>
+      	</h3>
+
+      	<h3>Classes</h3>
+
+      	<ul>
+      		          	<li>
+            	<a href="ACLService.html" target="classFrame">ACLService</a>
+          	</li>
+          	          	<li>
+            	<a href="ACLServicePort.html" target="classFrame">ACLServicePort</a>
+          	</li>
+          	          	<li>
+            	<a href="AddObjectToFolder.html" target="classFrame">AddObjectToFolder</a>
+          	</li>
+          	          	<li>
+            	<a href="AddObjectToFolderResponse.html" target="classFrame">AddObjectToFolderResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="AppendContentStream.html" target="classFrame">AppendContentStream</a>
+          	</li>
+          	          	<li>
+            	<a href="AppendContentStreamResponse.html" target="classFrame">AppendContentStreamResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="ApplyACL.html" target="classFrame">ApplyACL</a>
+          	</li>
+          	          	<li>
+            	<a href="ApplyACLResponse.html" target="classFrame">ApplyACLResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="ApplyPolicy.html" target="classFrame">ApplyPolicy</a>
+          	</li>
+          	          	<li>
+            	<a href="ApplyPolicyResponse.html" target="classFrame">ApplyPolicyResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="BulkUpdateProperties.html" target="classFrame">BulkUpdateProperties</a>
+          	</li>
+          	          	<li>
+            	<a href="BulkUpdatePropertiesResponse.html" target="classFrame">BulkUpdatePropertiesResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="CancelCheckOut.html" target="classFrame">CancelCheckOut</a>
+          	</li>
+          	          	<li>
+            	<a href="CancelCheckOutResponse.html" target="classFrame">CancelCheckOutResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="CheckIn.html" target="classFrame">CheckIn</a>
+          	</li>
+          	          	<li>
+            	<a href="CheckInResponse.html" target="classFrame">CheckInResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="CheckOut.html" target="classFrame">CheckOut</a>
+          	</li>
+          	          	<li>
+            	<a href="CheckOutResponse.html" target="classFrame">CheckOutResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisACLCapabilityType.html" target="classFrame">CmisACLCapabilityType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisACLType.html" target="classFrame">CmisACLType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisAccessControlEntryType.html" target="classFrame">CmisAccessControlEntryType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisAccessControlListType.html" target="classFrame">CmisAccessControlListType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisAccessControlPrincipalType.html" target="classFrame">CmisAccessControlPrincipalType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisAllowableActionsType.html" target="classFrame">CmisAllowableActionsType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisBulkUpdateType.html" target="classFrame">CmisBulkUpdateType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisChangeEventType.html" target="classFrame">CmisChangeEventType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisChoice.html" target="classFrame">CmisChoice</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisChoiceBoolean.html" target="classFrame">CmisChoiceBoolean</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisChoiceDateTime.html" target="classFrame">CmisChoiceDateTime</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisChoiceDecimal.html" target="classFrame">CmisChoiceDecimal</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisChoiceHtml.html" target="classFrame">CmisChoiceHtml</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisChoiceId.html" target="classFrame">CmisChoiceId</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisChoiceInteger.html" target="classFrame">CmisChoiceInteger</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisChoiceString.html" target="classFrame">CmisChoiceString</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisChoiceUri.html" target="classFrame">CmisChoiceUri</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisContentStreamType.html" target="classFrame">CmisContentStreamType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisCreatablePropertyTypesType.html" target="classFrame">CmisCreatablePropertyTypesType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisException.html" target="classFrame">CmisException</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisExtensionFeatureKeyValuePair.html" target="classFrame">CmisExtensionFeatureKeyValuePair</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisExtensionFeatureType.html" target="classFrame">CmisExtensionFeatureType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisExtensionType.html" target="classFrame">CmisExtensionType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisFaultType.html" target="classFrame">CmisFaultType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisListOfIdsType.html" target="classFrame">CmisListOfIdsType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisNewTypeSettableAttributes.html" target="classFrame">CmisNewTypeSettableAttributes</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisObjectIdAndChangeTokenType.html" target="classFrame">CmisObjectIdAndChangeTokenType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisObjectInFolderContainerType.html" target="classFrame">CmisObjectInFolderContainerType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisObjectInFolderListType.html" target="classFrame">CmisObjectInFolderListType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisObjectInFolderType.html" target="classFrame">CmisObjectInFolderType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisObjectListType.html" target="classFrame">CmisObjectListType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisObjectParentsType.html" target="classFrame">CmisObjectParentsType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisObjectType.html" target="classFrame">CmisObjectType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisPermissionDefinition.html" target="classFrame">CmisPermissionDefinition</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisPermissionMapping.html" target="classFrame">CmisPermissionMapping</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisPropertiesType.html" target="classFrame">CmisPropertiesType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisProperty.html" target="classFrame">CmisProperty</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisPropertyBoolean.html" target="classFrame">CmisPropertyBoolean</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisPropertyBooleanDefinitionType.html" target="classFrame">CmisPropertyBooleanDefinitionType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisPropertyDateTime.html" target="classFrame">CmisPropertyDateTime</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisPropertyDateTimeDefinitionType.html" target="classFrame">CmisPropertyDateTimeDefinitionType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisPropertyDecimal.html" target="classFrame">CmisPropertyDecimal</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisPropertyDecimalDefinitionType.html" target="classFrame">CmisPropertyDecimalDefinitionType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisPropertyDefinitionType.html" target="classFrame">CmisPropertyDefinitionType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisPropertyHtml.html" target="classFrame">CmisPropertyHtml</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisPropertyHtmlDefinitionType.html" target="classFrame">CmisPropertyHtmlDefinitionType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisPropertyId.html" target="classFrame">CmisPropertyId</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisPropertyIdDefinitionType.html" target="classFrame">CmisPropertyIdDefinitionType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisPropertyInteger.html" target="classFrame">CmisPropertyInteger</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisPropertyIntegerDefinitionType.html" target="classFrame">CmisPropertyIntegerDefinitionType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisPropertyString.html" target="classFrame">CmisPropertyString</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisPropertyStringDefinitionType.html" target="classFrame">CmisPropertyStringDefinitionType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisPropertyUri.html" target="classFrame">CmisPropertyUri</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisPropertyUriDefinitionType.html" target="classFrame">CmisPropertyUriDefinitionType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisQueryType.html" target="classFrame">CmisQueryType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisRenditionType.html" target="classFrame">CmisRenditionType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisRepositoryCapabilitiesType.html" target="classFrame">CmisRepositoryCapabilitiesType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisRepositoryEntryType.html" target="classFrame">CmisRepositoryEntryType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisRepositoryInfoType.html" target="classFrame">CmisRepositoryInfoType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisTypeContainer.html" target="classFrame">CmisTypeContainer</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisTypeDefinitionListType.html" target="classFrame">CmisTypeDefinitionListType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisTypeDefinitionType.html" target="classFrame">CmisTypeDefinitionType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisTypeDocumentDefinitionType.html" target="classFrame">CmisTypeDocumentDefinitionType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisTypeFolderDefinitionType.html" target="classFrame">CmisTypeFolderDefinitionType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisTypeItemDefinitionType.html" target="classFrame">CmisTypeItemDefinitionType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisTypeMutabilityCapabilitiesType.html" target="classFrame">CmisTypeMutabilityCapabilitiesType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisTypePolicyDefinitionType.html" target="classFrame">CmisTypePolicyDefinitionType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisTypeRelationshipDefinitionType.html" target="classFrame">CmisTypeRelationshipDefinitionType</a>
+          	</li>
+          	          	<li>
+            	<a href="CmisTypeSecondaryDefinitionType.html" target="classFrame">CmisTypeSecondaryDefinitionType</a>
+          	</li>
+          	          	<li>
+            	<a href="CreateDocument.html" target="classFrame">CreateDocument</a>
+          	</li>
+          	          	<li>
+            	<a href="CreateDocumentFromSource.html" target="classFrame">CreateDocumentFromSource</a>
+          	</li>
+          	          	<li>
+            	<a href="CreateDocumentFromSourceResponse.html" target="classFrame">CreateDocumentFromSourceResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="CreateDocumentResponse.html" target="classFrame">CreateDocumentResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="CreateFolder.html" target="classFrame">CreateFolder</a>
+          	</li>
+          	          	<li>
+            	<a href="CreateFolderResponse.html" target="classFrame">CreateFolderResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="CreateItem.html" target="classFrame">CreateItem</a>
+          	</li>
+          	          	<li>
+            	<a href="CreateItemResponse.html" target="classFrame">CreateItemResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="CreatePolicy.html" target="classFrame">CreatePolicy</a>
+          	</li>
+          	          	<li>
+            	<a href="CreatePolicyResponse.html" target="classFrame">CreatePolicyResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="CreateRelationship.html" target="classFrame">CreateRelationship</a>
+          	</li>
+          	          	<li>
+            	<a href="CreateRelationshipResponse.html" target="classFrame">CreateRelationshipResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="CreateType.html" target="classFrame">CreateType</a>
+          	</li>
+          	          	<li>
+            	<a href="CreateTypeResponse.html" target="classFrame">CreateTypeResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="DeleteContentStream.html" target="classFrame">DeleteContentStream</a>
+          	</li>
+          	          	<li>
+            	<a href="DeleteContentStreamResponse.html" target="classFrame">DeleteContentStreamResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="DeleteObject.html" target="classFrame">DeleteObject</a>
+          	</li>
+          	          	<li>
+            	<a href="DeleteObjectResponse.html" target="classFrame">DeleteObjectResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="DeleteTree.html" target="classFrame">DeleteTree</a>
+          	</li>
+          	          	<li>
+            	<a href="DeleteTreeResponse.html" target="classFrame">DeleteTreeResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="DeleteType.html" target="classFrame">DeleteType</a>
+          	</li>
+          	          	<li>
+            	<a href="DeleteTypeResponse.html" target="classFrame">DeleteTypeResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="DiscoveryService.html" target="classFrame">DiscoveryService</a>
+          	</li>
+          	          	<li>
+            	<a href="DiscoveryServicePort.html" target="classFrame">DiscoveryServicePort</a>
+          	</li>
+          	          	<li>
+            	<a href="EnumACLPropagation.html" target="classFrame">EnumACLPropagation</a>
+          	</li>
+          	          	<li>
+            	<a href="EnumAllowableActionsKey.html" target="classFrame">EnumAllowableActionsKey</a>
+          	</li>
+          	          	<li>
+            	<a href="EnumBaseObjectTypeIds.html" target="classFrame">EnumBaseObjectTypeIds</a>
+          	</li>
+          	          	<li>
+            	<a href="EnumBasicPermissions.html" target="classFrame">EnumBasicPermissions</a>
+          	</li>
+          	          	<li>
+            	<a href="EnumCapabilityACL.html" target="classFrame">EnumCapabilityACL</a>
+          	</li>
+          	          	<li>
+            	<a href="EnumCapabilityChanges.html" target="classFrame">EnumCapabilityChanges</a>
+          	</li>
+          	          	<li>
+            	<a href="EnumCapabilityContentStreamUpdates.html" target="classFrame">EnumCapabilityContentStreamUpdates</a>
+          	</li>
+          	          	<li>
+            	<a href="EnumCapabilityJoin.html" target="classFrame">EnumCapabilityJoin</a>
+          	</li>
+          	          	<li>
+            	<a href="EnumCapabilityOrderBy.html" target="classFrame">EnumCapabilityOrderBy</a>
+          	</li>
+          	          	<li>
+            	<a href="EnumCapabilityQuery.html" target="classFrame">EnumCapabilityQuery</a>
+          	</li>
+          	          	<li>
+            	<a href="EnumCapabilityRendition.html" target="classFrame">EnumCapabilityRendition</a>
+          	</li>
+          	          	<li>
+            	<a href="EnumCardinality.html" target="classFrame">EnumCardinality</a>
+          	</li>
+          	          	<li>
+            	<a href="EnumContentStreamAllowed.html" target="classFrame">EnumContentStreamAllowed</a>
+          	</li>
+          	          	<li>
+            	<a href="EnumDateTimeResolution.html" target="classFrame">EnumDateTimeResolution</a>
+          	</li>
+          	          	<li>
+            	<a href="EnumIncludeRelationships.html" target="classFrame">EnumIncludeRelationships</a>
+          	</li>
+          	          	<li>
+            	<a href="EnumPropertiesBase.html" target="classFrame">EnumPropertiesBase</a>
+          	</li>
+          	          	<li>
+            	<a href="EnumPropertiesDocument.html" target="classFrame">EnumPropertiesDocument</a>
+          	</li>
+          	          	<li>
+            	<a href="EnumPropertiesFolder.html" target="classFrame">EnumPropertiesFolder</a>
+          	</li>
+          	          	<li>
+            	<a href="EnumPropertiesPolicy.html" target="classFrame">EnumPropertiesPolicy</a>
+          	</li>
+          	          	<li>
+            	<a href="EnumPropertiesRelationship.html" target="classFrame">EnumPropertiesRelationship</a>
+          	</li>
+          	          	<li>
+            	<a href="EnumPropertyType.html" target="classFrame">EnumPropertyType</a>
+          	</li>
+          	          	<li>
+            	<a href="EnumRelationshipDirection.html" target="classFrame">EnumRelationshipDirection</a>
+          	</li>
+          	          	<li>
+            	<a href="EnumRenditionKind.html" target="classFrame">EnumRenditionKind</a>
+          	</li>
+          	          	<li>
+            	<a href="EnumServiceException.html" target="classFrame">EnumServiceException</a>
+          	</li>
+          	          	<li>
+            	<a href="EnumSupportedPermissions.html" target="classFrame">EnumSupportedPermissions</a>
+          	</li>
+          	          	<li>
+            	<a href="EnumTypeOfChanges.html" target="classFrame">EnumTypeOfChanges</a>
+          	</li>
+          	          	<li>
+            	<a href="EnumUnfileObject.html" target="classFrame">EnumUnfileObject</a>
+          	</li>
+          	          	<li>
+            	<a href="EnumUpdatability.html" target="classFrame">EnumUpdatability</a>
+          	</li>
+          	          	<li>
+            	<a href="EnumUsers.html" target="classFrame">EnumUsers</a>
+          	</li>
+          	          	<li>
+            	<a href="EnumVersioningState.html" target="classFrame">EnumVersioningState</a>
+          	</li>
+          	          	<li>
+            	<a href="DeleteTreeResponse.html" target="classFrame">FailedToDelete</a>
+          	</li>
+          	          	<li>
+            	<a href="GetACL.html" target="classFrame">GetACL</a>
+          	</li>
+          	          	<li>
+            	<a href="GetACLResponse.html" target="classFrame">GetACLResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="GetAllVersions.html" target="classFrame">GetAllVersions</a>
+          	</li>
+          	          	<li>
+            	<a href="GetAllVersionsResponse.html" target="classFrame">GetAllVersionsResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="GetAllowableActions.html" target="classFrame">GetAllowableActions</a>
+          	</li>
+          	          	<li>
+            	<a href="GetAllowableActionsResponse.html" target="classFrame">GetAllowableActionsResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="GetAppliedPolicies.html" target="classFrame">GetAppliedPolicies</a>
+          	</li>
+          	          	<li>
+            	<a href="GetAppliedPoliciesResponse.html" target="classFrame">GetAppliedPoliciesResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="GetCheckedOutDocs.html" target="classFrame">GetCheckedOutDocs</a>
+          	</li>
+          	          	<li>
+            	<a href="GetCheckedOutDocsResponse.html" target="classFrame">GetCheckedOutDocsResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="GetChildren.html" target="classFrame">GetChildren</a>
+          	</li>
+          	          	<li>
+            	<a href="GetChildrenResponse.html" target="classFrame">GetChildrenResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="GetContentChanges.html" target="classFrame">GetContentChanges</a>
+          	</li>
+          	          	<li>
+            	<a href="GetContentChangesResponse.html" target="classFrame">GetContentChangesResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="GetContentStream.html" target="classFrame">GetContentStream</a>
+          	</li>
+          	          	<li>
+            	<a href="GetContentStreamResponse.html" target="classFrame">GetContentStreamResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="GetDescendants.html" target="classFrame">GetDescendants</a>
+          	</li>
+          	          	<li>
+            	<a href="GetDescendantsResponse.html" target="classFrame">GetDescendantsResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="GetFolderParent.html" target="classFrame">GetFolderParent</a>
+          	</li>
+          	          	<li>
+            	<a href="GetFolderParentResponse.html" target="classFrame">GetFolderParentResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="GetFolderTree.html" target="classFrame">GetFolderTree</a>
+          	</li>
+          	          	<li>
+            	<a href="GetFolderTreeResponse.html" target="classFrame">GetFolderTreeResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="GetObject.html" target="classFrame">GetObject</a>
+          	</li>
+          	          	<li>
+            	<a href="GetObjectByPath.html" target="classFrame">GetObjectByPath</a>
+          	</li>
+          	          	<li>
+            	<a href="GetObjectByPathResponse.html" target="classFrame">GetObjectByPathResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="GetObjectOfLatestVersion.html" target="classFrame">GetObjectOfLatestVersion</a>
+          	</li>
+          	          	<li>
+            	<a href="GetObjectOfLatestVersionResponse.html" target="classFrame">GetObjectOfLatestVersionResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="GetObjectParents.html" target="classFrame">GetObjectParents</a>
+          	</li>
+          	          	<li>
+            	<a href="GetObjectParentsResponse.html" target="classFrame">GetObjectParentsResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="GetObjectRelationships.html" target="classFrame">GetObjectRelationships</a>
+          	</li>
+          	          	<li>
+            	<a href="GetObjectRelationshipsResponse.html" target="classFrame">GetObjectRelationshipsResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="GetObjectResponse.html" target="classFrame">GetObjectResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="GetProperties.html" target="classFrame">GetProperties</a>
+          	</li>
+          	          	<li>
+            	<a href="GetPropertiesOfLatestVersion.html" target="classFrame">GetPropertiesOfLatestVersion</a>
+          	</li>
+          	          	<li>
+            	<a href="GetPropertiesOfLatestVersionResponse.html" target="classFrame">GetPropertiesOfLatestVersionResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="GetPropertiesResponse.html" target="classFrame">GetPropertiesResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="GetRenditions.html" target="classFrame">GetRenditions</a>
+          	</li>
+          	          	<li>
+            	<a href="GetRenditionsResponse.html" target="classFrame">GetRenditionsResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="GetRepositories.html" target="classFrame">GetRepositories</a>
+          	</li>
+          	          	<li>
+            	<a href="GetRepositoriesResponse.html" target="classFrame">GetRepositoriesResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="GetRepositoryInfo.html" target="classFrame">GetRepositoryInfo</a>
+          	</li>
+          	          	<li>
+            	<a href="GetRepositoryInfoResponse.html" target="classFrame">GetRepositoryInfoResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="GetTypeChildren.html" target="classFrame">GetTypeChildren</a>
+          	</li>
+          	          	<li>
+            	<a href="GetTypeChildrenResponse.html" target="classFrame">GetTypeChildrenResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="GetTypeDefinition.html" target="classFrame">GetTypeDefinition</a>
+          	</li>
+          	          	<li>
+            	<a href="GetTypeDefinitionResponse.html" target="classFrame">GetTypeDefinitionResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="GetTypeDescendants.html" target="classFrame">GetTypeDescendants</a>
+          	</li>
+          	          	<li>
+            	<a href="GetTypeDescendantsResponse.html" target="classFrame">GetTypeDescendantsResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="MoveObject.html" target="classFrame">MoveObject</a>
+          	</li>
+          	          	<li>
+            	<a href="MoveObjectResponse.html" target="classFrame">MoveObjectResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="MultiFilingService.html" target="classFrame">MultiFilingService</a>
+          	</li>
+          	          	<li>
+            	<a href="MultiFilingServicePort.html" target="classFrame">MultiFilingServicePort</a>
+          	</li>
+          	          	<li>
+            	<a href="NavigationService.html" target="classFrame">NavigationService</a>
+          	</li>
+          	          	<li>
+            	<a href="NavigationServicePort.html" target="classFrame">NavigationServicePort</a>
+          	</li>
+          	          	<li>
+            	<a href="ObjectFactory.html" target="classFrame">ObjectFactory</a>
+          	</li>
+          	          	<li>
+            	<a href="ObjectService.html" target="classFrame">ObjectService</a>
+          	</li>
+          	          	<li>
+            	<a href="ObjectServicePort.html" target="classFrame">ObjectServicePort</a>
+          	</li>
+          	          	<li>
+            	<a href="PolicyService.html" target="classFrame">PolicyService</a>
+          	</li>
+          	          	<li>
+            	<a href="PolicyServicePort.html" target="classFrame">PolicyServicePort</a>
+          	</li>
+          	          	<li>
+            	<a href="Query.html" target="classFrame">Query</a>
+          	</li>
+          	          	<li>
+            	<a href="QueryResponse.html" target="classFrame">QueryResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="RelationshipService.html" target="classFrame">RelationshipService</a>
+          	</li>
+          	          	<li>
+            	<a href="RelationshipServicePort.html" target="classFrame">RelationshipServicePort</a>
+          	</li>
+          	          	<li>
+            	<a href="RemoveObjectFromFolder.html" target="classFrame">RemoveObjectFromFolder</a>
+          	</li>
+          	          	<li>
+            	<a href="RemoveObjectFromFolderResponse.html" target="classFrame">RemoveObjectFromFolderResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="RemovePolicy.html" target="classFrame">RemovePolicy</a>
+          	</li>
+          	          	<li>
+            	<a href="RemovePolicyResponse.html" target="classFrame">RemovePolicyResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="RepositoryService.html" target="classFrame">RepositoryService</a>
+          	</li>
+          	          	<li>
+            	<a href="RepositoryServicePort.html" target="classFrame">RepositoryServicePort</a>
+          	</li>
+          	          	<li>
+            	<a href="SetContentStream.html" target="classFrame">SetContentStream</a>
+          	</li>
+          	          	<li>
+            	<a href="SetContentStreamResponse.html" target="classFrame">SetContentStreamResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="UpdateProperties.html" target="classFrame">UpdateProperties</a>
+          	</li>
+          	          	<li>
+            	<a href="UpdatePropertiesResponse.html" target="classFrame">UpdatePropertiesResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="UpdateType.html" target="classFrame">UpdateType</a>
+          	</li>
+          	          	<li>
+            	<a href="UpdateTypeResponse.html" target="classFrame">UpdateTypeResponse</a>
+          	</li>
+          	          	<li>
+            	<a href="VersioningService.html" target="classFrame">VersioningService</a>
+          	</li>
+          	          	<li>
+            	<a href="VersioningServicePort.html" target="classFrame">VersioningServicePort</a>
+          	</li>
+          	      	</ul>
+
+	</body>
+</html>

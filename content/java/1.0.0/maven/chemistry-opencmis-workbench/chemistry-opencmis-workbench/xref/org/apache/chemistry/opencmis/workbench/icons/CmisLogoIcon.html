@@ -1,0 +1,203 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>CmisLogoIcon xref</title>
+<link type="text/css" rel="stylesheet" href="../../../../../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../../../../apidocs/org/apache/chemistry/opencmis/workbench/icons/CmisLogoIcon.html">View Javadoc</a></div><pre>
+
+<a class="jxr_linenumber" name="1" href="#1">1</a>   <em class="jxr_comment">/*</em>
+<a class="jxr_linenumber" name="2" href="#2">2</a>   <em class="jxr_comment"> * Licensed to the Apache Software Foundation (ASF) under one</em>
+<a class="jxr_linenumber" name="3" href="#3">3</a>   <em class="jxr_comment"> * or more contributor license agreements.  See the NOTICE file</em>
+<a class="jxr_linenumber" name="4" href="#4">4</a>   <em class="jxr_comment"> * distributed with this work for additional information</em>
+<a class="jxr_linenumber" name="5" href="#5">5</a>   <em class="jxr_comment"> * regarding copyright ownership.  The ASF licenses this file</em>
+<a class="jxr_linenumber" name="6" href="#6">6</a>   <em class="jxr_comment"> * to you under the Apache License, Version 2.0 (the</em>
+<a class="jxr_linenumber" name="7" href="#7">7</a>   <em class="jxr_comment"> * "License"); you may not use this file except in compliance</em>
+<a class="jxr_linenumber" name="8" href="#8">8</a>   <em class="jxr_comment"> * with the License.  You may obtain a copy of the License at</em>
+<a class="jxr_linenumber" name="9" href="#9">9</a>   <em class="jxr_comment"> *</em>
+<a class="jxr_linenumber" name="10" href="#10">10</a>  <em class="jxr_comment"> * <a href="http://www.apache.org/licenses/LICENSE-2.0" target="alexandria_uri">http://www.apache.org/licenses/LICENSE-2.0</a></em>
+<a class="jxr_linenumber" name="11" href="#11">11</a>  <em class="jxr_comment"> *</em>
+<a class="jxr_linenumber" name="12" href="#12">12</a>  <em class="jxr_comment"> * Unless required by applicable law or agreed to in writing,</em>
+<a class="jxr_linenumber" name="13" href="#13">13</a>  <em class="jxr_comment"> * software distributed under the License is distributed on an</em>
+<a class="jxr_linenumber" name="14" href="#14">14</a>  <em class="jxr_comment"> * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</em>
+<a class="jxr_linenumber" name="15" href="#15">15</a>  <em class="jxr_comment"> * KIND, either express or implied.  See the License for the</em>
+<a class="jxr_linenumber" name="16" href="#16">16</a>  <em class="jxr_comment"> * specific language governing permissions and limitations</em>
+<a class="jxr_linenumber" name="17" href="#17">17</a>  <em class="jxr_comment"> * under the License.</em>
+<a class="jxr_linenumber" name="18" href="#18">18</a>  <em class="jxr_comment"> */</em>
+<a class="jxr_linenumber" name="19" href="#19">19</a>  <strong class="jxr_keyword">package</strong> org.apache.chemistry.opencmis.workbench.icons;
+<a class="jxr_linenumber" name="20" href="#20">20</a>  
+<a class="jxr_linenumber" name="21" href="#21">21</a>  <strong class="jxr_keyword">import</strong> java.awt.Color;
+<a class="jxr_linenumber" name="22" href="#22">22</a>  <strong class="jxr_keyword">import</strong> java.awt.Graphics2D;
+<a class="jxr_linenumber" name="23" href="#23">23</a>  <strong class="jxr_keyword">import</strong> java.awt.geom.AffineTransform;
+<a class="jxr_linenumber" name="24" href="#24">24</a>  <strong class="jxr_keyword">import</strong> java.awt.geom.GeneralPath;
+<a class="jxr_linenumber" name="25" href="#25">25</a>  
+<a class="jxr_linenumber" name="26" href="#26">26</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a href="../../../../../../org/apache/chemistry/opencmis/workbench/icons/CmisLogoIcon.html">CmisLogoIcon</a> <strong class="jxr_keyword">extends</strong> <a href="../../../../../../org/apache/chemistry/opencmis/workbench/icons/AbstractWorkbenchIcon.html">AbstractWorkbenchIcon</a> {
+<a class="jxr_linenumber" name="27" href="#27">27</a>  
+<a class="jxr_linenumber" name="28" href="#28">28</a>      <strong class="jxr_keyword">public</strong> <a href="../../../../../../org/apache/chemistry/opencmis/workbench/icons/CmisLogoIcon.html">CmisLogoIcon</a>() {
+<a class="jxr_linenumber" name="29" href="#29">29</a>          <strong class="jxr_keyword">super</strong>();
+<a class="jxr_linenumber" name="30" href="#30">30</a>      }
+<a class="jxr_linenumber" name="31" href="#31">31</a>  
+<a class="jxr_linenumber" name="32" href="#32">32</a>      <strong class="jxr_keyword">public</strong> <a href="../../../../../../org/apache/chemistry/opencmis/workbench/icons/CmisLogoIcon.html">CmisLogoIcon</a>(<strong class="jxr_keyword">int</strong> width, <strong class="jxr_keyword">int</strong> height) {
+<a class="jxr_linenumber" name="33" href="#33">33</a>          <strong class="jxr_keyword">super</strong>(width, height);
+<a class="jxr_linenumber" name="34" href="#34">34</a>      }
+<a class="jxr_linenumber" name="35" href="#35">35</a>  
+<a class="jxr_linenumber" name="36" href="#36">36</a>      @Override
+<a class="jxr_linenumber" name="37" href="#37">37</a>      <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">int</strong> getOrginalHeight() {
+<a class="jxr_linenumber" name="38" href="#38">38</a>          <strong class="jxr_keyword">return</strong> 1334;
+<a class="jxr_linenumber" name="39" href="#39">39</a>      }
+<a class="jxr_linenumber" name="40" href="#40">40</a>  
+<a class="jxr_linenumber" name="41" href="#41">41</a>      @Override
+<a class="jxr_linenumber" name="42" href="#42">42</a>      <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">int</strong> getOrginalWidth() {
+<a class="jxr_linenumber" name="43" href="#43">43</a>          <strong class="jxr_keyword">return</strong> 1334;
+<a class="jxr_linenumber" name="44" href="#44">44</a>      }
+<a class="jxr_linenumber" name="45" href="#45">45</a>  
+<a class="jxr_linenumber" name="46" href="#46">46</a>      @Override
+<a class="jxr_linenumber" name="47" href="#47">47</a>      <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> paint(Graphics2D g) {
+<a class="jxr_linenumber" name="48" href="#48">48</a>          GeneralPath shape = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="49" href="#49">49</a>  
+<a class="jxr_linenumber" name="50" href="#50">50</a>          java.util.LinkedList&lt;AffineTransform&gt; transformations = <strong class="jxr_keyword">new</strong> java.util.LinkedList&lt;AffineTransform&gt;();
+<a class="jxr_linenumber" name="51" href="#51">51</a>  
+<a class="jxr_linenumber" name="52" href="#52">52</a>          transformations.offer(g.getTransform());
+<a class="jxr_linenumber" name="53" href="#53">53</a>          g.transform(<strong class="jxr_keyword">new</strong> AffineTransform(1, 0, 0, 1, 0, 281.97653f));
+<a class="jxr_linenumber" name="54" href="#54">54</a>  
+<a class="jxr_linenumber" name="55" href="#55">55</a>          transformations.offer(g.getTransform());
+<a class="jxr_linenumber" name="56" href="#56">56</a>          g.transform(<strong class="jxr_keyword">new</strong> AffineTransform(1, 0, 0, 1, 2436.9204f, -124.31232f));
+<a class="jxr_linenumber" name="57" href="#57">57</a>  
+<a class="jxr_linenumber" name="58" href="#58">58</a>          shape = <strong class="jxr_keyword">new</strong> GeneralPath();
+<a class="jxr_linenumber" name="59" href="#59">59</a>          shape.moveTo(-2031.8895, 1175.7178);
+<a class="jxr_linenumber" name="60" href="#60">60</a>          shape.curveTo(-2075.5454, 1170.6311, -2116.6348, 1151.2609, -2146.2356, 1121.8132);
+<a class="jxr_linenumber" name="61" href="#61">61</a>          shape.curveTo(-2171.932, 1096.2499, -2187.9302, 1065.7382, -2194.3806, 1029.991);
+<a class="jxr_linenumber" name="62" href="#62">62</a>          shape.curveTo(-2197.1716, 1014.5248, -2197.415, 983.32043, -2194.8618, 968.31323);
+<a class="jxr_linenumber" name="63" href="#63">63</a>          shape.curveTo(-2188.4307, 930.5087, -2173.016, 900.52216, -2146.261, 873.7669);
+<a class="jxr_linenumber" name="64" href="#64">64</a>          shape.curveTo(-2117.3096, 844.8153, -2081.3035, 827.12683, -2037.0364, 820.1083);
+<a class="jxr_linenumber" name="65" href="#65">65</a>          shape.curveTo(-2027.2711, 818.56, -2018.9781, 818.3132, -1976.7147, 818.3132);
+<a class="jxr_linenumber" name="66" href="#66">66</a>          shape.curveTo(-1934.3462, 818.3132, -1926.1584, 818.558, -1916.2147, 820.1221);
+<a class="jxr_linenumber" name="67" href="#67">67</a>          shape.curveTo(-1868.8749, 827.56805, -1830.209, 847.6636, -1801.1826, 879.90686);
+<a class="jxr_linenumber" name="68" href="#68">68</a>          shape.curveTo(-1754.4962, 931.76733, -1709.376, 956.78015, -1647.7147, 964.98285);
+<a class="jxr_linenumber" name="69" href="#69">69</a>          shape.curveTo(-1640.1449, 965.98987, -1619.367, 966.3132, -1562.2147, 966.3132);
+<a class="jxr_linenumber" name="70" href="#70">70</a>          shape.curveTo(-1493.5465, 966.3132, -1485.8551, 966.1495, -1477.2147, 964.5046);
+<a class="jxr_linenumber" name="71" href="#71">71</a>          shape.curveTo(-1454.5997, 960.19916, -1439.0458, 955.15137, -1419.4122, 945.7456);
+<a class="jxr_linenumber" name="72" href="#72">72</a>          shape.curveTo(-1354.2749, 914.54083, -1310.797, 855.5158, -1299.6564, 783.167);
+<a class="jxr_linenumber" name="73" href="#73">73</a>          shape.curveTo(-1297.3734, 768.342, -1297.3638, 737.2168, -1299.6373, 722.3132);
+<a class="jxr_linenumber" name="74" href="#74">74</a>          shape.curveTo(-1307.0671, 673.61005, -1329.2562, 630.73645, -1364.3307, 597.3132);
+<a class="jxr_linenumber" name="75" href="#75">75</a>          shape.curveTo(-1400.1494, 563.18066, -1445.8508, 542.9278, -1496.4806, 538.75);
+<a class="jxr_linenumber" name="76" href="#76">76</a>          shape.curveTo(-1513.7247, 537.327, -1630.6799, 538.0954, -1643.2147, 539.7141);
+<a class="jxr_linenumber" name="77" href="#77">77</a>          shape.curveTo(-1690.7499, 545.85223, -1726.1213, 560.5084, -1761.2147, 588.6076);
+<a class="jxr_linenumber" name="78" href="#78">78</a>          shape.curveTo(-1766.4397, 592.7912, -1781.9647, 607.5045, -1795.7147, 621.30383);
+<a class="jxr_linenumber" name="79" href="#79">79</a>          shape.curveTo(-1824.4304, 650.1223, -1831.8323, 655.88525, -1854.7147, 667.2401);
+<a class="jxr_linenumber" name="80" href="#80">80</a>          shape.curveTo(-1878.536, 679.0608, -1900.768, 685.29333, -1928.2147, 687.8451);
+<a class="jxr_linenumber" name="81" href="#81">81</a>          shape.curveTo(-1947.2653, 689.6163, -2025.59, 688.605, -2038.7147, 686.4184);
+<a class="jxr_linenumber" name="82" href="#82">82</a>          shape.curveTo(-2070.0793, 681.1931, -2100.478, 669.1829, -2123.186, 653.0444);
+<a class="jxr_linenumber" name="83" href="#83">83</a>          shape.curveTo(-2142.9116, 639.0256, -2163.7546, 616.12286, -2174.8916, 596.22906);
+<a class="jxr_linenumber" name="84" href="#84">84</a>          shape.curveTo(-2195.8513, 558.7895, -2202.2798, 512.50574, -2192.578, 468.89188);
+<a class="jxr_linenumber" name="85" href="#85">85</a>          shape.curveTo(-2189.2695, 454.01898, -2185.2588, 442.76266, -2178.6528, 429.80997);
+<a class="jxr_linenumber" name="86" href="#86">86</a>          shape.curveTo(-2168.8674, 410.62357, -2159.1477, 397.68896, -2142.7534, 382.03638);
+<a class="jxr_linenumber" name="87" href="#87">87</a>          shape.curveTo(-2115.536, 356.0503, -2081.671, 339.58496, -2040.2146, 332.1815);
+<a class="jxr_linenumber" name="88" href="#88">88</a>          shape.curveTo(-2032.4506, 330.79498, -2022.1263, 330.40778, -1983.7146, 330.06268);
+<a class="jxr_linenumber" name="89" href="#89">89</a>          shape.curveTo(-1952.941, 329.7862, -1932.917, 330.0297, -1925.7146, 330.76868);
+<a class="jxr_linenumber" name="90" href="#90">90</a>          shape.curveTo(-1891.397, 334.2888, -1861.6295, 344.73697, -1834.522, 362.77676);
+<a class="jxr_linenumber" name="91" href="#91">91</a>          shape.curveTo(-1820.4675, 372.12976, -1810.1885, 381.22156, -1795.9165, 396.92297);
+<a class="jxr_linenumber" name="92" href="#92">92</a>          shape.curveTo(-1758.6875, 437.88037, -1719.2906, 461.8582, -1672.2146, 472.21057);
+<a class="jxr_linenumber" name="93" href="#93">93</a>          shape.curveTo(-1646.5458, 477.8553, -1642.9052, 478.08237, -1570.7146, 478.54166);
+<a class="jxr_linenumber" name="94" href="#94">94</a>          shape.curveTo(-1525.8026, 478.82736, -1499.9233, 478.60065, -1492.2146, 477.85266);
+<a class="jxr_linenumber" name="95" href="#95">95</a>          shape.curveTo(-1447.1614, 473.48337, -1405.4979, 455.55566, -1370.7146, 425.57178);
+<a class="jxr_linenumber" name="96" href="#96">96</a>          shape.curveTo(-1320.6914, 382.45056, -1293.3047, 315.85788, -1298.2021, 249.25247);
+<a class="jxr_linenumber" name="97" href="#97">97</a>          shape.curveTo(-1305.9259, 144.21048, -1386.49, 61.578964, -1491.7146, 50.773926);
+<a class="jxr_linenumber" name="98" href="#98">98</a>          shape.curveTo(-1499.2115, 50.004097, -1524.2104, 49.782207, -1570.2146, 50.077168);
+<a class="jxr_linenumber" name="99" href="#99">99</a>          shape.curveTo(-1642.911, 50.543266, -1646.8376, 50.786858, -1671.8975, 56.385166);
+<a class="jxr_linenumber" name="100" href="#100">100</a>         shape.curveTo(-1719.6499, 67.05298, -1760.235, 92.96109, -1801.674, 139.23007);
+<a class="jxr_linenumber" name="101" href="#101">101</a>         shape.curveTo(-1826.2881, 166.71297, -1861.3197, 186.56857, -1900.3665, 195.16808);
+<a class="jxr_linenumber" name="102" href="#102">102</a>         shape.curveTo(-1921.9122, 199.91327, -1927.7876, 200.30507, -1977.2146, 200.29268);
+<a class="jxr_linenumber" name="103" href="#103">103</a>         shape.curveTo(-2026.7438, 200.28069, -2033.3618, 199.80278, -2055.7146, 194.62918);
+<a class="jxr_linenumber" name="104" href="#104">104</a>         shape.curveTo(-2125.972, 178.36807, -2179.6643, 125.383484, -2193.1782, 58.97757);
+<a class="jxr_linenumber" name="105" href="#105">105</a>         shape.curveTo(-2202.7673, 11.858009, -2194.0427, -37.362732, -2169.485, -74.68683);
+<a class="jxr_linenumber" name="106" href="#106">106</a>         shape.curveTo(-2142.298, -116.00693, -2100.3948, -143.60252, -2047.7145, -154.87881);
+<a class="jxr_linenumber" name="107" href="#107">107</a>         shape.lineTo(-2034.7145, -157.66151);
+<a class="jxr_linenumber" name="108" href="#108">108</a>         shape.lineTo(-1976.7145, -157.66151);
+<a class="jxr_linenumber" name="109" href="#109">109</a>         shape.lineTo(-1918.7145, -157.66151);
+<a class="jxr_linenumber" name="110" href="#110">110</a>         shape.lineTo(-1905.7145, -154.87881);
+<a class="jxr_linenumber" name="111" href="#111">111</a>         shape.curveTo(-1863.2804, -145.79572, -1824.2146, -124.09651, -1800.6559, -96.52402);
+<a class="jxr_linenumber" name="112" href="#112">112</a>         shape.curveTo(-1791.4143, -85.70782, -1774.6082, -69.43272, -1763.1979, -60.24962);
+<a class="jxr_linenumber" name="113" href="#113">113</a>         shape.curveTo(-1734.2258, -36.93242, -1704.246, -22.701519, -1668.4849, -15.291119);
+<a class="jxr_linenumber" name="114" href="#114">114</a>         shape.curveTo(-1644.9766, -10.419719, -1636.8424, -9.963919, -1559.7145, -9.196018);
+<a class="jxr_linenumber" name="115" href="#115">115</a>         shape.curveTo(-1498.396, -8.585618, -1485.0343, -8.198018, -1476.2145, -6.7742186);
+<a class="jxr_linenumber" name="116" href="#116">116</a>         shape.curveTo(-1421.0698, 2.1277819, -1374.7711, 23.1151, -1335.7645, 56.89197);
+<a class="jxr_linenumber" name="117" href="#117">117</a>         shape.curveTo(-1283.9639, 101.74762, -1252.727, 159.1881, -1242.5435, 228.31319);
+<a class="jxr_linenumber" name="118" href="#118">118</a>         shape.curveTo(-1241.2355, 237.19199, -1240.7755, 246.5557, -1240.7755, 264.31317);
+<a class="jxr_linenumber" name="119" href="#119">119</a>         shape.curveTo(-1240.7755, 290.08246, -1241.9602, 301.67938, -1246.8538, 323.81317);
+<a class="jxr_linenumber" name="120" href="#120">120</a>         shape.curveTo(-1263.2478, 397.96448, -1311.0327, 463.07877, -1376.8717, 500.98248);
+<a class="jxr_linenumber" name="121" href="#121">121</a>         shape.curveTo(-1383.6392, 504.87857, -1388.9576, 508.41977, -1388.6906, 508.852);
+<a class="jxr_linenumber" name="122" href="#122">122</a>         shape.curveTo(-1388.4235, 509.2841, -1384.9446, 511.42908, -1380.9597, 513.6186);
+<a class="jxr_linenumber" name="123" href="#123">123</a>         shape.curveTo(-1353.288, 528.8229, -1323.7072, 553.427, -1303.032, 578.4353);
+<a class="jxr_linenumber" name="124" href="#124">124</a>         shape.curveTo(-1225.9866, 671.6287, -1219.2275, 804.037, -1286.3861, 904.5291);
+<a class="jxr_linenumber" name="125" href="#125">125</a>         shape.curveTo(-1326.0433, 963.8698, -1387.4884, 1005.55115, -1456.9199, 1020.21063);
+<a class="jxr_linenumber" name="126" href="#126">126</a>         shape.curveTo(-1479.9633, 1025.0759, -1489.1595, 1025.6127, -1560.7145, 1026.268);
+<a class="jxr_linenumber" name="127" href="#127">127</a>         shape.curveTo(-1597.5645, 1026.6055, -1632.6644, 1027.3411, -1638.7145, 1027.9026);
+<a class="jxr_linenumber" name="128" href="#128">128</a>         shape.curveTo(-1676.1212, 1031.3745, -1708.2396, 1041.7823, -1737.4445, 1059.8959);
+<a class="jxr_linenumber" name="129" href="#129">129</a>         shape.curveTo(-1755.9216, 1071.3557, -1782.5437, 1094.2594, -1797.2281, 1111.3291);
+<a class="jxr_linenumber" name="130" href="#130">130</a>         shape.curveTo(-1827.7462, 1146.8046, -1871.8407, 1169.5424, -1922.1882, 1175.7657);
+<a class="jxr_linenumber" name="131" href="#131">131</a>         shape.curveTo(-1932.1768, 1177.0005, -2021.2151, 1176.9615, -2031.8893, 1175.7178);
+<a class="jxr_linenumber" name="132" href="#132">132</a>         shape.closePath();
+<a class="jxr_linenumber" name="133" href="#133">133</a> 
+<a class="jxr_linenumber" name="134" href="#134">134</a>         g.setPaint(<strong class="jxr_keyword">new</strong> Color(0x552681));
+<a class="jxr_linenumber" name="135" href="#135">135</a>         g.fill(shape);
+<a class="jxr_linenumber" name="136" href="#136">136</a> 
+<a class="jxr_linenumber" name="137" href="#137">137</a>         shape = <strong class="jxr_keyword">new</strong> GeneralPath();
+<a class="jxr_linenumber" name="138" href="#138">138</a>         shape.moveTo(-1610.2147, 931.8146);
+<a class="jxr_linenumber" name="139" href="#139">139</a>         shape.curveTo(-1649.9078, 928.6836, -1687.1461, 914.52515, -1716.6757, 891.3373);
+<a class="jxr_linenumber" name="140" href="#140">140</a>         shape.curveTo(-1721.0972, 887.8653, -1729.3962, 880.13947, -1735.118, 874.1689);
+<a class="jxr_linenumber" name="141" href="#141">141</a>         shape.curveTo(-1740.84, 868.1983, -1748.715, 859.9941, -1752.618, 855.9372);
+<a class="jxr_linenumber" name="142" href="#142">142</a>         shape.curveTo(-1767.8978, 840.05597, -1789.4181, 823.2516, -1809.0271, 811.8893);
+<a class="jxr_linenumber" name="143" href="#143">143</a>         shape.curveTo(-1825.5798, 802.298, -1851.3657, 792.9792, -1872.7969, 788.84326);
+<a class="jxr_linenumber" name="144" href="#144">144</a>         shape.curveTo(-1897.9053, 783.99774, -1904.9255, 783.61017, -1981.7147, 782.8293);
+<a class="jxr_linenumber" name="145" href="#145">145</a>         shape.curveTo(-2059.9465, 782.0338, -2061.11, 781.9613, -2086.3655, 776.3044);
+<a class="jxr_linenumber" name="146" href="#146">146</a>         shape.curveTo(-2193.287, 752.3556, -2276.3801, 664.9992, -2295.1443, 556.8133);
+<a class="jxr_linenumber" name="147" href="#147">147</a>         shape.curveTo(-2319.8872, 414.1558, -2229.764, 277.586, -2088.7148, 243.9974);
+<a class="jxr_linenumber" name="148" href="#148">148</a>         shape.curveTo(-2061.9548, 237.62491, -2061.4434, 237.5907, -1981.2148, 236.80751);
+<a class="jxr_linenumber" name="149" href="#149">149</a>         shape.curveTo(-1902.1821, 236.03601, -1895.7013, 235.6535, -1870.099, 230.24911);
+<a class="jxr_linenumber" name="150" href="#150">150</a>         shape.curveTo(-1847.8667, 225.55602, -1825.8387, 217.10251, -1807.8125, 206.34592);
+<a class="jxr_linenumber" name="151" href="#151">151</a>         shape.curveTo(-1786.6072, 193.69221, -1759.972, 171.41122, -1743.2964, 152.37631);
+<a class="jxr_linenumber" name="152" href="#152">152</a>         shape.curveTo(-1716.176, 121.41921, -1683.643, 101.75993, -1643.1117, 91.83591);
+<a class="jxr_linenumber" name="153" href="#153">153</a>         shape.curveTo(-1622.2886, 86.737404, -1615.9746, 86.31245, -1561.2148, 86.32387);
+<a class="jxr_linenumber" name="154" href="#154">154</a>         shape.curveTo(-1512.7024, 86.33397, -1510.2032, 86.42631, -1497.7148, 88.669464);
+<a class="jxr_linenumber" name="155" href="#155">155</a>         shape.curveTo(-1412.3916, 103.99525, -1352.4021, 164.9842, -1344.2715, 244.66931);
+<a class="jxr_linenumber" name="156" href="#156">156</a>         shape.curveTo(-1338.8594, 297.71182, -1354.4307, 346.31052, -1388.786, 383.59973);
+<a class="jxr_linenumber" name="157" href="#157">157</a>         shape.curveTo(-1418.6389, 416.00223, -1462.1085, 437.44894, -1508.715, 442.76953);
+<a class="jxr_linenumber" name="158" href="#158">158</a>         shape.curveTo(-1520.4064, 444.10422, -1606.0237, 444.10422, -1617.715, 442.76953);
+<a class="jxr_linenumber" name="159" href="#159">159</a>         shape.curveTo(-1665.0148, 437.36984, -1708.7263, 415.59714, -1738.1967, 382.75784);
+<a class="jxr_linenumber" name="160" href="#160">160</a>         shape.curveTo(-1782.7043, 333.16205, -1825.8955, 307.96365, -1881.9664, 298.88004);
+<a class="jxr_linenumber" name="161" href="#161">161</a>         shape.curveTo(-1904.4396, 295.23935, -1920.6659, 294.64462, -1986.215, 295.05963);
+<a class="jxr_linenumber" name="162" href="#162">162</a>         shape.curveTo(-2054.4785, 295.49182, -2056.8625, 295.66324, -2080.9368, 301.87054);
+<a class="jxr_linenumber" name="163" href="#163">163</a>         shape.curveTo(-2123.6213, 312.87634, -2162.1199, 336.68445, -2190.3467, 369.53165);
+<a class="jxr_linenumber" name="164" href="#164">164</a>         shape.curveTo(-2221.5952, 405.89526, -2239.2678, 449.38226, -2242.0684, 496.80374);
+<a class="jxr_linenumber" name="165" href="#165">165</a>         shape.curveTo(-2248.4497, 604.8635, -2175.2393, 699.41345, -2068.715, 720.68604);
+<a class="jxr_linenumber" name="166" href="#166">166</a>         shape.curveTo(-2049.1797, 724.5872, -2038.7698, 724.99146, -1969.2151, 724.5496);
+<a class="jxr_linenumber" name="167" href="#167">167</a>         shape.curveTo(-1897.4711, 724.09393, -1893.7144, 723.85693, -1868.2151, 718.17883);
+<a class="jxr_linenumber" name="168" href="#168">168</a>         shape.curveTo(-1835.5405, 710.90283, -1806.6125, 696.7155, -1778.2151, 674.03973);
+<a class="jxr_linenumber" name="169" href="#169">169</a>         shape.curveTo(-1772.9901, 669.86743, -1758.1401, 655.77454, -1745.2151, 642.72205);
+<a class="jxr_linenumber" name="170" href="#170">170</a>         shape.curveTo(-1732.29, 629.66956, -1718.4187, 616.48517, -1714.3896, 613.42334);
+<a class="jxr_linenumber" name="171" href="#171">171</a>         shape.curveTo(-1692.3102, 596.64435, -1665.3789, 584.70807, -1634.7151, 578.1104);
+<a class="jxr_linenumber" name="172" href="#172">172</a>         shape.lineTo(-1621.7151, 575.3133);
+<a class="jxr_linenumber" name="173" href="#173">173</a>         shape.lineTo(-1564.2151, 575.3133);
+<a class="jxr_linenumber" name="174" href="#174">174</a>         shape.curveTo(-1504.1653, 575.3133, -1502.2032, 575.4262, -1483.7151, 579.9455);
+<a class="jxr_linenumber" name="175" href="#175">175</a>         shape.curveTo(-1428.8756, 593.3506, -1384.7422, 627.2066, -1361.1285, 673.9851);
+<a class="jxr_linenumber" name="176" href="#176">176</a>         shape.curveTo(-1342.5242, 710.8401, -1338.128, 759.9583, -1349.6561, 802.16724);
+<a class="jxr_linenumber" name="177" href="#177">177</a>         shape.curveTo(-1357.5739, 831.15656, -1372.8544, 856.54584, -1395.8464, 878.9144);
+<a class="jxr_linenumber" name="178" href="#178">178</a>         shape.curveTo(-1424.2118, 906.5103, -1459.5076, 923.57874, -1502.2151, 930.35223);
+<a class="jxr_linenumber" name="179" href="#179">179</a>         shape.curveTo(-1510.5492, 931.674, -1521.6885, 932.08203, -1556.2151, 932.33026);
+<a class="jxr_linenumber" name="180" href="#180">180</a>         shape.curveTo(-1580.1401, 932.50226, -1604.4401, 932.27026, -1610.2151, 931.81464);
+<a class="jxr_linenumber" name="181" href="#181">181</a>         shape.closePath();
+<a class="jxr_linenumber" name="182" href="#182">182</a> 
+<a class="jxr_linenumber" name="183" href="#183">183</a>         g.setPaint(<strong class="jxr_keyword">new</strong> Color(0xE3AF1B));
+<a class="jxr_linenumber" name="184" href="#184">184</a>         g.fill(shape);
+<a class="jxr_linenumber" name="185" href="#185">185</a> 
+<a class="jxr_linenumber" name="186" href="#186">186</a>         g.setTransform(transformations.poll());
+<a class="jxr_linenumber" name="187" href="#187">187</a>         g.setTransform(transformations.poll());
+<a class="jxr_linenumber" name="188" href="#188">188</a>     }
+<a class="jxr_linenumber" name="189" href="#189">189</a> }
+</pre>
+<hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
+</html>
+

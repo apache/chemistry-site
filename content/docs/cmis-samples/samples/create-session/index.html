@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<!--
+
+    Licensed to the Apache Software Foundation (ASF) under one or more
+    contributor license agreements.  See the NOTICE file distributed with
+    this work for additional information regarding copyright ownership.
+    The ASF licenses this file to You under the Apache License, Version 2.0
+    (the "License"); you may not use this file except in compliance with
+    the License.  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="author" content="Apache Chemistry">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+
+    <title>Creating a Session - Apache Chemistry Samples</title>
+
+    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link href="../../css/cinder.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.css">
+
+
+    <link href="../../css/chemistry.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+    
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../../index.html">Apache Chemistry Samples</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../index.html">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Repository <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li class="active">
+    <a href="index.html">Creating a Session</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../capabilities/index.html">Getting Repository Capabilities</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../types/index.html">Working with Types</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../exceptions/index.html">CMIS Exceptions</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">CRUD <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../retrieve-objects/index.html">Retrieving Objects</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../create-objects/index.html">Creating Objects</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../update-objects/index.html">Updating Objects</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../move-objects/index.html">Moving Object</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../delete-objects/index.html">Deleting Objects</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../content/index.html">Working with Content</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../versions/index.html">Working with Versions</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../properties/index.html">Working with Properties and Secondary Types</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../operation-context/index.html">Understanding the Operation Context</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../lists/index.html">Working with Lists, Paging and Skipping</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../extensions/index.html">Getting Extensions</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Query <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../queries/index.html">Executing Queries</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../query-examples/index.html">Query Examples</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../changelog/index.html">Retrieving the Change Log</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Access Control <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../allowable-actions/index.html">Checking Allowable Actions</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../access-control/index.html">Managing Access Control</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../retention/index.html">Retention and Holds</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../about/index.html">About</a>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search" aria-hidden="true"></i> Search
+                    </a>
+                </li>
+                
+                    <li >
+                        <a rel="next" href="../../index.html">
+                            <i class="fa fa-arrow-left" aria-hidden="true"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../capabilities/index.html">
+                            Next <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                
+                <li>
+                    <a href="https://www.apache.org" style="padding: 2px;">
+                        <img src="../../img/feather.png">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="first-level active"><a href="#creating-a-session">Creating a Session</a></li>
+        
+            <li class="second-level"><a href="#atompub-binding">AtomPub Binding</a></li>
+            
+        
+            <li class="second-level"><a href="#browser-binding">Browser Binding</a></li>
+            
+        
+            <li class="second-level"><a href="#web-services-binding">Web Services Binding</a></li>
+            
+        
+            <li class="second-level"><a href="#local-binding">Local Binding</a></li>
+            
+        
+            <li class="second-level"><a href="#connecting-to-the-first-repository">Connecting to the First Repository</a></li>
+            
+        
+    
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="creating-a-session">Creating a Session</h1>
+<p>A session is the entry point to the content repository. Creating a session is the first thing an application has to do to interact with the repository.</p>
+<p>A few details such as the URL of the repository endpoint, the user name and the user&rsquo;s credentials are necessary to establish a session.
+Beyond that more details might be required, depending on the repository and the environment. Those details are controlled by <strong>session parameters</strong>.</p>
+<p>A complete list of all session parameters for OpenCMIS can be found in the <a href="https://chemistry.apache.org/java/javadoc/org/apache/chemistry/opencmis/commons/SessionParameter.html">JavaDoc</a>. For PortCMIS, please refer to the help file that is contained in the binary packages.</p>
+<p>Session objects can be expensive to create and should be kept as long as possible. Most OpenCMIS and PortCMIS objects, including session objects, are <strong>thread safe</strong>. They can and should be reused across threads to reduce the number of calls to the repository.</p>
+<p>A session object manages a <strong>set of caches</strong> that keeps object metadata (properties values, Allowable Actions, ACL, etc.), paths information, and type metadata in memory. There is no content cache.</p>
+<p>There is <strong>no fixed lifetime</strong> of a session object. It can be used for a long time. Only if the repository requires cookies that expire it may have to be recreated from time to time.
+There is <strong>no need to close a session</strong> or clean its caches if you don&rsquo;t need it anymore. Just let the GC deal with it.</p>
+<div class="admonition note">
+<p class="admonition-title">Which binding should I use?</p>
+<p>The <strong>Browser Binding</strong> is the fastest binding and is recommended for <strong>CMIS 1.1</strong> repositories.<br />
+Choose the <strong>AtomPub Binding</strong> for <strong>CMIS 1.0</strong> repositories.<br />
+The Web Services Binding is the last resort and should be avoided. It is the slowest binding and is the most complex to set up.</p>
+</div>
+<h2 id="atompub-binding">AtomPub Binding</h2>
+<p><span class="cmis">CMIS 1.0</span>
+<span class="cmis">CMIS 1.1</span></p>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">// default factory implementation
+SessionFactory factory = SessionFactoryImpl.newInstance();
+Map&lt;String, String&gt; parameters = new HashMap&lt;String, String&gt;();
+
+// user credentials
+parameters.put(SessionParameter.USER, &quot;Otto&quot;);
+parameters.put(SessionParameter.PASSWORD, &quot;****&quot;);
+
+// connection settings
+parameters.put(SessionParameter.ATOMPUB_URL, &quot;http://&lt;host&gt;:&lt;port&gt;/cmis/atom&quot;);
+parameters.put(SessionParameter.BINDING_TYPE, BindingType.ATOMPUB.value());
+parameters.put(SessionParameter.REPOSITORY_ID, &quot;myRepository&quot;);
+
+// create session
+Session session = factory.createSession(parameters);
+</code></pre>
+
+<p class="portcmis">PortCMIS (C#)</p>
+<pre><code class="csharp">// default factory implementation
+SessionFactory factory = SessionFactory.NewInstance();
+Dictionary&lt;string, string&gt; parameters = new Dictionary&lt;string, string&gt;();
+
+// user credentials
+parameters[SessionParameter.User] = &quot;Otto&quot;;
+parameters[SessionParameter.Password] = &quot;****&quot;;
+
+// connection settings
+parameters[SessionParameter.AtomPubUrl] = &quot;http://&lt;host&gt;:&lt;port&gt;/cmis/atom&quot;;
+parameters[SessionParameter.BindingType] = BindingType.AtomPub;
+parameters[SessionParameter.RepositoryId] = &quot;myRepository&quot;;
+
+// create session
+ISession session = factory.CreateSession(parameters);
+</code></pre>
+
+<h2 id="browser-binding">Browser Binding</h2>
+<p><span class="cmis">CMIS 1.1</span></p>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">// default factory implementation
+SessionFactory factory = SessionFactoryImpl.newInstance();
+Map&lt;String, String&gt; parameters = new HashMap&lt;String, String&gt;();
+
+// user credentials
+parameters.put(SessionParameter.USER, &quot;Otto&quot;);
+parameters.put(SessionParameter.PASSWORD, &quot;****&quot;);
+
+// connection settings
+parameters.put(SessionParameter.BROWSER_URL, &quot;http://&lt;host&gt;:&lt;port&gt;/cmis/browser&quot;);
+parameters.put(SessionParameter.BINDING_TYPE, BindingType.BROWSER.value());
+parameters.put(SessionParameter.REPOSITORY_ID, &quot;myRepository&quot;);
+
+// create session
+Session session = factory.createSession(parameters);
+</code></pre>
+
+<p class="portcmis">PortCMIS (C#)</p>
+<pre><code class="csharp">// default factory implementation
+SessionFactory factory = SessionFactory.NewInstance();
+Dictionary&lt;string, string&gt; parameters = new Dictionary&lt;string, string&gt;();
+
+// user credentials
+parameters[SessionParameter.User] = &quot;Otto&quot;;
+parameters[SessionParameter.Password] = &quot;****&quot;;
+
+// connection settings
+parameters[SessionParameter.BrowserUrl] = &quot;http://&lt;host&gt;:&lt;port&gt;/cmis/browser&quot;;
+parameters[SessionParameter.BindingType] = BindingType.Browser;
+parameters[SessionParameter.RepositoryId] = &quot;myRepository&quot;;
+
+// create session
+ISession session = factory.CreateSession(parameters);
+</code></pre>
+
+<h2 id="web-services-binding">Web Services Binding</h2>
+<p><span class="cmis">CMIS 1.0</span>
+<span class="cmis">CMIS 1.1</span></p>
+<p>PortCMIS does not support the Web Service binding.</p>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">// default factory implementation
+SessionFactory factory = SessionFactoryImpl.newInstance();
+Map&lt;String, String&gt; parameters = new HashMap&lt;String, String&gt;();
+
+// user credentials
+parameters.put(SessionParameter.USER, &quot;Otto&quot;);
+parameters.put(SessionParameter.PASSWORD, &quot;****&quot;);
+
+// connection settings
+parameters.put(SessionParameter.BINDING_TYPE, BindingType.WEBSERVICES.value());
+parameters.put(SessionParameter.WEBSERVICES_ACL_SERVICE, &quot;http://&lt;host&gt;:&lt;port&gt;/cmis/services/ACLService?wsdl&quot;);
+parameters.put(SessionParameter.WEBSERVICES_DISCOVERY_SERVICE, &quot;http://&lt;host&gt;:&lt;port&gt;/cmis/services/DiscoveryService?wsdl&quot;);
+parameters.put(SessionParameter.WEBSERVICES_MULTIFILING_SERVICE, &quot;http://&lt;host&gt;:&lt;port&gt;/cmis/services/MultiFilingService?wsdl&quot;);
+parameters.put(SessionParameter.WEBSERVICES_NAVIGATION_SERVICE, &quot;http://&lt;host&gt;:&lt;port&gt;/cmis/services/NavigationService?wsdl&quot;);
+parameters.put(SessionParameter.WEBSERVICES_OBJECT_SERVICE, &quot;http://&lt;host&gt;:&lt;port&gt;/cmis/services/ObjectService?wsdl&quot;);
+parameters.put(SessionParameter.WEBSERVICES_POLICY_SERVICE, &quot;http://&lt;host&gt;:&lt;port&gt;/cmis/services/PolicyService?wsdl&quot;);
+parameters.put(SessionParameter.WEBSERVICES_RELATIONSHIP_SERVICE, &quot;http://&lt;host&gt;:&lt;port&gt;/cmis/services/RelationshipService?wsdl&quot;);
+parameters.put(SessionParameter.WEBSERVICES_REPOSITORY_SERVICE, &quot;http://&lt;host&gt;:&lt;port&gt;/cmis/services/RepositoryService?wsdl&quot;);
+parameters.put(SessionParameter.WEBSERVICES_VERSIONING_SERVICE, &quot;http://&lt;host&gt;:&lt;port&gt;/cmis/services/VersioningService?wsdl&quot;);
+parameters.put(SessionParameter.REPOSITORY_ID, &quot;myRepository&quot;);
+
+// create session
+Session session = factory.createSession(parameters);
+</code></pre>
+
+<h2 id="local-binding">Local Binding</h2>
+<p><span class="cmis">CMIS 1.0</span>
+<span class="cmis">CMIS 1.1</span></p>
+<p>The local binding is specific to OpenCMIS. It lets an OpenCMIS client connect to an OpenCMIS server in the same JVM.
+There is no PortCMIS equivalent.</p>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">// default factory implementation
+SessionFactory factory = SessionFactoryImpl.newInstance();
+Map&lt;String, String&gt; parameters = new HashMap&lt;String, String&gt;();
+
+// user credentials
+parameters.put(SessionParameter.USER, &quot;Otto&quot;);
+parameters.put(SessionParameter.PASSWORD, &quot;****&quot;);
+
+// connection settings
+parameters.put(SessionParameter.BINDING_TYPE, BindingType.LOCAL.value());
+parameters.put(SessionParameter.LOCAL_FACTORY, &quot;my.local.factory&quot;);
+parameters.put(SessionParameter.REPOSITORY_ID, &quot;myRepository&quot;);
+
+// create session
+Session session = factory.createSession(parameters);
+</code></pre>
+
+<h2 id="connecting-to-the-first-repository">Connecting to the First Repository</h2>
+<p>Some CMIS endpoints only provide one repository. In this case it is not necessary to provide its repository ID.
+The following code snippet gets the list of all available repositories and connects to the first one.</p>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">SessionFactory factory = SessionFactoryImpl.newInstance();
+List&lt;Repository&gt; repositories = factory.getRepositories(parameters);
+Session session = repositories.get(0).createSession();
+</code></pre>
+
+<p class="portcmis">PortCMIS (C#)</p>
+<pre><code class="csharp">SessionFactory factory = SessionFactory.NewInstance();
+ISession session = factory.GetRepositories(parameters)[0].CreateSession();
+</code></pre></div>
+        
+    </div>
+
+    <footer class="col-md-12 text-center">
+        <hr>
+        <p>
+    </footer>
+
+    <script src="../../js/jquery-1.10.2.min.js"></script>
+    <script src="../../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '../..';
+    </script>
+    <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+    <script src="../../js/base.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        From here you can search these documents. Enter your search terms below.
+                    </p>
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                        </div>
+                    </form>
+                    <div id="mkdocs-search-results"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../../js/retina.min.js"></script>
+    </body>
+
+</html>
+<!-- last update: 2017-07-31 12:45:42 -->

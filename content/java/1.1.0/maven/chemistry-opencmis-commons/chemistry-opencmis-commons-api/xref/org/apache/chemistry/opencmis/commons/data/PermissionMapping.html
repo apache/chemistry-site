@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>PermissionMapping xref</title>
+<link type="text/css" rel="stylesheet" href="../../../../../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../../../../apidocs/org/apache/chemistry/opencmis/commons/data/PermissionMapping.html">View Javadoc</a></div><pre>
+
+<a class="jxr_linenumber" name="1" href="#1">1</a>   <em class="jxr_comment">/*</em>
+<a class="jxr_linenumber" name="2" href="#2">2</a>   <em class="jxr_comment"> * Licensed to the Apache Software Foundation (ASF) under one</em>
+<a class="jxr_linenumber" name="3" href="#3">3</a>   <em class="jxr_comment"> * or more contributor license agreements.  See the NOTICE file</em>
+<a class="jxr_linenumber" name="4" href="#4">4</a>   <em class="jxr_comment"> * distributed with this work for additional information</em>
+<a class="jxr_linenumber" name="5" href="#5">5</a>   <em class="jxr_comment"> * regarding copyright ownership.  The ASF licenses this file</em>
+<a class="jxr_linenumber" name="6" href="#6">6</a>   <em class="jxr_comment"> * to you under the Apache License, Version 2.0 (the</em>
+<a class="jxr_linenumber" name="7" href="#7">7</a>   <em class="jxr_comment"> * "License"); you may not use this file except in compliance</em>
+<a class="jxr_linenumber" name="8" href="#8">8</a>   <em class="jxr_comment"> * with the License.  You may obtain a copy of the License at</em>
+<a class="jxr_linenumber" name="9" href="#9">9</a>   <em class="jxr_comment"> *</em>
+<a class="jxr_linenumber" name="10" href="#10">10</a>  <em class="jxr_comment"> * <a href="http://www.apache.org/licenses/LICENSE-2.0" target="alexandria_uri">http://www.apache.org/licenses/LICENSE-2.0</a></em>
+<a class="jxr_linenumber" name="11" href="#11">11</a>  <em class="jxr_comment"> *</em>
+<a class="jxr_linenumber" name="12" href="#12">12</a>  <em class="jxr_comment"> * Unless required by applicable law or agreed to in writing,</em>
+<a class="jxr_linenumber" name="13" href="#13">13</a>  <em class="jxr_comment"> * software distributed under the License is distributed on an</em>
+<a class="jxr_linenumber" name="14" href="#14">14</a>  <em class="jxr_comment"> * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY</em>
+<a class="jxr_linenumber" name="15" href="#15">15</a>  <em class="jxr_comment"> * KIND, either express or implied.  See the License for the</em>
+<a class="jxr_linenumber" name="16" href="#16">16</a>  <em class="jxr_comment"> * specific language governing permissions and limitations</em>
+<a class="jxr_linenumber" name="17" href="#17">17</a>  <em class="jxr_comment"> * under the License.</em>
+<a class="jxr_linenumber" name="18" href="#18">18</a>  <em class="jxr_comment"> */</em>
+<a class="jxr_linenumber" name="19" href="#19">19</a>  <strong class="jxr_keyword">package</strong> org.apache.chemistry.opencmis.commons.data;
+<a class="jxr_linenumber" name="20" href="#20">20</a>  
+<a class="jxr_linenumber" name="21" href="#21">21</a>  <strong class="jxr_keyword">import</strong> java.io.Serializable;
+<a class="jxr_linenumber" name="22" href="#22">22</a>  <strong class="jxr_keyword">import</strong> java.util.List;
+<a class="jxr_linenumber" name="23" href="#23">23</a>  
+<a class="jxr_linenumber" name="24" href="#24">24</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">interface</strong> <a href="../../../../../../org/apache/chemistry/opencmis/commons/data/PermissionMapping.html">PermissionMapping</a> <strong class="jxr_keyword">extends</strong> Serializable, <a href="../../../../../../org/apache/chemistry/opencmis/commons/data/ExtensionsData.html">ExtensionsData</a> {
+<a class="jxr_linenumber" name="25" href="#25">25</a>      String CAN_GET_DESCENDENTS_FOLDER = <span class="jxr_string">"canGetDescendents.Folder"</span>;
+<a class="jxr_linenumber" name="26" href="#26">26</a>      String CAN_GET_CHILDREN_FOLDER = <span class="jxr_string">"canGetChildren.Folder"</span>;
+<a class="jxr_linenumber" name="27" href="#27">27</a>      String CAN_GET_PARENTS_FOLDER = <span class="jxr_string">"canGetParents.Folder"</span>;
+<a class="jxr_linenumber" name="28" href="#28">28</a>      String CAN_GET_FOLDER_PARENT_OBJECT = <span class="jxr_string">"canGetFolderParent.Object"</span>;
+<a class="jxr_linenumber" name="29" href="#29">29</a>      String CAN_CREATE_DOCUMENT_FOLDER = <span class="jxr_string">"canCreateDocument.Folder"</span>;
+<a class="jxr_linenumber" name="30" href="#30">30</a>      String CAN_CREATE_FOLDER_FOLDER = <span class="jxr_string">"canCreateFolder.Folder"</span>;
+<a class="jxr_linenumber" name="31" href="#31">31</a>      String CAN_CREATE_POLICY_FOLDER = <span class="jxr_string">"canCreatePolicy.Folder"</span>;
+<a class="jxr_linenumber" name="32" href="#32">32</a>      String CAN_CREATE_RELATIONSHIP_SOURCE = <span class="jxr_string">"canCreateRelationship.Source"</span>;
+<a class="jxr_linenumber" name="33" href="#33">33</a>      String CAN_CREATE_RELATIONSHIP_TARGET = <span class="jxr_string">"canCreateRelationship.Target"</span>;
+<a class="jxr_linenumber" name="34" href="#34">34</a>      String CAN_GET_PROPERTIES_OBJECT = <span class="jxr_string">"canGetProperties.Object"</span>;
+<a class="jxr_linenumber" name="35" href="#35">35</a>      String CAN_VIEW_CONTENT_OBJECT = <span class="jxr_string">"canViewContent.Object"</span>;
+<a class="jxr_linenumber" name="36" href="#36">36</a>      String CAN_UPDATE_PROPERTIES_OBJECT = <span class="jxr_string">"canUpdateProperties.Object"</span>;
+<a class="jxr_linenumber" name="37" href="#37">37</a>      String CAN_MOVE_OBJECT = <span class="jxr_string">"canMove.Object"</span>;
+<a class="jxr_linenumber" name="38" href="#38">38</a>      String CAN_MOVE_TARGET = <span class="jxr_string">"canMove.Target"</span>;
+<a class="jxr_linenumber" name="39" href="#39">39</a>      String CAN_MOVE_SOURCE = <span class="jxr_string">"canMove.Source"</span>;
+<a class="jxr_linenumber" name="40" href="#40">40</a>      String CAN_DELETE_OBJECT = <span class="jxr_string">"canDelete.Object"</span>;
+<a class="jxr_linenumber" name="41" href="#41">41</a>      String CAN_DELETE_TREE_FOLDER = <span class="jxr_string">"canDeleteTree.Folder"</span>;
+<a class="jxr_linenumber" name="42" href="#42">42</a>      String CAN_SET_CONTENT_DOCUMENT = <span class="jxr_string">"canSetContent.Document"</span>;
+<a class="jxr_linenumber" name="43" href="#43">43</a>      String CAN_DELETE_CONTENT_DOCUMENT = <span class="jxr_string">"canDeleteContent.Document"</span>;
+<a class="jxr_linenumber" name="44" href="#44">44</a>      String CAN_ADD_TO_FOLDER_OBJECT = <span class="jxr_string">"canAddToFolder.Object"</span>;
+<a class="jxr_linenumber" name="45" href="#45">45</a>      String CAN_ADD_TO_FOLDER_FOLDER = <span class="jxr_string">"canAddToFolder.Folder"</span>;
+<a class="jxr_linenumber" name="46" href="#46">46</a>      String CAN_REMOVE_FROM_FOLDER_OBJECT = <span class="jxr_string">"canRemoveFromFolder.Object"</span>;
+<a class="jxr_linenumber" name="47" href="#47">47</a>      String CAN_REMOVE_FROM_FOLDER_FOLDER = <span class="jxr_string">"canRemoveFromFolder.Folder"</span>;
+<a class="jxr_linenumber" name="48" href="#48">48</a>      String CAN_CHECKOUT_DOCUMENT = <span class="jxr_string">"canCheckout.Document"</span>;
+<a class="jxr_linenumber" name="49" href="#49">49</a>      String CAN_CANCEL_CHECKOUT_DOCUMENT = <span class="jxr_string">"canCancelCheckout.Document"</span>;
+<a class="jxr_linenumber" name="50" href="#50">50</a>      String CAN_CHECKIN_DOCUMENT = <span class="jxr_string">"canCheckin.Document"</span>;
+<a class="jxr_linenumber" name="51" href="#51">51</a>      String CAN_GET_ALL_VERSIONS_VERSION_SERIES = <span class="jxr_string">"canGetAllVersions.VersionSeries"</span>;
+<a class="jxr_linenumber" name="52" href="#52">52</a>      String CAN_GET_OBJECT_RELATIONSHIPS_OBJECT = <span class="jxr_string">"canGetObjectRelationships.Object"</span>;
+<a class="jxr_linenumber" name="53" href="#53">53</a>      String CAN_ADD_POLICY_OBJECT = <span class="jxr_string">"canAddPolicy.Object"</span>;
+<a class="jxr_linenumber" name="54" href="#54">54</a>      String CAN_ADD_POLICY_POLICY = <span class="jxr_string">"canAddPolicy.Policy"</span>;
+<a class="jxr_linenumber" name="55" href="#55">55</a>      String CAN_REMOVE_POLICY_OBJECT = <span class="jxr_string">"canRemovePolicy.Object"</span>;
+<a class="jxr_linenumber" name="56" href="#56">56</a>      String CAN_REMOVE_POLICY_POLICY = <span class="jxr_string">"canRemovePolicy.Policy"</span>;
+<a class="jxr_linenumber" name="57" href="#57">57</a>      String CAN_GET_APPLIED_POLICIES_OBJECT = <span class="jxr_string">"canGetAppliedPolicies.Object"</span>;
+<a class="jxr_linenumber" name="58" href="#58">58</a>      String CAN_GET_ACL_OBJECT = <span class="jxr_string">"canGetACL.Object"</span>;
+<a class="jxr_linenumber" name="59" href="#59">59</a>      String CAN_APPLY_ACL_OBJECT = <span class="jxr_string">"canApplyACL.Object"</span>;
+<a class="jxr_linenumber" name="60" href="#60">60</a>  
+<a class="jxr_linenumber" name="61" href="#61">61</a>      String getKey();
+<a class="jxr_linenumber" name="62" href="#62">62</a>  
+<a class="jxr_linenumber" name="63" href="#63">63</a>      List&lt;String&gt; getPermissions();
+<a class="jxr_linenumber" name="64" href="#64">64</a>  
+<a class="jxr_linenumber" name="65" href="#65">65</a>  }
+</pre>
+<hr/><div id="footer">This page was automatically generated by <a href="http://maven.apache.org/">Maven</a></div></body>
+</html>
+

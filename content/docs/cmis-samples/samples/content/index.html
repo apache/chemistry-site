@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<!--
+
+    Licensed to the Apache Software Foundation (ASF) under one or more
+    contributor license agreements.  See the NOTICE file distributed with
+    this work for additional information regarding copyright ownership.
+    The ASF licenses this file to You under the Apache License, Version 2.0
+    (the "License"); you may not use this file except in compliance with
+    the License.  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+
+-->
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta name="author" content="Apache Chemistry">
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+
+    <title>Working with Content - Apache Chemistry Samples</title>
+
+    <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link href="../../css/cinder.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.css">
+
+
+    <link href="../../css/chemistry.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+    
+</head>
+
+<body>
+
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../../index.html">Apache Chemistry Samples</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../../index.html">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Repository <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../create-session/index.html">Creating a Session</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../capabilities/index.html">Getting Repository Capabilities</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../types/index.html">Working with Types</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../exceptions/index.html">CMIS Exceptions</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">CRUD <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../retrieve-objects/index.html">Retrieving Objects</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../create-objects/index.html">Creating Objects</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../update-objects/index.html">Updating Objects</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../move-objects/index.html">Moving Object</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../delete-objects/index.html">Deleting Objects</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="index.html">Working with Content</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../versions/index.html">Working with Versions</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../properties/index.html">Working with Properties and Secondary Types</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../operation-context/index.html">Understanding the Operation Context</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../lists/index.html">Working with Lists, Paging and Skipping</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../extensions/index.html">Getting Extensions</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Query <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../queries/index.html">Executing Queries</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../query-examples/index.html">Query Examples</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../changelog/index.html">Retrieving the Change Log</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Access Control <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../allowable-actions/index.html">Checking Allowable Actions</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../access-control/index.html">Managing Access Control</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../retention/index.html">Retention and Holds</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li >
+                        <a href="../../about/index.html">About</a>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search" aria-hidden="true"></i> Search
+                    </a>
+                </li>
+                
+                    <li >
+                        <a rel="next" href="../delete-objects/index.html">
+                            <i class="fa fa-arrow-left" aria-hidden="true"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../versions/index.html">
+                            Next <i class="fa fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                
+                <li>
+                    <a href="https://www.apache.org" style="padding: 2px;">
+                        <img src="../../img/feather.png">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <div class="container">
+        
+        <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="first-level active"><a href="#working-with-content">Working with Content</a></li>
+        
+            <li class="second-level"><a href="#content-streams">Content Streams</a></li>
+            
+        
+            <li class="second-level"><a href="#mime-types">MIME Types</a></li>
+            
+        
+            <li class="second-level"><a href="#getting-content">Getting Content</a></li>
+            
+                <li class="third-level"><a href="#getting-partial-content">Getting Partial Content</a></li>
+            
+                <li class="third-level"><a href="#getting-a-content-url">Getting a Content URL</a></li>
+            
+        
+            <li class="second-level"><a href="#updating-content">Updating Content</a></li>
+            
+                <li class="third-level"><a href="#overwriting-content">Overwriting Content</a></li>
+            
+                <li class="third-level"><a href="#deleting-content">Deleting Content</a></li>
+            
+                <li class="third-level"><a href="#appending-content">Appending Content</a></li>
+            
+        
+            <li class="second-level"><a href="#working-with-renditions">Working with Renditions</a></li>
+            
+                <li class="third-level"><a href="#getting-the-list-of-renditions">Getting the List of Renditions</a></li>
+            
+                <li class="third-level"><a href="#getting-rendition-content">Getting Rendition Content</a></li>
+            
+        
+    
+    </ul>
+</div></div>
+        <div class="col-md-9" role="main">
+
+<h1 id="working-with-content">Working with Content</h1>
+<p><span class="cmis">CMIS 1.0</span>
+<span class="cmis">CMIS 1.1</span>
+<span class="spec">Spec 2.1.4.2</span></p>
+<h2 id="content-streams">Content Streams</h2>
+<p>Content Stream objects are used to send and fetch content. They contain a file name, a <a href="#mime-types">MIME type</a>, the stream length, and the stream.</p>
+<p>In some cases, the stream length is unknown (<code>null</code>). OpenCMIS and PortCMIS don’t rely on it and your application shouldn&rsquo;t either. </p>
+<p>You can create content stream objects manually or implement the interface yourself, but OpenCMIS and PortCMIS provide some convenience methods for this.</p>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">// create a simple ContentStream object
+ContentStream cs1 = session.getObjectFactory().createContentStream(filename, length, mimeType, stream);
+
+// create a ContentStream object from a byte array
+ContentStream cs2 = ContentStreamUtils.createByteArrayContentStream(filename, bytes, mimeType);
+
+// create a ContentStream object from a string
+ContentStream cs3 = ContentStreamUtils.createTextContentStream(filename, content);
+
+// create a ContentStream object from file
+ContentStream cs4 = ContentStreamUtils.createFileContentStream(file);
+</code></pre>
+
+<p class="portcmis">PortCMIS (C#)</p>
+<pre><code class="csharp">// create a simple IContentStream object
+IContentStream cs1 = Session.ObjectFactory.CreateContentStream(filename, length, mimeType, stream);
+
+// create a IContentStream object from a byte array
+IContentStream cs2 = ContentStreamUtils.CreateByteArrayContentStream(filename, bytes, mimeType);
+
+// create a IContentStream object from a string
+IContentStream cs3 = ContentStreamUtils.CreateTextContentStream(filename, content);
+</code></pre>
+
+<h2 id="mime-types">MIME Types</h2>
+<p>When you create a new document or update the content of a document, you have to provide a MIME type.
+If you don&rsquo;t know the MIME type, use <code>application/octet-stream</code>.</p>
+<p>OpenCMIS can guess the MIME type based on the file extension.
+If you need a more thorough MIME type detection, have a look at <a href="https://tika.apache.org/">Apache Tika</a>.</p>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">String mimeType = MimeTypes.getMIMEType(&quot;txt&quot;); // MIME type for a .txt file
+</code></pre>
+
+<p>For .Net 4.5+ you can use <a href="https://msdn.microsoft.com/en-us/library/system.web.mimemapping.getmimemapping.aspx">System.Web.MimeMapping.GetMimeMapping</a>.</p>
+<p class="portcmis">PortCMIS (C#)</p>
+<pre><code class="csharp">string mimeType = MimeMapping.GetMimeMapping(&quot;text.txt&quot;);
+</code></pre>
+
+<h2 id="getting-content">Getting Content</h2>
+<p><span class="cmis">CMIS 1.0</span>
+<span class="cmis">CMIS 1.1</span></p>
+<p>The code snippets below show how to get the content of document.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>CMIS differentiates between documents with no content and documents with a content of 0 bytes.<br />
+If a document has no content, <code>getContentStream()</code> returns <code>null</code>. If a document has a 0 byte content, <code>getContentStream()</code> returns a content stream object with an empty stream.</p>
+</div>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">Document document = ...
+ContentStream contentStream = document.getContentStream();
+InputStream stream = contentStream.getStream();
+</code></pre>
+
+<p class="portcmis">PortCMIS (C#)</p>
+<pre><code class="csharp">IDocument document = ...
+IContentStream contentStream = document.GetContentStream();
+Stream stream = contentStream.Stream;
+</code></pre>
+
+<h3 id="getting-partial-content">Getting Partial Content</h3>
+<p><span class="cmis">CMIS 1.0</span>
+<span class="cmis">CMIS 1.1</span></p>
+<p>It&rsquo;s also possible to get only a part of the content.</p>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">Document document = ...
+
+// skip the first 100 bytes
+// use null to start from the beginning
+BigInteger offset = BigInteger.valueOf(100);
+
+// only read 200 bytes
+// use null to read to the end of the stream
+BigInteger length = BigInteger.valueOf(200); 
+
+ContentStream contentStream = document.getContentStream(offset, length);
+InputStream stream = contentStream.getStream();
+</code></pre>
+
+<p class="portcmis">PortCMIS (C#)</p>
+<pre><code class="csharp">IDocument document = ...
+
+// skip the first 100 bytes
+// use null to start from the beginning
+long? offset = 100;
+
+// only read 200 bytes
+// use null to read to the end of the stream
+long? length = 200;
+
+IContentStream contentStream = document.GetContentStream(offset, length);
+Stream stream = contentStream.Stream;
+</code></pre>
+
+<h3 id="getting-a-content-url">Getting a Content URL</h3>
+<p>The AtomPub Binding and the Browser Binding can provide a URL to the content of a document. Depending on the repository and the binding, the server might not return the content but an error message because this URL does not include authentication data. A user may have to re-authenticate to get the content.</p>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">Document document = ...
+
+String link = document.getContentUrl();
+</code></pre>
+
+<h2 id="updating-content">Updating Content</h2>
+<h3 id="overwriting-content">Overwriting Content</h3>
+<p><span class="cmis">CMIS 1.0</span>
+<span class="cmis">CMIS 1.1</span></p>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">Document document = ...
+
+ContentStream contentStream = ...
+
+document.setContentStream(contentStream, true);
+</code></pre>
+
+<p class="portcmis">PortCMIS (C#)</p>
+<pre><code class="csharp">IDocument document = ...
+
+IContentStream contentStream = ...
+
+document.SetContentStream(contentStream, true);
+</code></pre>
+
+<h3 id="deleting-content">Deleting Content</h3>
+<p><span class="cmis">CMIS 1.0</span>
+<span class="cmis">CMIS 1.1</span></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Some repositories  don&rsquo;t support documents without content. Check the <a href="../capabilities/index.html">repository capabilities</a> if that&rsquo;s the case or check the
+<a href="../allowable-actions/index.html">Allowable Actions</a> of the document.</p>
+</div>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">Document document = ...
+document.deleteContentStream();
+</code></pre>
+
+<p class="portcmis">PortCMIS (C#)</p>
+<pre><code class="csharp">IDocument document = ...
+document.DeleteContentStream();
+</code></pre>
+
+<h3 id="appending-content">Appending Content</h3>
+<p><span class="cmis">CMIS 1.1</span></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Not all repositories support appending content. It is not possible to discover wheter a repository supports it or not.
+If you append content be prepared to catch a <a href="../exceptions/index.html">notSupported</a> exception. </p>
+</div>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">Document document = ...
+
+ContentStream contentStream = ...
+boolean isLastChunk = true; // indicates that this is the last part of the content 
+
+document.appendContentStream(contentStream, isLastChunk);
+</code></pre>
+
+<p class="portcmis">PortCMIS (C#)</p>
+<pre><code class="csharp">IDocument document = ...
+
+IContentStream contentStream = ...
+bool isLastChunk = true; // indicates that this is the last part of the content 
+
+document.AppendContentStream(contentStream, isLastChunk);
+</code></pre>
+
+<h2 id="working-with-renditions">Working with Renditions</h2>
+<p><span class="cmis">CMIS 1.0</span>
+<span class="cmis">CMIS 1.1</span>
+<span class="spec">Spec 2.1.4.2</span></p>
+<p>Renditions are alternative versions of a document. For example, a rendition could be a PDF of an Office document. Thumbnails are a special kind of renditions and could also exist for non-document objects.<br />
+CMIS only supports server managed renditions. A CMIS client cannot upload, modify, or delete a rendition.</p>
+<h3 id="getting-the-list-of-renditions">Getting the List of Renditions</h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The list of renditions is only available if it has been requested with an <a href="../operation-context/index.html#rendition-filter">Operation Context</a>.</p>
+</div>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">Document document = ...
+
+for (Rendition rendition: document.getRenditions()) {
+    System.out.println(rendition.getTitle() + &quot;: &quot; + rendition.getStreamId());
+}
+</code></pre>
+
+<p class="portcmis">PortCMIS (C#)</p>
+<pre><code class="csharp">IDocument document = ...
+
+foreach (IRendition rendition in folder.Renditions) {
+    Console.WriteLine(rendition.Title + &quot;: &quot; + rendition.StreamId);
+}
+</code></pre>
+
+<h3 id="getting-rendition-content">Getting Rendition Content</h3>
+<p>The rendition content can be retrieved either for an Rendition object (see above) or directly from the document with a stream ID.</p>
+<p class="opencmis">OpenCMIS (Java)</p>
+<pre><code class="java">Document document = ...
+Rendition rendition = ...
+
+ContentStream cs1 = document.getContentStream(rendition.getStreamId());
+
+ContentStream cs2 = rendition.getContentStream();
+</code></pre>
+
+<p class="portcmis">PortCMIS (C#)</p>
+<pre><code class="csharp">IDocument document = ...
+IRendition rendition = ...
+
+IContentStream cs1 = document.GetContentStream(rendition.StreamId);
+
+IContentStream cs2 = rendition.GetContentStream();
+</code></pre></div>
+        
+    </div>
+
+    <footer class="col-md-12 text-center">
+        <hr>
+        <p>
+    </footer>
+
+    <script src="../../js/jquery-1.10.2.min.js"></script>
+    <script src="../../js/bootstrap-3.0.3.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+    var base_url = '../..';
+    </script>
+    <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+    <script src="../../js/base.js"></script>
+
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        From here you can search these documents. Enter your search terms below.
+                    </p>
+                    <form role="form">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                        </div>
+                    </form>
+                    <div id="mkdocs-search-results"></div>
+                </div>
+                <div class="modal-footer">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript" src="../../js/retina.min.js"></script>
+    </body>
+
+</html>
+<!-- last update: 2017-07-31 12:45:42 -->
