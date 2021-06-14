@@ -137,12 +137,16 @@ The simplest way to view the sample code is to use eclipse
 
 1. Add the maven repository to your eclipse workspace classpath with the following command. You only need to perform this step once.
 
+   ```
     mvn eclipse:configure-workspace -Declipse.workspace=<path-to-your-eclipse-workspace>
+   ```
     
 1. Create an Eclipse project from the code, and import it into your eclipse.
 Type the following command :-
 
+   ```
     mvn eclipse:eclipse
+   ```
 
 1. Import the project into eclipse:-
  
@@ -195,14 +199,14 @@ Note that:-
 1. This repository does not require credentials, but the code snippet sets a user id and password to show how this is done
 1. The code uses the `ATOMPUB` binding for connection. 
 
-```java
+   ```java
     SessionFactory sessionFactory = SessionFactoryImpl.newInstance();
     Map<String, String> parameter = new HashMap<String, String>();
     parameter.put(SessionParameter.USER, "admin");
     parameter.put(SessionParameter.PASSWORD, "admin");
     parameter.put(SessionParameter.ATOMPUB_URL, "http://repo.opencmis.org/inmemory/atom/");
     parameter.put(SessionParameter.BINDING_TYPE, BindingType.ATOMPUB.value());
-```
+   ```
 
 #### Connecting to a repository by id
 
