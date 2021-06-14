@@ -228,6 +228,15 @@ pre {
     text-align: left;
 }
 
+code {
+    padding: 0px;
+    margin-top: 5px;
+    margin-left: 15px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    text-align: left;
+}
+
 .helpheading {
     font-weight: bold;
     background-color: #D0D9BD;
